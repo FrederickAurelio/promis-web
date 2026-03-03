@@ -1,9 +1,12 @@
+import Navbar from "@/components/layout/navbar";
+import PageTransition from "@/components/layout/page-transition";
+import ViewportProvider from "@/components/layout/viewport-provider";
+import WhatsappButton from "@/components/layout/whatsapp-button";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
-import Navbar from "@/components/layout/navbar";
-import ViewportProvider from "@/components/layout/viewport-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,13 +46,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-height-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-height-screen relative`}
       >
         <ViewportProvider>
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-            <Navbar />
-            {children}
-          </ThemeProvider>
+          <TooltipProvider>
+            <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+              <Navbar />
+              <PageTransition>{children}</PageTransition>
+              <p>sssssssss</p>
+              <WhatsappButton />
+            </ThemeProvider>
+          </TooltipProvider>
         </ViewportProvider>
       </body>
     </html>
