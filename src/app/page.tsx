@@ -1,4 +1,5 @@
-import HeroTransition from "@/components/layout/hero-transition";
+import HeroTransition from "@/components/transitions/hero-transition";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -19,9 +20,10 @@ export default function Home() {
       </div>
 
       <HeroTransition className="max-w-3xl h-full flex flex-col justify-center items-start z-10 relative -translate-y-4">
-        <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full font-semibold text-sm mb-6 uppercase tracking-wider">
+        {/* use Badge components */}
+        <Badge className="px-4 py-1 bg-primary/10 text-primary rounded-full font-semibold text-sm mb-6 uppercase tracking-wider">
           Pemimpin Pasar Transmisi Daya
-        </span>
+        </Badge>
         <h1 className="text-5xl md:text-7xl font-semibold mb-6 leading-[1.1]">
           Solusi Rantai <span className="text-primary">Presisi</span> Untuk
           Efisiensi Pabrik

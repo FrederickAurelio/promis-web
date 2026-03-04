@@ -1,6 +1,6 @@
 "use client";
 
-import CollapseTransition from "@/components/common/CollapseTransition";
+import CollapseTransition from "@/components/transitions/CollapseTransition";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { MenuIcon, X } from "lucide-react";
