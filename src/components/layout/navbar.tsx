@@ -54,103 +54,109 @@ export default function Navbar() {
     <nav
       data-nav-root="true"
       className={cn(
-        "flex flex-col",
         "sticky top-0 z-50 w-full",
         scrolled && isMenuOpen && "shadow-md",
       )}
     >
       <div
         className={cn(
-          "w-full transition-all duration-300",
-          scrolled
-            ? "bg-background/70 backdrop-blur-md shadow-md h-14"
-            : "bg-transparent h-16",
-          "flex items-center justify-between pr-5 md:px-5 lg:px-10",
+          "w-full transition-all duration-300 ",
+          !scrolled
+            ? "bg-transparent backdrop-blur-0"
+            : "backdrop-blur-md bg-background/70 shadow-md",
         )}
       >
-        <div className="flex items-center">
-          {/* Mobile */}
-          <div className="items-center md:hidden mx-3 ml-4">
-            <Button
-              onClick={() => setIsMenuOpen((prev) => !prev)}
-              className="rounded-[10px] size-7 translate-y-px"
-              size="icon-sm"
-              variant="ghost"
-            >
-              {isMenuOpen ? (
-                <X className="size-5" strokeWidth={1.5} />
-              ) : (
-                <MenuIcon className="size-5" strokeWidth={1.5} />
-              )}
-            </Button>
+        <div
+          className={cn(
+            "container mx-auto flex items-center justify-between px-4 md:px-6 lg:px-10 transition-all duration-300",
+            scrolled ? "h-12 md:h-14" : "h-14 md:h-16",
+          )}
+        >
+          <div className="flex items-center">
+            {/* Mobile */}
+            <div className="items-center md:hidden mr-3">
+              <Button
+                onClick={() => setIsMenuOpen((prev) => !prev)}
+                className="rounded-[10px] size-7 translate-y-px"
+                size="icon-sm"
+                variant="ghost"
+              >
+                {isMenuOpen ? (
+                  <X className="size-5" strokeWidth={1.5} />
+                ) : (
+                  <MenuIcon className="size-5" strokeWidth={1.5} />
+                )}
+              </Button>
+            </div>
+            <Image
+              src="/logo.png"
+              alt="Promis Conveyor Chain"
+              width={200}
+              height={45}
+              priority
+              className="h-7 md:h-8 w-auto object-contain"
+            />
           </div>
-          <Image
-            src="/logo.png"
-            alt="Promis Conveyor Chain"
-            width={6732}
-            height={1512}
-            priority
-            className="h-7 md:h-8 w-auto object-contain"
-          />
-        </div>
 
-        {/* Desktop */}
-        <div className="items-center hidden md:flex md:gap-2 lg:gap-3 xl:gap-4">
-          {NAV_ITEMS.map((item) => (
-            <Button
-              key={item.href}
-              size="sm"
-              variant="ghost"
-              asChild
-              className={cn(
-                "text-base lg:text-lg",
-                isActive(item.href) && "text-primary hover:text-primary",
-              )}
-            >
-              <Link href={item.href}>{item.label}</Link>
-            </Button>
-          ))}
-
-          <Button
-            size="lg"
-            variant="default"
-            asChild
-            className="text-base font-semibold ml-2"
-          >
-            <Link href="/contact">Minta Penawaran</Link>
-          </Button>
-        </div>
-
-        <div className="items-center md:hidden">
-          <Button
-            size="default"
-            variant="default"
-            asChild
-            className="text-sm font-semibold ml-2"
-          >
-            <Link href="/contact">Minta Penawaran</Link>
-          </Button>
-        </div>
-      </div>
-      <CollapseTransition open={isMenuOpen} direction="vertical" duration={350}>
-        <div className="md:hidden bg-background/70 backdrop-blur-md">
-          <div className="flex flex-col py-2">
+          <div className="items-center hidden md:flex md:gap-2 lg:gap-3 xl:gap-4">
             {NAV_ITEMS.map((item) => (
               <Button
                 key={item.href}
                 size="sm"
                 variant="ghost"
                 asChild
-                onClick={() => setIsMenuOpen(false)}
                 className={cn(
-                  "w-full justify-start px-4 py-2 text-base rounded-none text-foreground/90 hover:bg-accent hover:text-accent-foreground",
-                  isActive(item.href) &&
-                    "bg-accent text-primary hover:text-primary",
+                  "text-base lg:text-lg",
+                  isActive(item.href) && "text-primary hover:text-primary",
                 )}
               >
                 <Link href={item.href}>{item.label}</Link>
               </Button>
             ))}
+
+            <Button
+              size="lg"
+              variant="default"
+              asChild
+              className="text-base font-semibold ml-2"
+            >
+              <Link href="/contact">Minta Penawaran</Link>
+            </Button>
+          </div>
+
+          <div className="items-center md:hidden">
+            <Button
+              size="default"
+              variant="default"
+              asChild
+              className="text-sm font-semibold ml-2"
+            >
+              <Link href="/contact">Minta Penawaran</Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+      <CollapseTransition open={isMenuOpen} direction="vertical" duration={350}>
+        <div className="md:hidden bg-background/70 backdrop-blur-md">
+          <div className="container mx-auto px-4 md:px-6 lg:px-10">
+            <div className="flex flex-col py-2">
+              {NAV_ITEMS.map((item) => (
+                <Button
+                  key={item.href}
+                  size="sm"
+                  variant="ghost"
+                  asChild
+                  onClick={() => setIsMenuOpen(false)}
+                  className={cn(
+                    "w-full justify-start px-4 py-2 text-base rounded-none text-foreground/90 hover:bg-accent hover:text-accent-foreground",
+                    isActive(item.href) &&
+                      "bg-accent text-primary hover:text-primary",
+                  )}
+                >
+                  <Link href={item.href}>{item.label}</Link>
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
       </CollapseTransition>

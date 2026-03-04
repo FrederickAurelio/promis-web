@@ -1,4 +1,6 @@
+import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
+import PageContainer from "@/components/layout/page-container";
 import PageTransition from "@/components/layout/page-transition";
 import ViewportProvider from "@/components/layout/viewport-provider";
 import WhatsappButton from "@/components/layout/whatsapp-button";
@@ -52,8 +54,10 @@ export default function RootLayout({
           <TooltipProvider>
             <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
               <Navbar />
-              <PageTransition>{children}</PageTransition>
-              <p>sssssssss</p>
+              <PageContainer>
+                <PageTransition>{children}</PageTransition>
+              </PageContainer>
+              <Footer />
               <WhatsappButton />
             </ThemeProvider>
           </TooltipProvider>
