@@ -74,7 +74,7 @@ export default function Navbar() {
         >
           <div className="flex items-center">
             {/* Mobile */}
-            <div className="items-center md:hidden mr-3">
+            <div className="items-center md:hidden mr-1">
               <Button
                 onClick={() => setIsMenuOpen((prev) => !prev)}
                 className="rounded-[10px] size-7 translate-y-px"
@@ -126,7 +126,7 @@ export default function Navbar() {
 
           <div className="items-center md:hidden">
             <Button
-              size="default"
+              size="sm"
               variant="default"
               asChild
               className="text-sm font-semibold ml-2"
