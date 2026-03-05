@@ -102,7 +102,7 @@ function FooterBrandAndSocials() {
 
 function FooterNavigation() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 lg:mx-auto">
       <h3 className="text-lg font-semibold">Tautan Cepat</h3>
       <div className="flex flex-col gap-2">
         {NAVIGATION_ITEMS.map((data) => (
