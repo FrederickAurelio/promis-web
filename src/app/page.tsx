@@ -140,31 +140,31 @@ function LayananIndustri() {
 
 const REASONS_TO_CHOOSE_US = [
   {
-    title: "Meterial Grade Premium",
+    title: "Material Kelas Premium",
     description:
       "Kami menggunakan material berkualitas tinggi untuk memproduksi conveyor chain dan sprocket yang tahan lama dan tahan terhadap cuaca.",
     icon: CheckCircle,
   },
   {
-    title: "Engineering Excellence",
+    title: "Keunggulan Teknik",
     description:
       "Kami memiliki tim teknis berpengalaman yang memastikan produk kami memenuhi standar tertinggi.",
     icon: Brain,
   },
   {
-    title: "Custom Solutions",
+    title: "Solusi Kustom",
     description:
       "Kami menyediakan solusi konveyor chain dan sprocket yang disesuaikan dengan kebutuhan industri Anda.",
     icon: Settings,
   },
   {
-    title: "Quality Assurance",
+    title: "Jaminan Kualitas",
     description:
       "Kami memiliki sistem kontrol kualitas yang ketat untuk memastikan produk kami memenuhi standar tertinggi.",
     icon: ShieldCheck,
   },
   {
-    title: "Customer Satisfaction",
+    title: "Kepuasan Pelanggan",
     description:
       "Kami memiliki tim pelanggan berpengalaman yang memastikan produk kami memenuhi standar tertinggi.",
     icon: Smile,
