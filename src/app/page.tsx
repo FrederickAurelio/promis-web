@@ -1,11 +1,24 @@
+import PageContainer from "@/components/layout/page-container";
 import HeroTransition from "@/components/transitions/hero-transition";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  Brain,
+  CheckCircle,
+  Flame,
+  FlaskConical,
+  Palmtree,
+  Pill,
+  Settings,
+  ShieldCheck,
+  Smile,
+  Truck,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+function Hero() {
   return (
     <section className="h-[calc(var(--height-screen)-56px)] md:h-[calc(var(--height-screen)-64px)]">
       <div className="absolute inset-0 z-0">
@@ -57,5 +70,154 @@ export default function Home() {
         </div>
       </HeroTransition>
     </section>
+  );
+}
+
+const SEKTOR_INDUSTRI = [
+  {
+    name: "Kelapa Sawit",
+    icon: Palmtree,
+  },
+  {
+    name: "Petrokimia",
+    icon: Truck,
+  },
+  {
+    name: "Energi",
+    icon: Flame,
+  },
+  {
+    name: "Kimia",
+    icon: FlaskConical,
+  },
+  {
+    name: "Farmasi",
+    icon: Pill,
+  },
+];
+
+function LayananIndustri() {
+  return (
+    <section className="py-24 pb-32 flex flex-col gap-3">
+      <h2 className="text-3xl lg:text-4xl font-bold max-sm:max-w-[16ch]">
+        Sektor Industri Yang Kami Layani
+      </h2>
+      <div className="flex justify-between md:items-end gap-4 md:gap-8 flex-col md:flex-row mb-7">
+        <p className="text-muted-foreground text-base lg:text-lg">
+          Meskipun spesialisasi kami adalah Kelapa Sawit, keahlian teknik kami
+          mencakup berbagai industri berat lainnya.
+        </p>
+        <div>
+          <Button
+            className="px-0! py-0! leading-none h-fit! text-base! lg:text-lg!"
+            variant="link"
+            asChild
+          >
+            <Link
+              href="https://wa.me/6281234567890"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Konsultasi Sektor Anda <ArrowRight className="size-5" />
+            </Link>
+          </Button>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        {SEKTOR_INDUSTRI.map((sektor) => (
+          <div
+            key={sektor.name}
+            className="bg-card border border-border rounded-xl p-4 py-8 flex flex-col items-center justify-center gap-2 hover:bg-accent hover:border-accent-foreground transition-all duration-300 cursor-pointer hover:-translate-y-1"
+          >
+            <sektor.icon className="size-10" />
+            <h3 className="text-lg font-bold">{sektor.name}</h3>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+const REASONS_TO_CHOOSE_US = [
+  {
+    title: "Meterial Grade Premium",
+    description:
+      "Kami menggunakan material berkualitas tinggi untuk memproduksi conveyor chain dan sprocket yang tahan lama dan tahan terhadap cuaca.",
+    icon: CheckCircle,
+  },
+  {
+    title: "Engineering Excellence",
+    description:
+      "Kami memiliki tim teknis berpengalaman yang memastikan produk kami memenuhi standar tertinggi.",
+    icon: Brain,
+  },
+  {
+    title: "Custom Solutions",
+    description:
+      "Kami menyediakan solusi konveyor chain dan sprocket yang disesuaikan dengan kebutuhan industri Anda.",
+    icon: Settings,
+  },
+  {
+    title: "Quality Assurance",
+    description:
+      "Kami memiliki sistem kontrol kualitas yang ketat untuk memastikan produk kami memenuhi standar tertinggi.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Customer Satisfaction",
+    description:
+      "Kami memiliki tim pelanggan berpengalaman yang memastikan produk kami memenuhi standar tertinggi.",
+    icon: Smile,
+  },
+];
+
+function AlasanMemilihKami() {
+  return (
+    <section className="py-20 bg-card flex flex-col gap-8 md:grid md:grid-cols-7 items-center">
+      <Image
+        src="/about.jpg"
+        alt="Industrial Background"
+        width={600}
+        height={600}
+        className="object-cover aspect-4/3 rounded-xl flex-1 md:col-span-3"
+      />
+      <div className="flex-1 flex flex-col gap-4 w-full md:col-span-4">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+          Mengapa Memilih Promis?
+        </h2>
+        <p className="text-muted-foreground text-base lg:text-lg">
+          Kami bukan sekadar pemasok; kami adalah mitra teknis Anda dalam
+          menjaga kelancaran operasional pabrik.
+        </p>
+        <div className="flex flex-col gap-3">
+          {REASONS_TO_CHOOSE_US.map((reason) => (
+            <div className="flex items-center gap-4" key={reason.title}>
+              <div className="size-10 shrink-0 flex items-center justify-center rounded-full border-2 border-primary/20 text-primary">
+                <reason.icon className="size-5" />
+              </div>
+              <div className="flex flex-col gap-0.5">
+                <h3 className="text-lg font-bold">{reason.title}</h3>
+                <p className="text-muted-foreground text-base ">
+                  {reason.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+export default function Home() {
+  return (
+    <>
+      <PageContainer>
+        <Hero />
+      </PageContainer>
+      <PageContainer>
+        <LayananIndustri />
+        <AlasanMemilihKami />
+      </PageContainer>
+    </>
   );
 }

@@ -54,9 +54,7 @@ export default function RootLayout({
           <TooltipProvider>
             <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
               <Navbar />
-              <PageContainer>
-                <PageTransition>{children}</PageTransition>
-              </PageContainer>
+              <PageTransition>{children}</PageTransition>
               <Footer />
               <WhatsappButton />
             </ThemeProvider>
