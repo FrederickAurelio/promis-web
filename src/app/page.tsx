@@ -173,13 +173,13 @@ const REASONS_TO_CHOOSE_US = [
 
 function AlasanMemilihKami() {
   return (
-    <section className="py-20 bg-card flex flex-col gap-8 md:grid md:grid-cols-7 items-center">
+    <section className="py-20 bg-card flex flex-col gap-12 md:grid md:grid-cols-7 items-center">
       <Image
         src="/about.jpg"
         alt="Industrial Background"
         width={600}
         height={600}
-        className="object-cover aspect-4/3 rounded-xl flex-1 md:col-span-3"
+        className="object-cover aspect-4/3 rounded-xl flex-1 md:col-span-3 shadow-lg"
       />
       <div className="flex-1 flex flex-col gap-4 w-full md:col-span-4">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
