@@ -17,7 +17,7 @@ export default function WhatsappButton() {
             rel="noopener noreferrer"
           >
             <Image
-              className="rounded-full shadow-lg"
+              className="rounded-full shadow-lg animate-pulse hover:animate-none transition-all duration-200 cursor-pointer hover:scale-105"
               src="/whatsapp.svg"
               alt="Whatsapp"
               priority
