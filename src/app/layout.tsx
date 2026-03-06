@@ -1,6 +1,5 @@
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
-import PageContainer from "@/components/layout/page-container";
 import PageTransition from "@/components/transitions/page-transition";
 import ViewportProvider from "@/components/layout/viewport-provider";
 import WhatsappButton from "@/components/layout/whatsapp-button";
