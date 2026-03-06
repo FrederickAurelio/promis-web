@@ -226,7 +226,7 @@ const PRODUCTS = [
 
 function ProdukPilihanKami() {
   return (
-    <section className="py-20 flex flex-col gap-12">
+    <section className="py-20 pb-28 flex flex-col gap-12">
       <div className="flex flex-col gap-3">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
           Produk Pilihan Kami
