@@ -1,12 +1,7 @@
-import PageContainer from "@/components/layout/page-container";
+import SectionContainer from "@/components/layout/section-container";
 import HeroTransition from "@/components/transitions/hero-transition";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import {
   ArrowRight,
   Brain,
@@ -25,7 +20,7 @@ import Link from "next/link";
 
 function Hero() {
   return (
-    <section className="h-[calc(var(--height-screen)-56px)] md:h-[calc(var(--height-screen)-64px)]">
+    <SectionContainer className="h-[calc(var(--height-screen)-56px)] min-h-[600px] md:max-h-[1050px] md:h-[calc(var(--height-screen)-64px)]">
       <div className="absolute inset-0 z-0">
         <Image
           src="/about3.jpg"
@@ -74,7 +69,7 @@ function Hero() {
           </Button>
         </div>
       </HeroTransition>
-    </section>
+    </SectionContainer>
   );
 }
 
@@ -103,7 +98,7 @@ const SEKTOR_INDUSTRI = [
 
 function LayananIndustri() {
   return (
-    <section className="py-24 pb-32 flex flex-col gap-3">
+    <SectionContainer className="py-24 pb-32 flex flex-col gap-3">
       <h2 className="text-3xl lg:text-4xl font-bold max-sm:max-w-[16ch]">
         Sektor Industri Yang Kami Layani
       </h2>
@@ -139,7 +134,7 @@ function LayananIndustri() {
           </div>
         ))}
       </div>
-    </section>
+    </SectionContainer>
   );
 }
 
@@ -178,7 +173,10 @@ const REASONS_TO_CHOOSE_US = [
 
 function AlasanMemilihKami() {
   return (
-    <section className="py-20 bg-card flex flex-col gap-8 md:gap-12 md:grid md:grid-cols-7 items-center">
+    <SectionContainer
+      rootClassName="bg-card"
+      className="py-20 flex flex-col gap-8 md:gap-12 md:grid md:grid-cols-7 items-center"
+    >
       <Image
         src="/about.jpg"
         alt="Industrial Background"
@@ -210,7 +208,7 @@ function AlasanMemilihKami() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionContainer>
   );
 }
 
@@ -231,7 +229,7 @@ const PRODUCTS = [
 
 function ProdukPilihanKami() {
   return (
-    <section className="py-20 pb-32 flex flex-col gap-12">
+    <SectionContainer className="py-20 pb-32 flex flex-col gap-12">
       <div className="flex flex-col gap-3">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
           Produk Pilihan Kami
@@ -278,7 +276,7 @@ function ProdukPilihanKami() {
           </div>
         ))}
       </div>
-    </section>
+    </SectionContainer>
   );
 }
 
@@ -307,7 +305,10 @@ const GALLERY_OPERATIONAL = [
 
 function GaleriOperasional() {
   return (
-    <section className="py-24 pb-32 flex flex-col gap-2 md:gap-0">
+    <SectionContainer
+      rootClassName="bg-card"
+      className="py-20 flex flex-col gap-2 md:gap-0"
+    >
       <h2 className="text-3xl lg:text-4xl font-bold max-sm:max-w-[16ch] lg:leading-none">
         Galeri Operasional
       </h2>
@@ -342,22 +343,30 @@ function GaleriOperasional() {
           </div>
         ))}
       </div>
-    </section>
+    </SectionContainer>
+  );
+}
+
+function Testimoni() {
+  return (
+    <SectionContainer className="py-20 pb-32 flex flex-col gap-12">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
+        Apa Kata Mitra Kami
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6"></div>
+    </SectionContainer>
   );
 }
 
 export default function Home() {
   return (
-    <>
-      <PageContainer>
-        <Hero />
-      </PageContainer>
-      <PageContainer>
-        <LayananIndustri />
-        <AlasanMemilihKami />
-        <ProdukPilihanKami />
-        <GaleriOperasional />
-      </PageContainer>
-    </>
+    <main>
+      <Hero />
+      <LayananIndustri />
+      <AlasanMemilihKami />
+      <ProdukPilihanKami />
+      <GaleriOperasional />
+      <Testimoni />
+    </main>
   );
 }

@@ -1,10 +1,9 @@
-import PageContainer from "@/components/layout/page-container";
+import SectionContainer from "@/components/layout/section-container";
 
 export default function ProductsPage() {
   return (
-    <PageContainer>
-      <h1>Produk</h1>
-    </PageContainer>
+    <main>
+      <SectionContainer>Produk</SectionContainer>
+    </main>
   );
 }
-

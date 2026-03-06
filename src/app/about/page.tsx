@@ -1,9 +1,9 @@
-import PageContainer from "@/components/layout/page-container";
+import SectionContainer from "@/components/layout/section-container";
 
 export default function AboutPage() {
   return (
-    <PageContainer>
-      <h1>Tentang Kami</h1>
-    </PageContainer>
+    <main>
+      <SectionContainer>Tentang Kami</SectionContainer>
+    </main>
   );
 }
