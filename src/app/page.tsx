@@ -208,6 +208,75 @@ function AlasanMemilihKami() {
     </section>
   );
 }
+
+const PRODUCTS = [
+  {
+    name: "Conveyor Chain",
+    description:
+      "Conveyor chain adalah komponen yang digunakan untuk mengangkut material dari satu tempat ke tempat lain.",
+    image: "/photo_20_2024-02-01_08-37-17.jpg",
+  },
+  {
+    name: "Sprocket",
+    description:
+      "Sprocket adalah komponen yang digunakan untuk mengangkut material dari satu tempat ke tempat lain.",
+    image: "/photo_20_2024-02-01_08-37-17.jpg",
+  },
+];
+
+function ProdukPilihanKami() {
+  return (
+    <section className="py-20 flex flex-col gap-12">
+      <div className="flex flex-col gap-3">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
+          Produk Pilihan Kami
+        </h2>
+        <p className="text-muted-foreground text-base lg:text-lg text-center">
+          Komponen kritis yang dirancang untuk durabilitas ekstrem.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6">
+        {PRODUCTS.map((product) => (
+          <div
+            key={product.name}
+            className="bg-card border border-border rounded-xl flex flex-col overflow-hidden cursor-pointer group"
+          >
+            <Image
+              src={product.image}
+              alt={product.name}
+              width={1000}
+              height={1000}
+              className="w-full h-80 object-cover group-hover:scale-[102%] transition-transform duration-500"
+            />
+            <div className="flex flex-col gap-2 p-4 pb-6 lg:p-6 lg:pb-8 lg:gap-3">
+              <h3 className="text-lg lg:text-xl font-bold">{product.name}</h3>
+              <p className="text-muted-foreground text-base lg:text-lg">
+                {product.description}
+              </p>
+              <div>
+                <Button
+                  className="px-0! py-0! leading-none h-fit! text-base! lg:text-lg!"
+                  variant="link"
+                  asChild
+                >
+                  <Link
+                    href="/products"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Lihat Detail Spek{" "}
+                    <ArrowRight className="size-4 -translate-y-px" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -217,6 +286,7 @@ export default function Home() {
       <PageContainer>
         <LayananIndustri />
         <AlasanMemilihKami />
+        <ProdukPilihanKami />
       </PageContainer>
     </>
   );
