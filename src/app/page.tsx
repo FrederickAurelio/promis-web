@@ -3,6 +3,11 @@ import HeroTransition from "@/components/transitions/hero-transition";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
   ArrowRight,
   Brain,
   CheckCircle,
@@ -173,7 +178,7 @@ const REASONS_TO_CHOOSE_US = [
 
 function AlasanMemilihKami() {
   return (
-    <section className="py-20 bg-card flex flex-col gap-12 md:grid md:grid-cols-7 items-center">
+    <section className="py-20 bg-card flex flex-col gap-8 md:gap-12 md:grid md:grid-cols-7 items-center">
       <Image
         src="/about.jpg"
         alt="Industrial Background"
@@ -226,7 +231,7 @@ const PRODUCTS = [
 
 function ProdukPilihanKami() {
   return (
-    <section className="py-20 pb-28 flex flex-col gap-12">
+    <section className="py-20 pb-32 flex flex-col gap-12">
       <div className="flex flex-col gap-3">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
           Produk Pilihan Kami
@@ -277,6 +282,70 @@ function ProdukPilihanKami() {
   );
 }
 
+const GALLERY_OPERATIONAL = [
+  {
+    id: 1,
+    image: "/about.jpg",
+    name: "Fasilitas Produksi",
+  },
+  {
+    id: 2,
+    image: "/about3.jpg",
+    name: "Stok Gudang",
+  },
+  {
+    id: 3,
+    image: "/photo_20_2024-02-01_08-37-17.jpg",
+    name: "Karyawan",
+  },
+  {
+    id: 4,
+    image: "/about.jpg",
+    name: "Produksi",
+  },
+];
+
+function GaleriOperasional() {
+  return (
+    <section className="py-24 pb-32 flex flex-col gap-2 md:gap-0">
+      <h2 className="text-3xl lg:text-4xl font-bold max-sm:max-w-[16ch] lg:leading-none">
+        Galeri Operasional
+      </h2>
+      <div className="flex justify-between md:items-end gap-4 md:gap-8 flex-col md:flex-row mb-7">
+        <p className="text-muted-foreground text-base lg:text-lg">
+          Sekilas pandang fasilitas produksi dan stok gudang kami.
+        </p>
+        <div className="max-md:flex max-md:justify-end">
+          <Button
+            className="lg:text-lg font-semibold lg:h-12 lg:px-8 "
+            size="lg"
+            variant="secondary"
+            asChild
+          >
+            <Link href="/about">Lihat Galeri Lengkap</Link>
+          </Button>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-5">
+        {GALLERY_OPERATIONAL.map((gallery) => (
+          <div
+            className="w-full h-full hover:scale-[102%] transition-transform duration-300 cursor-pointer"
+            key={gallery.id}
+          >
+            <Image
+              src={gallery.image}
+              alt={gallery.name}
+              width={500}
+              height={500}
+              className="w-full h-full object-cover aspect-square rounded-xl shadow-md"
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -287,6 +356,7 @@ export default function Home() {
         <LayananIndustri />
         <AlasanMemilihKami />
         <ProdukPilihanKami />
+        <GaleriOperasional />
       </PageContainer>
     </>
   );
