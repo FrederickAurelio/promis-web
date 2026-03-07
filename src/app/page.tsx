@@ -4,13 +4,14 @@ import HeroTransition from "@/components/transitions/hero-transition";
 import RevealCard from "@/components/transitions/reveal-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CarouselItem } from "@/components/ui/carousel";
+import { CarouselItem, CarouselPrevious } from "@/components/ui/carousel";
 import {
   ArrowRight,
   Brain,
   CheckCircle,
   Flame,
   FlaskConical,
+  MessageCircle,
   Palmtree,
   Pill,
   QuoteIcon,
@@ -269,11 +270,7 @@ function ProdukPilihanKami() {
                   variant="link"
                   asChild
                 >
-                  <Link
-                    href="/products"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href="/products">
                     Lihat Detail Spek{" "}
                     <ArrowRight className="size-4 -translate-y-px" />
                   </Link>
@@ -434,6 +431,50 @@ function Testimoni() {
   );
 }
 
+function ClickToAction() {
+  return (
+    <SectionContainer
+      rootClassName="bg-primary text-primary-foreground"
+      className="py-24 pb-28 flex flex-col gap-12"
+    >
+      <div className="flex flex-col gap-4">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
+          Siap Meningkatkan Efisiensi Pabrik Anda?
+        </h2>
+        <p className="text-base lg:text-lg text-center">
+          Hubungi spesialis teknis kami hari ini untuk konsultasi gratis dan
+          penawaran harga terbak.
+        </p>
+      </div>
+      <div className="flex justify-center gap-4 flex-col md:flex-row">
+        <Button
+          className="text-lg font-semibold flex items-center gap-1.5 text-primary bg-primary-foreground hover:bg-primary-foreground hover:text-primary shadow-none hover:scale-[102%] transition-all duration-200"
+          size="xl"
+          variant="default"
+          asChild
+        >
+          <Link
+            href="https://wa.me/6281234567890"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MessageCircle className="size-5" />
+            Chat WhatsApp Sekarang
+          </Link>
+        </Button>
+        <Button
+          className="text-lg font-semibold border border-primary-foreground hover:bg-primary-foreground hover:text-primary hover:scale-[103%] transition-all duration-200"
+          size="xl"
+          variant="default"
+          asChild
+        >
+          <Link href="/contact">Lihat Lokasi Kmai</Link>
+        </Button>
+      </div>
+    </SectionContainer>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -443,6 +484,7 @@ export default function Home() {
       <ProdukPilihanKami />
       <GaleriOperasional />
       <Testimoni />
+      <ClickToAction />
     </>
   );
 }
