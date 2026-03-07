@@ -1,7 +1,9 @@
 import SectionContainer from "@/components/layout/section-container";
+import CarouselAuto from "@/components/transitions/carousel-auto";
 import HeroTransition from "@/components/transitions/hero-transition";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { CarouselItem } from "@/components/ui/carousel";
 import {
   ArrowRight,
   Brain,
@@ -10,6 +12,7 @@ import {
   FlaskConical,
   Palmtree,
   Pill,
+  QuoteIcon,
   Settings,
   ShieldCheck,
   Smile,
@@ -98,7 +101,7 @@ const SEKTOR_INDUSTRI = [
 
 function LayananIndustri() {
   return (
-    <SectionContainer className="py-24 pb-32 flex flex-col gap-3">
+    <SectionContainer className="py-24 pb-32 lg:py-32 lg:pb-40 flex flex-col gap-3">
       <h2 className="text-3xl lg:text-4xl font-bold max-sm:max-w-[16ch]">
         Sektor Industri Yang Kami Layani
       </h2>
@@ -347,13 +350,78 @@ function GaleriOperasional() {
   );
 }
 
+const TESTIMONI = [
+  {
+    id: 2,
+    name: "Ibu Maya Lestari",
+    job: "Direktur PT. Petrokimia Gresik",
+    testimoni:
+      "Sprocket dari IndoChain sangat presisi dan tahan lama. Kualitasnya konsisten, membuat kami sangat puas dengan produk mereka.",
+  },
+  {
+    id: 3,
+    name: "Bpk. Ahmad Soejo",
+    job: "Manager PKS, Sumatera Utara",
+    testimoni:
+      "Konsultasi teknis dari tim IndoChain sangat membantu kami meningkatkan efisiensi produksi. Respons mereka cepat dan profesional.",
+  },
+  {
+    id: 1,
+    name: "Bpk. Agus Setiawan",
+    job: "Manager PKS, Sumatera Utara",
+    testimoni:
+      "Rantai dari IndoChain memiliki umur pakai 30% lebih lama dibanding merk sebelumnya. Ini sangat mengurangi biaya perawatan dan meningkatkan produktivitas.",
+  },
+  {
+    id: 4,
+    name: "Ibu Rina Dewi",
+    job: "Supervisor Produksi, PT. Agro Nusantara",
+    testimoni:
+      "Pelayanan IndoChain luar biasa. Mereka selalu siap memberikan solusi tepat dan produk selalu sesuai spesifikasi.",
+  },
+  {
+    id: 5,
+    name: "Bpk. Hendra Pratama",
+    job: "Engineering Head, PT. Sawit Makmur",
+    testimoni:
+      "Penggunaan komponen IndoChain membuat proses produksi lebih stabil dan minim gangguan. Kami merasa investasi ini sangat berharga.",
+  },
+];
+
 function Testimoni() {
   return (
     <SectionContainer className="py-20 pb-32 flex flex-col gap-12">
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
         Apa Kata Mitra Kami
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6"></div>
+      <CarouselAuto>
+        {TESTIMONI.map((testimoni) => (
+          <CarouselItem
+            className="md:basis-1/2 lg:basis-1/3 flex items-center justify-center"
+            key={testimoni.id}
+          >
+            <div
+              className="bg-card border border-border rounded-xl p-8 flex flex-col gap-4 relative"
+              key={testimoni.id}
+            >
+              <div className="absolute z-0 top-5 left-5">
+                <QuoteIcon className="size-7 text-primary/20" />
+              </div>
+              <p className="text-muted-foreground text-base lg:text-lg z-10 italic">
+                {testimoni.testimoni}
+              </p>
+              <div className="flex flex-col z-10">
+                <h2 className="font-semibold text-base lg:text-lg">
+                  {testimoni.name}
+                </h2>
+                <p className="text-muted-foreground text-sm lg:text-base">
+                  {testimoni.job}
+                </p>
+              </div>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselAuto>
     </SectionContainer>
   );
 }
