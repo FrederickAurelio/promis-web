@@ -106,7 +106,7 @@ function FooterNavigation() {
           <Link
             key={data.href}
             href={data.href}
-            className="text-muted-foreground hover:text-primary text-base transition-colors duration-300"
+            className="text-muted-foreground hover:text-primary w-fit text-base transition-colors duration-300"
           >
             {data.label}
           </Link>
@@ -125,7 +125,7 @@ function FooterProducts() {
           <Link
             key={data.href}
             href={data.href}
-            className="text-muted-foreground hover:text-primary text-base transition-colors duration-300"
+            className="text-muted-foreground hover:text-primary w-fit text-base transition-colors duration-300"
           >
             {data.label}
           </Link>
@@ -141,7 +141,7 @@ function FooterContact() {
       <h3 className="text-lg font-semibold">Hubungi Kami</h3>
 
       {CONTACT_ITEMS.map((data) => (
-        <div className="group flex items-start gap-4" key={data.href}>
+        <div className="group flex w-fit items-start gap-4 cursor-pointer" key={data.href}>
           <data.Icon className="text-muted-foreground group-hover:text-primary mt-1 size-5 shrink-0" />
           <Link
             href={data.href}

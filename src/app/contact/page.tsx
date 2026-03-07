@@ -73,7 +73,7 @@ function HubungiKami() {
                 href={info.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 lg:gap-4"
+                className="group flex items-center gap-3 lg:gap-4 w-fit"
                 key={info.label}
               >
                 <div className="border-primary/20 text-primary bg-primary/5 group-hover:bg-primary/10 group-hover:border-primary/40 shrink-0 rounded-xl border p-3 transition-colors duration-200">
@@ -83,7 +83,7 @@ function HubungiKami() {
                   <p className="text-foreground text-sm font-semibold md:text-base">
                     {info.label}
                   </p>
-                  <p className="text-foreground group-hover:text-primary decoration-primary/30 text-base font-medium underline-offset-4 transition-colors group-hover:underline lg:text-lg">
+                  <p className="text-muted-foreground group-hover:text-primary decoration-primary/30 text-base font-medium underline-offset-4 transition-colors group-hover:underline lg:text-lg">
                     {info.value}
                   </p>
                 </div>
