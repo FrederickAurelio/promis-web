@@ -1,20 +1,19 @@
 import SectionContainer from "@/components/layout/section-container";
 import RevealCard from "@/components/transitions/reveal-card";
-import { Button } from "@/components/ui/button";
-import { Handshake, Link, Sparkles, Trophy } from "lucide-react";
+import { Handshake, Sparkles, Trophy } from "lucide-react";
 import Image from "next/image";
 
 function Intro() {
   return (
-    <SectionContainer className="py-20 pb-24 flex flex-col gap-12">
+    <SectionContainer className="flex flex-col gap-12 py-20 pb-24">
       <div className="flex flex-col gap-1 text-center">
-        <span className="text-sm text-primary uppercase tracking-wider">
+        <span className="text-primary text-sm tracking-wider uppercase">
           PROFIL PERUSAHAAN
         </span>
-        <h1 className="text-4xl md:text-5xl font-semibold mb-6 leading-[1.1]">
+        <h1 className="mb-6 text-4xl leading-[1.1] font-semibold md:text-5xl">
           Dedikasi Untuk Industri Indonesia
         </h1>
-        <p className="text-muted-foreground text-base lg:text-lg max-w-4xl mx-auto">
+        <p className="text-muted-foreground mx-auto max-w-4xl text-base lg:text-lg">
           Sejak tahun 2010, IndoChain telah berkomitmen untuk menjadi tulang
           punggung sistem transmisi mekanikal di Indonesia. Kami menggabungkan
           teknologi manufaktur modern dengan pemahaman mendalam tentang
@@ -55,9 +54,9 @@ const TIMELINE_ITEMS = [
 
 function Timeline() {
   return (
-    <SectionContainer className="py-24 pb-32 flex flex-col gap-16">
-      <div className="flex flex-col gap-4 text-center max-w-2xl mx-auto">
-        <h3 className="text-3xl md:text-5xl font-bold">Perjalanan Kami</h3>
+    <SectionContainer className="flex flex-col gap-16 py-24 pb-32">
+      <div className="mx-auto flex max-w-2xl flex-col gap-4 text-center">
+        <h3 className="text-3xl font-bold md:text-5xl">Perjalanan Kami</h3>
         <p className="text-muted-foreground text-lg">
           Dedikasi kami dalam menyediakan solusi rantai industri dari tahun ke
           tahun.
@@ -65,7 +64,7 @@ function Timeline() {
       </div>
 
       <div className="relative mx-auto max-w-5xl px-4">
-        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-primary via-primary/30 to-primary/5 -translate-x-1/2" />
+        <div className="from-primary via-primary/30 to-primary/5 absolute top-0 bottom-0 left-4 w-0.5 -translate-x-1/2 bg-linear-to-b md:left-1/2" />
 
         <div className="flex flex-col gap-16 md:gap-12">
           {TIMELINE_ITEMS.map((milestone, idx) => (
@@ -76,18 +75,18 @@ function Timeline() {
                 }`}
               >
                 {/* Spacer untuk Desktop (sisi kosong) */}
-                <div className="hidden md:block w-[45%]" />
+                <div className="hidden w-[45%] md:block" />
 
                 {/* Titik Penanda (Sejajar tengah tahun) */}
-                <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-background border-4 border-primary rounded-full -translate-x-1/2 z-10 shadow-[0_0_0_4px_rgba(var(--primary),0.1)]" />
+                <div className="bg-background border-primary absolute left-0 z-10 h-4 w-4 -translate-x-1/2 rounded-full border-4 shadow-[0_0_0_4px_rgba(var(--primary),0.1)] md:left-1/2" />
 
                 {/* Kotak Konten */}
-                <div className="w-full md:w-[45%] pl-10 md:pl-5">
+                <div className="w-full pl-10 md:w-[45%] md:pl-5">
                   <div className="flex flex-col gap-1">
-                    <span className="text-primary font-black text-3xl tracking-tighter">
+                    <span className="text-primary text-3xl font-black tracking-tighter">
                       {milestone.year}
                     </span>
-                    <h4 className="text-xl font-bold text-foreground">
+                    <h4 className="text-foreground text-xl font-bold">
                       {milestone.title}
                     </h4>
                     <p className="text-muted-foreground leading-relaxed">
@@ -129,20 +128,20 @@ function NilaiKami() {
   return (
     <SectionContainer
       rootClassName="bg-card"
-      className="py-24 pb-32 flex flex-col gap-16"
+      className="flex flex-col gap-16 py-24 pb-32"
     >
-      <h3 className="text-2xl md:text-3xl font-bold text-center">
+      <h3 className="text-center text-2xl font-bold md:text-3xl">
         Nilai-Nilai Utama Kami
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6 lg:gap-8">
         {NILAI_KAMI_ITEMS.map((nilai) => (
           <div
-            className="flex flex-col gap-2 justify-center items-center p-8 bg-card border border-border rounded-xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer hover:border-accent-foreground hover:bg-white"
+            className="bg-card border-border hover:border-accent-foreground flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border p-8 transition-all duration-300 hover:-translate-y-1.5 hover:bg-white"
             key={nilai.name}
           >
-            <nilai.icon className="size-10 mb-3" />
-            <h4 className="text-xl font-bold text-center">{nilai.name}</h4>
-            <p className="text-muted-foreground text-base lg:text-lg text-center">
+            <nilai.icon className="mb-3 size-10" />
+            <h4 className="text-center text-xl font-bold">{nilai.name}</h4>
+            <p className="text-muted-foreground text-center text-base lg:text-lg">
               {nilai.description}
             </p>
           </div>
@@ -162,16 +161,16 @@ const PROCESS_MANUFACTURING_ITEMS = [
 
 function ProsesManufaktur() {
   return (
-    <SectionContainer className="py-20 flex flex-col-reverse gap-8 md:gap-12 md:grid md:grid-cols-7 items-center">
+    <SectionContainer className="flex flex-col-reverse items-center gap-8 py-20 md:grid md:grid-cols-7 md:gap-12">
       <Image
         src="/photo_20_2024-02-01_08-37-17.jpg"
         alt="Industrial Background"
         width={600}
         height={600}
-        className="object-cover aspect-4/3 rounded-xl flex-1 md:col-span-3 shadow-lg"
+        className="aspect-4/3 flex-1 rounded-xl object-cover shadow-lg md:col-span-3"
       />
-      <div className="flex-1 flex flex-col gap-4 w-full md:col-span-4">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+      <div className="flex w-full flex-1 flex-col gap-4 md:col-span-4">
+        <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
           Proses Manufaktur & Kontrol Kualitas
         </h2>
         <p className="text-muted-foreground text-base lg:text-lg">
@@ -181,7 +180,7 @@ function ProsesManufaktur() {
         <div className="flex flex-col gap-4">
           {PROCESS_MANUFACTURING_ITEMS.map((process, idx) => (
             <div className="flex items-center gap-2.5" key={idx}>
-              <div className="size-8 shrink-0 flex items-center justify-center rounded-full border-2 border-primary/20 text-primary">
+              <div className="border-primary/20 text-primary flex size-8 shrink-0 items-center justify-center rounded-full border-2">
                 <span className="text-base font-normal">{idx + 1}</span>
               </div>
               <div className="flex flex-col gap-0.5">
@@ -264,18 +263,18 @@ function Galeri() {
   return (
     <SectionContainer
       rootClassName="bg-card"
-      className="py-20 pb-32 flex flex-col gap-8"
+      className="flex flex-col gap-8 py-20 pb-32"
     >
       <div className="flex flex-col gap-2 text-center">
-        <h3 className="text-2xl md:text-3xl font-bold text-center">
+        <h3 className="text-center text-2xl font-bold md:text-3xl">
           Geleri Dokumentasi
         </h3>
-        <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
+        <p className="text-muted-foreground mx-auto max-w-2xl text-base md:text-lg">
           Melihat lebih dekat fasilitas, stok, dan pengiriman kami ke seluruh
           Indonesia.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:grid-cols-4">
         {GALLERY_ITEMS.map((gallery) => (
           <RevealCard
             once
@@ -283,17 +282,17 @@ function Galeri() {
             delay={0.6}
             randomDelay
             threshold={0.1}
-            className="bg-card border border-border rounded-xl flex flex-col overflow-hidden cursor-pointer group hover:scale-105 transition-transform duration-300 shadow-lg"
+            className="bg-card border-border group flex cursor-pointer flex-col overflow-hidden rounded-xl border shadow-lg transition-transform duration-300 hover:scale-105"
           >
             <Image
               src={gallery.image}
               alt={gallery.name}
               width={1000}
               height={1000}
-              className="w-full h-64 object-cover group-hover:scale-[102%] transition-transform duration-500"
+              className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-[102%]"
             />
             <div className="flex flex-col gap-1 p-4 pb-6 lg:p-6 lg:pb-8">
-              <h3 className="text-lg lg:text-xl font-bold">{gallery.name}</h3>
+              <h3 className="text-lg font-bold lg:text-xl">{gallery.name}</h3>
               <p className="text-muted-foreground text-base">
                 {gallery.description}
               </p>

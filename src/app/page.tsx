@@ -25,33 +25,33 @@ import Link from "next/link";
 
 function Hero() {
   return (
-    <SectionContainer className="h-[calc(var(--height-screen)-56px)] min-h-[600px] md:max-h-[1050px] md:h-[calc(var(--height-screen)-64px)]">
+    <SectionContainer className="h-[calc(var(--height-screen)-56px)] min-h-[600px] md:h-[calc(var(--height-screen)-64px)] md:max-h-[1050px]">
       <div className="absolute inset-0 z-0">
         <Image
           src="/about3.jpg"
           alt="Industrial Background"
           fill
-          className="w-full h-full object-cover opacity-30"
+          className="h-full w-full object-cover opacity-30"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-linear-to-r from-background via-background/80 via-50% to-transparent"></div>
+        <div className="from-background via-background/80 absolute inset-0 bg-linear-to-r via-50% to-transparent"></div>
       </div>
 
-      <HeroTransition className="max-w-3xl h-full flex flex-col justify-center items-start z-10 relative -translate-y-4">
+      <HeroTransition className="relative z-10 flex h-full max-w-3xl -translate-y-4 flex-col items-start justify-center">
         {/* use Badge components */}
-        <Badge className="px-4 py-1 bg-primary/10 text-primary rounded-full font-semibold text-sm mb-6 uppercase tracking-wider">
+        <Badge className="bg-primary/10 text-primary mb-6 rounded-full px-4 py-1 text-sm font-semibold tracking-wider uppercase">
           Pemimpin Pasar Transmisi Daya
         </Badge>
-        <h1 className="text-5xl md:text-7xl font-semibold mb-6 leading-[1.1]">
+        <h1 className="mb-6 text-5xl leading-[1.1] font-semibold md:text-7xl">
           Solusi Rantai <span className="text-primary">Presisi</span> Untuk
           Efisiensi Pabrik
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl">
+        <p className="text-muted-foreground mb-10 max-w-2xl text-xl md:text-2xl">
           IndoChain menyediakan komponen conveyor chain dan sprocket kelas dunia
           yang dirancang khusus untuk meningkatkan produktivitas pabrik kelapa
           sawit di seluruh Indonesia.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col gap-4 sm:flex-row">
           <Button
             className="text-lg font-semibold"
             size="xl"
@@ -59,7 +59,7 @@ function Hero() {
             asChild
           >
             <Link href="/products">
-              <div className="w-full flex items-center justify-between gap-2">
+              <div className="flex w-full items-center justify-between gap-2">
                 Jelajahi Produk <ArrowRight className="size-5" />
               </div>
             </Link>
@@ -67,7 +67,7 @@ function Hero() {
 
           <Button className="text-lg" size="xl" variant="secondary" asChild>
             <Link href="/about">
-              <div className="w-full flex items-center justify-between gap-2">
+              <div className="flex w-full items-center justify-between gap-2">
                 Tentang Kami <ArrowRight className="size-5" />
               </div>
             </Link>
@@ -103,18 +103,18 @@ const SEKTOR_INDUSTRI = [
 
 function LayananIndustri() {
   return (
-    <SectionContainer className="py-24 pb-32 lg:py-32 lg:pb-40 flex flex-col gap-3">
-      <h2 className="text-3xl lg:text-4xl font-bold max-sm:max-w-[16ch]">
+    <SectionContainer className="flex flex-col gap-3 py-24 pb-32 lg:py-32 lg:pb-40">
+      <h2 className="text-3xl font-bold max-sm:max-w-[16ch] lg:text-4xl">
         Sektor Industri Yang Kami Layani
       </h2>
-      <div className="flex justify-between md:items-end gap-4 md:gap-8 flex-col md:flex-row mb-7">
+      <div className="mb-7 flex flex-col justify-between gap-4 md:flex-row md:items-end md:gap-8">
         <p className="text-muted-foreground text-base lg:text-lg">
           Meskipun spesialisasi kami adalah Kelapa Sawit, keahlian teknik kami
           mencakup berbagai industri berat lainnya.
         </p>
         <div>
           <Button
-            className="px-0! py-0! leading-none h-fit! text-base! lg:text-lg!"
+            className="h-fit! px-0! py-0! text-base! leading-none lg:text-lg!"
             variant="link"
             asChild
           >
@@ -128,14 +128,14 @@ function LayananIndustri() {
           </Button>
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
         {SEKTOR_INDUSTRI.map((sektor) => (
           <RevealCard
             randomDelay
             delay={0.6}
             threshold={0.3}
             key={sektor.name}
-            className="bg-card border border-border rounded-xl p-4 py-8 flex flex-col items-center justify-center gap-2 hover:bg-accent hover:border-accent-foreground transition-all duration-300 cursor-pointer hover:-translate-y-1"
+            className="bg-card border-border hover:bg-accent hover:border-accent-foreground flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border p-4 py-8 transition-all duration-300 hover:-translate-y-1"
           >
             <sektor.icon className="size-10" />
             <h3 className="text-lg font-bold">{sektor.name}</h3>
@@ -183,17 +183,17 @@ function AlasanMemilihKami() {
   return (
     <SectionContainer
       rootClassName="bg-card"
-      className="py-20 flex flex-col gap-8 md:gap-12 md:grid md:grid-cols-7 items-center"
+      className="flex flex-col items-center gap-8 py-20 md:grid md:grid-cols-7 md:gap-12"
     >
       <Image
         src="/about.jpg"
         alt="Industrial Background"
         width={600}
         height={600}
-        className="object-cover aspect-4/3 rounded-xl flex-1 md:col-span-3 shadow-lg"
+        className="aspect-4/3 flex-1 rounded-xl object-cover shadow-lg md:col-span-3"
       />
-      <div className="flex-1 flex flex-col gap-4 w-full md:col-span-4">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+      <div className="flex w-full flex-1 flex-col gap-4 md:col-span-4">
+        <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
           Mengapa Memilih Promis?
         </h2>
         <p className="text-muted-foreground text-base lg:text-lg">
@@ -203,12 +203,12 @@ function AlasanMemilihKami() {
         <div className="flex flex-col gap-3">
           {REASONS_TO_CHOOSE_US.map((reason) => (
             <div className="flex items-center gap-4" key={reason.title}>
-              <div className="size-10 shrink-0 flex items-center justify-center rounded-full border-2 border-primary/20 text-primary">
+              <div className="border-primary/20 text-primary flex size-10 shrink-0 items-center justify-center rounded-full border-2">
                 <reason.icon className="size-5" />
               </div>
               <div className="flex flex-col gap-0.5">
                 <h3 className="text-lg font-bold">{reason.title}</h3>
-                <p className="text-muted-foreground text-base ">
+                <p className="text-muted-foreground text-base">
                   {reason.description}
                 </p>
               </div>
@@ -237,36 +237,36 @@ const PRODUCTS = [
 
 function ProdukPilihanKami() {
   return (
-    <SectionContainer className="py-20 pb-32 flex flex-col gap-12">
+    <SectionContainer className="flex flex-col gap-12 py-20 pb-32">
       <div className="flex flex-col gap-3">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
+        <h2 className="text-center text-2xl font-bold md:text-3xl lg:text-4xl">
           Produk Pilihan Kami
         </h2>
-        <p className="text-muted-foreground text-base lg:text-lg text-center">
+        <p className="text-muted-foreground text-center text-base lg:text-lg">
           Komponen kritis yang dirancang untuk durabilitas ekstrem.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6">
         {PRODUCTS.map((product) => (
           <div
             key={product.name}
-            className="bg-card border border-border rounded-xl flex flex-col overflow-hidden cursor-pointer group"
+            className="bg-card border-border group flex cursor-pointer flex-col overflow-hidden rounded-xl border"
           >
             <Image
               src={product.image}
               alt={product.name}
               width={1000}
               height={1000}
-              className="w-full h-80 object-cover group-hover:scale-[102%] transition-transform duration-500"
+              className="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-[102%]"
             />
-            <div className="flex flex-col gap-2 p-4 pb-6 lg:p-6 lg:pb-8 lg:gap-3">
-              <h3 className="text-lg lg:text-xl font-bold">{product.name}</h3>
+            <div className="flex flex-col gap-2 p-4 pb-6 lg:gap-3 lg:p-6 lg:pb-8">
+              <h3 className="text-lg font-bold lg:text-xl">{product.name}</h3>
               <p className="text-muted-foreground text-base lg:text-lg">
                 {product.description}
               </p>
               <div>
                 <Button
-                  className="px-0! py-0! leading-none h-fit! text-base! lg:text-lg!"
+                  className="h-fit! px-0! py-0! text-base! leading-none lg:text-lg!"
                   variant="link"
                   asChild
                 >
@@ -311,18 +311,18 @@ function GaleriOperasional() {
   return (
     <SectionContainer
       rootClassName="bg-card"
-      className="py-20 flex flex-col gap-2 md:gap-0"
+      className="flex flex-col gap-2 py-20 md:gap-0"
     >
-      <h2 className="text-3xl lg:text-4xl font-bold max-sm:max-w-[16ch] lg:leading-none">
+      <h2 className="text-3xl font-bold max-sm:max-w-[16ch] lg:text-4xl lg:leading-none">
         Galeri Operasional
       </h2>
-      <div className="flex justify-between md:items-end gap-4 md:gap-8 flex-col md:flex-row mb-7">
+      <div className="mb-7 flex flex-col justify-between gap-4 md:flex-row md:items-end md:gap-8">
         <p className="text-muted-foreground text-base lg:text-lg">
           Sekilas pandang fasilitas produksi dan stok gudang kami.
         </p>
         <div className="max-md:flex max-md:justify-end">
           <Button
-            className="lg:text-lg font-semibold lg:h-12 lg:px-8 "
+            className="font-semibold lg:h-12 lg:px-8 lg:text-lg"
             size="lg"
             variant="secondary"
             asChild
@@ -331,11 +331,11 @@ function GaleriOperasional() {
           </Button>
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-5">
+      <div className="grid grid-cols-2 gap-3 md:grid-cols-4 lg:gap-5">
         {GALLERY_OPERATIONAL.map((gallery) => {
           return (
             <RevealCard
-              className="w-full h-full hover:scale-[102%] transition-transform duration-300 cursor-pointer"
+              className="h-full w-full cursor-pointer transition-transform duration-300 hover:scale-[102%]"
               key={gallery.id}
               randomDelay
               delay={0.5}
@@ -345,7 +345,7 @@ function GaleriOperasional() {
                 alt={gallery.name}
                 width={500}
                 height={500}
-                className="w-full h-full object-cover aspect-square rounded-xl shadow-md"
+                className="aspect-square h-full w-full rounded-xl object-cover shadow-md"
               />
             </RevealCard>
           );
@@ -395,28 +395,28 @@ const TESTIMONI = [
 
 function Testimoni() {
   return (
-    <SectionContainer className="py-20 pb-32 flex flex-col gap-12">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
+    <SectionContainer className="flex flex-col gap-12 py-20 pb-32">
+      <h2 className="text-center text-2xl font-bold md:text-3xl lg:text-4xl">
         Apa Kata Mitra Kami
       </h2>
       <CarouselAuto delay={3000}>
         {TESTIMONI.map((testimoni) => (
           <CarouselItem
-            className="md:basis-1/2 lg:basis-1/3 flex items-center justify-center"
+            className="flex items-center justify-center md:basis-1/2 lg:basis-1/3"
             key={testimoni.id}
           >
             <div
-              className="bg-card border border-border rounded-xl p-8 flex flex-col gap-4 relative"
+              className="bg-card border-border relative flex flex-col gap-4 rounded-xl border p-8"
               key={testimoni.id}
             >
-              <div className="absolute z-0 top-5 left-5">
-                <QuoteIcon className="size-7 text-primary/20" />
+              <div className="absolute top-5 left-5 z-0">
+                <QuoteIcon className="text-primary/20 size-7" />
               </div>
-              <p className="text-muted-foreground text-base lg:text-lg z-10 italic">
+              <p className="text-muted-foreground z-10 text-base italic lg:text-lg">
                 {testimoni.testimoni}
               </p>
-              <div className="flex flex-col z-10">
-                <h2 className="font-semibold text-base lg:text-lg">
+              <div className="z-10 flex flex-col">
+                <h2 className="text-base font-semibold lg:text-lg">
                   {testimoni.name}
                 </h2>
                 <p className="text-muted-foreground text-sm lg:text-base">
@@ -435,20 +435,20 @@ function ClickToAction() {
   return (
     <SectionContainer
       rootClassName="bg-primary text-primary-foreground"
-      className="py-24 pb-28 flex flex-col gap-12"
+      className="flex flex-col gap-12 py-24 pb-28"
     >
       <div className="flex flex-col gap-4">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
+        <h2 className="text-center text-2xl font-bold md:text-3xl lg:text-4xl">
           Siap Meningkatkan Efisiensi Pabrik Anda?
         </h2>
-        <p className="text-base lg:text-lg text-center">
+        <p className="text-center text-base lg:text-lg">
           Hubungi spesialis teknis kami hari ini untuk konsultasi gratis dan
           penawaran harga terbak.
         </p>
       </div>
-      <div className="flex justify-center gap-4 flex-col md:flex-row">
+      <div className="flex flex-col justify-center gap-4 md:flex-row">
         <Button
-          className="text-lg font-semibold flex items-center gap-1.5 text-primary bg-primary-foreground hover:bg-primary-foreground hover:text-primary shadow-none hover:scale-[102%] transition-all duration-200"
+          className="text-primary bg-primary-foreground hover:bg-primary-foreground hover:text-primary flex items-center gap-1.5 text-lg font-semibold shadow-none transition-all duration-200 hover:scale-[102%]"
           size="xl"
           variant="default"
           asChild
@@ -463,7 +463,7 @@ function ClickToAction() {
           </Link>
         </Button>
         <Button
-          className="text-lg font-semibold border border-primary-foreground hover:bg-primary-foreground hover:text-primary hover:scale-[103%] transition-all duration-200"
+          className="border-primary-foreground hover:bg-primary-foreground hover:text-primary border text-lg font-semibold transition-all duration-200 hover:scale-[103%]"
           size="xl"
           variant="default"
           asChild
