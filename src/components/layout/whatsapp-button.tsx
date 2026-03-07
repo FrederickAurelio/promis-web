@@ -1,3 +1,4 @@
+import { WHATSAPP_LINK } from "@/constant";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -12,7 +13,7 @@ export default function WhatsappButton() {
       <Tooltip>
         <TooltipTrigger asChild>
           <Link
-            href="https://wa.me/6281234567890"
+            href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
           >

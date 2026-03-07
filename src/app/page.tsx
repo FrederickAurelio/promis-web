@@ -5,6 +5,7 @@ import RevealCard from "@/components/transitions/reveal-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CarouselItem } from "@/components/ui/carousel";
+import { WHATSAPP_LINK } from "@/constant";
 import {
   ArrowRight,
   Brain,
@@ -119,7 +120,7 @@ function LayananIndustri() {
             asChild
           >
             <Link
-              href="https://wa.me/6281234567890"
+              href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -454,7 +455,7 @@ function ClickToAction() {
           asChild
         >
           <Link
-            href="https://wa.me/6281234567890"
+            href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
           >

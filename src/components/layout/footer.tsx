@@ -1,5 +1,14 @@
 import { Button } from "@/components/ui/button";
 import {
+  ADDRESS,
+  EMAIL,
+  MAILTO_LINK,
+  MAPS_QUERY_URL,
+  PHONE_DISPLAY,
+  SOCIAL_LINKS as SOCIAL_LINKS_CONST,
+  TEL_LINK,
+} from "@/constant";
+import {
   FacebookIcon,
   InstagramIcon,
   LinkedinIcon,
@@ -12,17 +21,17 @@ import Link from "next/link";
 
 const SOCIAL_LINKS = [
   {
-    href: "https://www.facebook.com/promischain",
+    href: SOCIAL_LINKS_CONST.facebook,
     label: "Follow us on Facebook",
     Icon: FacebookIcon,
   },
   {
-    href: "https://www.instagram.com/promischain",
+    href: SOCIAL_LINKS_CONST.instagram,
     label: "Follow us on Instagram",
     Icon: InstagramIcon,
   },
   {
-    href: "https://www.linkedin.com/company/promischain",
+    href: SOCIAL_LINKS_CONST.linkedin,
     label: "Follow us on LinkedIn",
     Icon: LinkedinIcon,
   },
@@ -44,21 +53,9 @@ const PRODUCTS_ITEMS = [
 ];
 
 const CONTACT_ITEMS = [
-  {
-    href: "https://www.google.com/maps?q=Jl.+Raya+Jakarta+No.+123,+Jakarta+Selatan",
-    label: "Jl. Raya Jakarta No. 123, Jakarta Selatan",
-    Icon: MapPinIcon,
-  },
-  {
-    href: "tel:+6281234567890",
-    label: "+62 812 3456 7890",
-    Icon: PhoneIcon,
-  },
-  {
-    href: "mailto:promischain@gmail.com",
-    label: "promischain@gmail.com",
-    Icon: MailIcon,
-  },
+  { href: MAPS_QUERY_URL, label: ADDRESS, Icon: MapPinIcon },
+  { href: TEL_LINK, label: PHONE_DISPLAY, Icon: PhoneIcon },
+  { href: MAILTO_LINK, label: EMAIL, Icon: MailIcon },
 ];
 
 function FooterBrandAndSocials() {
@@ -75,7 +72,7 @@ function FooterBrandAndSocials() {
         />
       </Link>
 
-      <p className="leading-relaxed text-muted-foreground max-w-xs">
+      <p className="text-muted-foreground max-w-xs leading-relaxed">
         Penyedia terpercaya solusi rantai konveyor dan sprocket berkualitas
         tinggi khusus untuk industri kelapa sawit di Indonesia.
       </p>
@@ -91,7 +88,7 @@ function FooterBrandAndSocials() {
             className="group"
           >
             <Link href={href} target="_blank" rel="noopener noreferrer">
-              <Icon className="size-5 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+              <Icon className="text-muted-foreground group-hover:text-primary size-5 transition-colors duration-300" />
             </Link>
           </Button>
         ))}
@@ -109,7 +106,7 @@ function FooterNavigation() {
           <Link
             key={data.href}
             href={data.href}
-            className="text-base text-muted-foreground hover:text-primary transition-colors duration-300"
+            className="text-muted-foreground hover:text-primary text-base transition-colors duration-300"
           >
             {data.label}
           </Link>
@@ -128,7 +125,7 @@ function FooterProducts() {
           <Link
             key={data.href}
             href={data.href}
-            className="text-base text-muted-foreground hover:text-primary transition-colors duration-300"
+            className="text-muted-foreground hover:text-primary text-base transition-colors duration-300"
           >
             {data.label}
           </Link>
@@ -144,13 +141,13 @@ function FooterContact() {
       <h3 className="text-lg font-semibold">Hubungi Kami</h3>
 
       {CONTACT_ITEMS.map((data) => (
-        <div className="flex items-start gap-4 group" key={data.href}>
-          <data.Icon className="size-5 text-muted-foreground mt-1 group-hover:text-primary" />
+        <div className="group flex items-start gap-4" key={data.href}>
+          <data.Icon className="text-muted-foreground group-hover:text-primary mt-1 size-5 shrink-0" />
           <Link
             href={data.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-base text-muted-foreground underline-offset-4 hover:text-primary hover:underline group-hover:text-primary group-hover:underline"
+            className="text-muted-foreground hover:text-primary group-hover:text-primary text-base underline-offset-4 group-hover:underline hover:underline"
           >
             {data.label}
           </Link>
@@ -162,9 +159,9 @@ function FooterContact() {
 
 export default function Footer() {
   return (
-    <footer className="bg-card border-t border-border pt-12 pb-8">
+    <footer className="bg-card border-border border-t pt-12 pb-8">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-16">
           <FooterBrandAndSocials />
           <FooterNavigation />
           <FooterContact />

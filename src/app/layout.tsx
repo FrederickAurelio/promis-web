@@ -3,6 +3,7 @@ import Navbar from "@/components/layout/navbar";
 import ViewportProvider from "@/components/layout/viewport-provider";
 import WhatsappButton from "@/components/layout/whatsapp-button";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { COMPANY_NAME, WEBSITE_URL } from "@/constant";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -19,22 +20,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Promis Conveyor Chain",
-  description:
-    "Promis Conveyor Chain, Conveyor Chain & Sprockets For Palm Oil Mills",
-  keywords: [
-    "Promis Conveyor Chain",
-    "Conveyor Chain",
-    "Sprockets",
-    "Palm Oil Mills",
-  ],
-  authors: [{ name: "Promis Conveyor Chain", url: "https://promischain.com" }],
-  creator: "Promis Conveyor Chain",
-  publisher: "Promis Conveyor Chain",
+  title: COMPANY_NAME,
+  description: `${COMPANY_NAME}, Conveyor Chain & Sprockets For Palm Oil Mills`,
+  keywords: [COMPANY_NAME, "Conveyor Chain", "Sprockets", "Palm Oil Mills"],
+  authors: [{ name: COMPANY_NAME, url: WEBSITE_URL }],
+  creator: COMPANY_NAME,
+  publisher: COMPANY_NAME,
   openGraph: {
-    title: "Promis Conveyor Chain",
-    description:
-      "Promis Conveyor Chain, Conveyor Chain & Sprockets For Palm Oil Mills",
+    title: COMPANY_NAME,
+    description: `${COMPANY_NAME}, Conveyor Chain & Sprockets For Palm Oil Mills`,
   },
 };
 
