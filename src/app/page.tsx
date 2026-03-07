@@ -1,6 +1,7 @@
 import SectionContainer from "@/components/layout/section-container";
 import CarouselAuto from "@/components/transitions/carousel-auto";
 import HeroTransition from "@/components/transitions/hero-transition";
+import RevealCard from "@/components/transitions/reveal-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CarouselItem } from "@/components/ui/carousel";
@@ -128,13 +129,16 @@ function LayananIndustri() {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {SEKTOR_INDUSTRI.map((sektor) => (
-          <div
+          <RevealCard
+            randomDelay
+            delay={0.6}
+            threshold={0.3}
             key={sektor.name}
             className="bg-card border border-border rounded-xl p-4 py-8 flex flex-col items-center justify-center gap-2 hover:bg-accent hover:border-accent-foreground transition-all duration-300 cursor-pointer hover:-translate-y-1"
           >
             <sektor.icon className="size-10" />
             <h3 className="text-lg font-bold">{sektor.name}</h3>
-          </div>
+          </RevealCard>
         ))}
       </div>
     </SectionContainer>
@@ -331,20 +335,24 @@ function GaleriOperasional() {
         </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-5">
-        {GALLERY_OPERATIONAL.map((gallery) => (
-          <div
-            className="w-full h-full hover:scale-[102%] transition-transform duration-300 cursor-pointer"
-            key={gallery.id}
-          >
-            <Image
-              src={gallery.image}
-              alt={gallery.name}
-              width={500}
-              height={500}
-              className="w-full h-full object-cover aspect-square rounded-xl shadow-md"
-            />
-          </div>
-        ))}
+        {GALLERY_OPERATIONAL.map((gallery) => {
+          return (
+            <RevealCard
+              className="w-full h-full hover:scale-[102%] transition-transform duration-300 cursor-pointer"
+              key={gallery.id}
+              randomDelay
+              delay={0.5}
+            >
+              <Image
+                src={gallery.image}
+                alt={gallery.name}
+                width={500}
+                height={500}
+                className="w-full h-full object-cover aspect-square rounded-xl shadow-md"
+              />
+            </RevealCard>
+          );
+        })}
       </div>
     </SectionContainer>
   );
@@ -394,7 +402,7 @@ function Testimoni() {
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
         Apa Kata Mitra Kami
       </h2>
-      <CarouselAuto>
+      <CarouselAuto delay={3000}>
         {TESTIMONI.map((testimoni) => (
           <CarouselItem
             className="md:basis-1/2 lg:basis-1/3 flex items-center justify-center"
@@ -428,13 +436,13 @@ function Testimoni() {
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <LayananIndustri />
       <AlasanMemilihKami />
       <ProdukPilihanKami />
       <GaleriOperasional />
       <Testimoni />
-    </main>
+    </>
   );
 }
