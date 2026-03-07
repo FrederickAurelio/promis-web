@@ -60,24 +60,24 @@ export default function Navbar() {
     >
       <div
         className={cn(
-          "w-full transition-all duration-300 ",
+          "w-full transition-all duration-300",
           !scrolled
-            ? "bg-transparent backdrop-blur-0"
-            : "backdrop-blur-md bg-background/70 shadow-md",
+            ? "backdrop-blur-0 bg-transparent"
+            : "bg-background/70 shadow-md backdrop-blur-md",
         )}
       >
         <div
           className={cn(
-            "container mx-auto flex items-center justify-between px-4 md:px-6 lg:px-10 transition-all duration-300",
+            "container mx-auto flex items-center justify-between px-4 transition-all duration-300 md:px-6 lg:px-10",
             scrolled ? "h-12 md:h-14" : "h-14 md:h-16",
           )}
         >
           <div className="flex items-center">
             {/* Mobile */}
-            <div className="items-center md:hidden mr-1">
+            <div className="mr-1 items-center md:hidden">
               <Button
                 onClick={() => setIsMenuOpen((prev) => !prev)}
-                className="rounded-[10px] size-7 translate-y-px"
+                className="size-7 translate-y-px rounded-[10px]"
                 size="icon-sm"
                 variant="ghost"
               >
@@ -94,11 +94,11 @@ export default function Navbar() {
               width={200}
               height={45}
               priority
-              className="h-7 md:h-8 w-auto object-contain"
+              className="h-7 w-auto object-contain md:h-8"
             />
           </div>
 
-          <div className="items-center hidden md:flex md:gap-2 lg:gap-3 xl:gap-4">
+          <div className="hidden items-center md:flex md:gap-1 lg:gap-2 xl:gap-3">
             {NAV_ITEMS.map((item) => (
               <Button
                 key={item.href}
@@ -118,7 +118,7 @@ export default function Navbar() {
               size="lg"
               variant="default"
               asChild
-              className="text-base font-semibold ml-2"
+              className="ml-2 text-base font-semibold"
             >
               <Link href="/contact">Minta Penawaran</Link>
             </Button>
@@ -129,7 +129,7 @@ export default function Navbar() {
               size="sm"
               variant="default"
               asChild
-              className="text-sm font-semibold ml-2"
+              className="ml-2 text-sm font-semibold"
             >
               <Link href="/contact">Minta Penawaran</Link>
             </Button>
@@ -137,7 +137,7 @@ export default function Navbar() {
         </div>
       </div>
       <CollapseTransition open={isMenuOpen} direction="vertical" duration={350}>
-        <div className="md:hidden bg-background/70 backdrop-blur-md">
+        <div className="bg-background/70 backdrop-blur-md md:hidden">
           <div className="container mx-auto px-4 md:px-6 lg:px-10">
             <div className="flex flex-col py-2">
               {NAV_ITEMS.map((item) => (
@@ -148,7 +148,7 @@ export default function Navbar() {
                   asChild
                   onClick={() => setIsMenuOpen(false)}
                   className={cn(
-                    "w-full justify-start px-4 py-2 text-base rounded-none text-foreground/90 hover:bg-accent hover:text-accent-foreground",
+                    "text-foreground/90 hover:bg-accent hover:text-accent-foreground w-full justify-start rounded-none px-4 py-2 text-base",
                     isActive(item.href) &&
                       "bg-accent text-primary hover:text-primary",
                   )}
