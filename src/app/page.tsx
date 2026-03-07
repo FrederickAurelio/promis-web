@@ -4,7 +4,7 @@ import HeroTransition from "@/components/transitions/hero-transition";
 import RevealCard from "@/components/transitions/reveal-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CarouselItem, CarouselPrevious } from "@/components/ui/carousel";
+import { CarouselItem } from "@/components/ui/carousel";
 import {
   ArrowRight,
   Brain,
