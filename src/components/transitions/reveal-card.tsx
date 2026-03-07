@@ -9,6 +9,7 @@ interface RevealCardProps {
   randomDelay?: boolean;
   threshold?: number;
   duration?: number;
+  once?: boolean;
 }
 
 export default function RevealCard({
@@ -18,6 +19,7 @@ export default function RevealCard({
   randomDelay = false,
   threshold = 0.2,
   duration = 1,
+  once = false,
 }: RevealCardProps) {
   // Lazy initialization ensures Math.random() is only called once per component
   const [delayValue] = useState(() =>
@@ -38,7 +40,7 @@ export default function RevealCard({
         opacity: 1,
       }}
       exit={{ transform: "translateY(0)", filter: "blur(10px)", opacity: 0 }}
-      viewport={{ once: false, amount: threshold }}
+      viewport={{ once, amount: threshold }}
       transition={{
         type: "tween",
         duration,

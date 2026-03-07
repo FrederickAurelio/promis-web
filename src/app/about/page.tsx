@@ -277,8 +277,12 @@ function Galeri() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-6">
         {GALLERY_ITEMS.map((gallery) => (
-          <div
+          <RevealCard
+            once
             key={gallery.id}
+            delay={0.6}
+            randomDelay
+            threshold={0.1}
             className="bg-card border border-border rounded-xl flex flex-col overflow-hidden cursor-pointer group hover:scale-105 transition-transform duration-300 shadow-lg"
           >
             <Image
@@ -294,7 +298,7 @@ function Galeri() {
                 {gallery.description}
               </p>
             </div>
-          </div>
+          </RevealCard>
         ))}
       </div>
     </SectionContainer>
