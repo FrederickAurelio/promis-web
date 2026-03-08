@@ -1,4 +1,6 @@
 import SectionContainer from "@/components/layout/section-container";
+import CarouselAuto from "@/components/transitions/carousel-auto";
+import { CarouselItem } from "@/components/ui/carousel";
 import Image from "next/image";
 import {
   Table,
@@ -15,7 +17,7 @@ import Link from "next/link";
 const products = [
   {
     name: "Conveyor Chain (Rantai Konveyor)",
-    image: "/photo_20_2024-02-01_08-37-17.jpg",
+    images: ["/about.jpg", "/photo_20_2024-02-01_08-37-17.jpg", "/about3.jpg"],
     specs: [
       { spesifikasi: "Material", detail: "Alloy Steel / Stainless Steel" },
       { spesifikasi: "Pitch Range", detail: "100mm - 300mm" },
@@ -28,7 +30,7 @@ const products = [
   },
   {
     name: "Sprocket (Sproket)",
-    image: "/photo_20_2024-02-01_08-37-17.jpg",
+    images: ["/photo_20_2024-02-01_08-37-17.jpg", "/about.jpg", "/about3.jpg"],
     specs: [
       { spesifikasi: "Material", detail: "Alloy Steel / Stainless Steel" },
       { spesifikasi: "Pitch Range", detail: "100mm - 300mm" },
@@ -59,14 +61,22 @@ function Katalog() {
             key={product.name}
             className="grid grid-cols-1 items-center gap-8 md:grid-cols-5 md:gap-12 lg:gap-16"
           >
-            <div className="group bg-card border-border relative aspect-square overflow-hidden rounded-2xl border shadow-md md:col-span-2">
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                priority
-              />
+            <div className="bg-card border-border relative aspect-square overflow-hidden rounded-2xl border shadow-lg **:data-[slot=carousel-item]:ml-0 **:data-[slot=carousel-item]:pl-0 md:col-span-2 [&_[data-slot=carousel-content]>div]:ml-0">
+              <CarouselAuto showBadge delay={4000}>
+                {product.images.map((src) => (
+                  <CarouselItem key={src}>
+                    <div className="relative aspect-square w-full">
+                      <Image
+                        src={src}
+                        alt={product.name}
+                        fill
+                        className="object-cover"
+                        priority
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselAuto>
             </div>
 
             <div className="flex flex-col gap-6 md:col-span-3 lg:gap-8">
