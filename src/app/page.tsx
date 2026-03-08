@@ -186,13 +186,14 @@ function AlasanMemilihKami() {
       rootClassName="bg-card"
       className="flex flex-col items-center gap-8 py-20 md:grid md:grid-cols-7 md:gap-12"
     >
-      <Image
-        src="/about.jpg"
-        alt="Industrial Background"
-        width={600}
-        height={600}
-        className="aspect-4/3 flex-1 rounded-xl object-cover shadow-lg md:col-span-3"
-      />
+      <div className="relative aspect-4/3 flex-1 md:col-span-3">
+        <Image
+          src="/about.jpg"
+          alt="Industrial Background"
+          fill
+          className="rounded-xl object-cover shadow-lg"
+        />
+      </div>
       <div className="flex w-full flex-1 flex-col gap-4 md:col-span-4">
         <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
           Mengapa Memilih Promis?
@@ -253,13 +254,14 @@ function ProdukPilihanKami() {
             key={product.name}
             className="bg-card border-border group flex cursor-pointer flex-col overflow-hidden rounded-xl border"
           >
-            <Image
-              src={product.image}
-              alt={product.name}
-              width={1000}
-              height={1000}
-              className="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-[102%]"
-            />
+            <div className="relative h-80 w-full">
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-[102%]"
+              />
+            </div>
             <div className="flex flex-col gap-2 p-4 pb-6 lg:gap-3 lg:p-6 lg:pb-8">
               <h3 className="text-lg font-bold lg:text-xl">{product.name}</h3>
               <p className="text-muted-foreground text-base lg:text-lg">
@@ -341,13 +343,14 @@ function GaleriOperasional() {
               randomDelay
               delay={0.5}
             >
-              <Image
-                src={gallery.image}
-                alt={gallery.name}
-                width={500}
-                height={500}
-                className="aspect-square h-full w-full rounded-xl object-cover shadow-md"
-              />
+              <div className="relative aspect-square h-full w-full">
+                <Image
+                  src={gallery.image}
+                  alt={gallery.name}
+                  fill
+                  className="rounded-xl object-cover shadow-md"
+                />
+              </div>
             </RevealCard>
           );
         })}

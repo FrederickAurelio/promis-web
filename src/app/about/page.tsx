@@ -162,13 +162,14 @@ const PROCESS_MANUFACTURING_ITEMS = [
 function ProsesManufaktur() {
   return (
     <SectionContainer className="flex flex-col-reverse items-center gap-8 py-20 md:grid md:grid-cols-7 md:gap-12">
-      <Image
-        src="/photo_20_2024-02-01_08-37-17.jpg"
-        alt="Industrial Background"
-        width={600}
-        height={600}
-        className="aspect-4/3 flex-1 rounded-xl object-cover shadow-lg md:col-span-3"
-      />
+      <div className="relative aspect-4/3 flex-1 md:col-span-3">
+        <Image
+          src="/photo_20_2024-02-01_08-37-17.jpg"
+          alt="Industrial Background"
+          fill
+          className="rounded-xl object-cover shadow-lg"
+        />
+      </div>
       <div className="flex w-full flex-1 flex-col gap-4 md:col-span-4">
         <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
           Proses Manufaktur & Kontrol Kualitas
@@ -284,13 +285,14 @@ function Galeri() {
             threshold={0.1}
             className="bg-card border-border group flex cursor-pointer flex-col overflow-hidden rounded-xl border shadow-lg transition-transform duration-300 hover:scale-105"
           >
-            <Image
-              src={gallery.image}
-              alt={gallery.name}
-              width={1000}
-              height={1000}
-              className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-[102%]"
-            />
+            <div className="relative h-64 w-full">
+              <Image
+                src={gallery.image}
+                alt={gallery.name}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-[102%]"
+              />
+            </div>
             <div className="flex flex-col gap-1 p-4 pb-6 lg:p-6 lg:pb-8">
               <h3 className="text-lg font-bold lg:text-xl">{gallery.name}</h3>
               <p className="text-muted-foreground text-base">
