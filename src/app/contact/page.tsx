@@ -6,6 +6,17 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Separator } from "@/components/ui/separator";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kontak",
+  description:
+    "Hubungi Promis Conveyor Chain – telepon, WhatsApp, email, alamat kantor di Medan. Jam operasional dan FAQ.",
+  openGraph: {
+    title: "Kontak | Promis Conveyor Chain",
+    description: "Kontak Promis – telepon, email, alamat. Tim siap membantu kebutuhan conveyor chain dan sprocket.",
+  },
+};
 import {
   ADDRESS,
   EMAIL,
@@ -204,9 +215,25 @@ function FAQSection() {
   );
 }
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <HubungiKami />
       <FAQSection />
     </>

@@ -2,6 +2,18 @@ import SectionContainer from "@/components/layout/section-container";
 import RevealCard from "@/components/transitions/reveal-card";
 import { Handshake, Sparkles, Trophy } from "lucide-react";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tentang Kami",
+  description:
+    "Profil Promis Conveyor Chain – dedikasi untuk industri Indonesia. Conveyor chain dan sprocket untuk pabrik kelapa sawit sejak 2010.",
+  openGraph: {
+    title: "Tentang Kami | Promis Conveyor Chain",
+    description:
+      "Profil Promis Conveyor Chain – conveyor chain dan sprocket untuk pabrik kelapa sawit. Dedikasi untuk industri Indonesia.",
+  },
+};
 
 function Intro() {
   return (

@@ -2,6 +2,18 @@ import SectionContainer from "@/components/layout/section-container";
 import CarouselAuto from "@/components/transitions/carousel-auto";
 import { CarouselItem } from "@/components/ui/carousel";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Produk",
+  description:
+    "Katalog produk Promis: conveyor chain (rantai konveyor), sprocket, dan pulley untuk pabrik kelapa sawit. Spesifikasi dan aplikasi.",
+  openGraph: {
+    title: "Produk | Promis Conveyor Chain",
+    description:
+      "Conveyor chain, sprocket, dan pulley untuk industri kelapa sawit. Spesifikasi teknis dan aplikasi.",
+  },
+};
 import {
   Table,
   TableBody,
