@@ -13,6 +13,7 @@ import {
 import { ArrowRight, InfoIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
 
 const products = [
   {
@@ -147,10 +148,62 @@ function Katalog() {
   );
 }
 
+const CARA_PEMESANAN = [
+  {
+    title: "Konsultasi",
+    description:
+      "Hubungi tim teknis kami untuk mendiskusikan kebutuhan spesifik Anda.",
+  },
+  {
+    title: "Penawaran",
+    description:
+      "Kami akan mengirimkan penawaran harga resmi dalam waktu 1x24 jam.",
+  },
+  {
+    title: "Produksi",
+    description:
+      "Proses manufaktur dimulai setelah persetujuan desain dan pembayaran.",
+  },
+  {
+    title: "Pengiriman",
+    description: "Barang dikirim ke lokasi Anda dengan packing kayu yang aman.",
+  },
+];
+
+function CaraPemesanan() {
+  return (
+    <SectionContainer
+      rootClassName="bg-accent"
+      className="flex flex-col gap-12 py-20 pb-32"
+    >
+      <h2 className="text-center text-2xl font-bold md:text-3xl lg:text-4xl">
+        Cara Pemesanan
+      </h2>
+      <div className="mx-4 grid grid-cols-1 gap-8 gap-y-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+        {CARA_PEMESANAN.map((item, index) => (
+          <div
+            className="flex flex-col items-center gap-4 text-center"
+            key={item.title}
+          >
+            <Badge variant="default" className="size-10 text-xl font-semibold">
+              {index + 1}
+            </Badge>
+            <h3 className="text-lg font-bold">{item.title}</h3>
+            <p className="text-muted-foreground text-base lg:text-lg">
+              {item.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </SectionContainer>
+  );
+}
+
 export default function ProductsPage() {
   return (
     <>
       <Katalog />
+      <CaraPemesanan />
     </>
   );
 }
