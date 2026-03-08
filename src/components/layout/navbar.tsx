@@ -2,6 +2,7 @@
 
 import CollapseTransition from "@/components/transitions/CollapseTransition";
 import { Button } from "@/components/ui/button";
+import { WHATSAPP_LINK } from "@/constant";
 import { cn } from "@/lib/utils";
 import { MenuIcon, X } from "lucide-react";
 import Image from "next/image";
@@ -120,7 +121,13 @@ export default function Navbar() {
               asChild
               className="ml-2 text-base font-semibold"
             >
-              <Link href="/contact">Minta Penawaran</Link>
+              <Link
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Minta Penawaran
+              </Link>
             </Button>
           </div>
 
@@ -131,7 +138,13 @@ export default function Navbar() {
               asChild
               className="ml-2 text-sm font-semibold"
             >
-              <Link href="/contact">Minta Penawaran</Link>
+              <Link
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Minta Penawaran
+              </Link>
             </Button>
           </div>
         </div>

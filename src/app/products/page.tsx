@@ -26,6 +26,7 @@ import { ArrowRight, InfoIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { WHATSAPP_LINK } from "@/constant";
 
 const products = [
   {
@@ -145,7 +146,11 @@ function Katalog() {
                 className="w-full py-6 text-lg font-semibold md:text-xl"
                 asChild
               >
-                <Link href="/products">
+                <Link
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="flex w-full items-center justify-center gap-2">
                     Minta Penawaran Harga{" "}
                     <ArrowRight className="size-4 -translate-y-px" />
