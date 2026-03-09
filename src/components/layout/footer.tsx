@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import {
   ADDRESS,
+  COMPANY_NAME,
   EMAIL,
   MAILTO_LINK,
   MAPS_QUERY_URL,
@@ -18,6 +19,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Separator } from "../ui/separator";
 
 const SOCIAL_LINKS = [
   {
@@ -141,7 +143,10 @@ function FooterContact() {
       <h3 className="text-lg font-semibold">Hubungi Kami</h3>
 
       {CONTACT_ITEMS.map((data) => (
-        <div className="group flex w-fit items-start gap-4 cursor-pointer" key={data.href}>
+        <div
+          className="group flex w-fit cursor-pointer items-start gap-4"
+          key={data.href}
+        >
           <data.Icon className="text-muted-foreground group-hover:text-primary mt-1 size-5 shrink-0" />
           <Link
             href={data.href}
@@ -157,16 +162,39 @@ function FooterContact() {
   );
 }
 
+function FooterBottom() {
+  return (
+    <div className="mt-7 flex flex-col justify-between md:mx-8 md:flex-row md:items-center">
+      <div className="text-muted-foreground flex items-center gap-2">
+        <Image
+          src="/logo-ipp.png"
+          alt="PT Inti Perkasa Pancasurya"
+          width={20}
+          height={20}
+        />
+        <p className="text-sm">PT INTI PERKASA PANCASURYA</p>
+      </div>
+      <p className="text-muted-foreground ml-1 text-sm md:ml-0">
+        &copy;{" "}
+        {new Date().getFullYear() < 2026 ? 2026 : new Date().getFullYear()}{" "}
+        {COMPANY_NAME}. Hak Cipta Dilindungi.
+      </p>
+    </div>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="bg-card border-border border-t pt-12 pb-8">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-16">
+      <div className="container mx-auto flex flex-col px-6 lg:px-12">
+        <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-16">
           <FooterBrandAndSocials />
           <FooterNavigation />
           <FooterContact />
           <FooterProducts />
         </div>
+        <Separator />
+        <FooterBottom />
       </div>
     </footer>
   );
