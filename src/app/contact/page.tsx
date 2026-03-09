@@ -14,7 +14,8 @@ export const metadata: Metadata = {
     "Hubungi Promis Conveyor Chain – telepon, WhatsApp, email, alamat kantor di Medan. Jam operasional dan FAQ.",
   openGraph: {
     title: "Kontak | Promis Conveyor Chain",
-    description: "Kontak Promis – telepon, email, alamat. Tim siap membantu kebutuhan conveyor chain dan sprocket.",
+    description:
+      "Kontak Promis – telepon, email, alamat. Tim siap membantu kebutuhan conveyor chain dan sprocket.",
   },
 };
 import {
@@ -84,7 +85,7 @@ function HubungiKami() {
                 href={info.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 lg:gap-4 w-fit"
+                className="group flex w-fit items-center gap-3 lg:gap-4"
                 key={info.label}
               >
                 <div className="border-primary/20 text-primary bg-primary/5 group-hover:bg-primary/10 group-hover:border-primary/40 shrink-0 rounded-xl border p-3 transition-colors duration-200">
@@ -192,7 +193,7 @@ function FAQSection() {
       <h2 className="text-center text-2xl font-bold md:text-3xl">
         Pertanyaan Umum (FAQ)
       </h2>
-      <div className="mx-auto w-full max-w-4xl">
+      <div className="w-full max-w-4xl md:mx-auto">
         <Accordion type="single" collapsible className="w-full">
           {FAQ_ITEMS.map((item, idx) => (
             <AccordionItem key={item.id} value={item.id}>

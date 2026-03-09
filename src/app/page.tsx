@@ -439,7 +439,7 @@ function ClickToAction() {
   return (
     <SectionContainer
       rootClassName="bg-primary text-primary-foreground"
-      className="flex flex-col gap-12 py-24 pb-28"
+      className="flex flex-col gap-12 py-16 pb-20 md:py-24 md:pb-28"
     >
       <div className="flex flex-col gap-4">
         <h2 className="text-center text-2xl font-bold md:text-3xl lg:text-4xl">
@@ -457,11 +457,7 @@ function ClickToAction() {
           variant="default"
           asChild
         >
-          <Link
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
             <MessageCircle className="size-5" />
             Chat WhatsApp Sekarang
           </Link>
