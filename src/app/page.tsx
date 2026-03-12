@@ -5,7 +5,7 @@ import RevealCard from "@/components/transitions/reveal-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CarouselItem } from "@/components/ui/carousel";
-import { WHATSAPP_LINK } from "@/constant";
+import { COMPANY_NAME, DEFAULT_OG_IMAGE, WHATSAPP_LINK } from "@/constant";
 import {
   ArrowRight,
   Brain,
@@ -23,6 +23,29 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Conveyor Chain & Sprocket untuk Industri",
+  description:
+    "Promis Conveyor Chain menghadirkan conveyor chain dan sprocket berkualitas untuk pabrik kelapa sawit dengan dukungan teknis dan pengiriman ke seluruh Indonesia.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: `${COMPANY_NAME} | Conveyor Chain & Sprocket`,
+    description:
+      "Conveyor chain dan sprocket berkualitas untuk pabrik kelapa sawit, lengkap dengan konsultasi teknis dan pengiriman nasional.",
+    url: "/",
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    title: `${COMPANY_NAME} | Conveyor Chain & Sprocket`,
+    description:
+      "Conveyor chain dan sprocket berkualitas untuk pabrik kelapa sawit, lengkap dengan konsultasi teknis dan pengiriman nasional.",
+    images: [DEFAULT_OG_IMAGE],
+  },
+};
 
 function Hero() {
   return (

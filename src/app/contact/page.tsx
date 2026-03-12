@@ -6,16 +6,28 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Separator } from "@/components/ui/separator";
+import { COMPANY_NAME, DEFAULT_OG_IMAGE } from "@/constant";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Kontak",
   description:
-    "Hubungi Promis Conveyor Chain – telepon, WhatsApp, email, alamat kantor di Medan. Jam operasional dan FAQ.",
+    "Hubungi Promis Conveyor Chain via telepon, WhatsApp, atau email. Dapatkan konsultasi teknis produk conveyor chain dan sprocket.",
+  alternates: {
+    canonical: "/contact",
+  },
   openGraph: {
-    title: "Kontak | Promis Conveyor Chain",
+    title: `Kontak | ${COMPANY_NAME}`,
     description:
-      "Kontak Promis – telepon, email, alamat. Tim siap membantu kebutuhan conveyor chain dan sprocket.",
+      "Kontak resmi Promis Conveyor Chain di Medan untuk kebutuhan penawaran, konsultasi, dan dukungan teknis.",
+    url: "/contact",
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    title: `Kontak | ${COMPANY_NAME}`,
+    description:
+      "Hubungi tim Promis Conveyor Chain untuk konsultasi dan penawaran conveyor chain serta sprocket.",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 import {

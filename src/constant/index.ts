@@ -1,5 +1,6 @@
 export const COMPANY_NAME = "Promis Conveyor Chain";
 export const WEBSITE_URL = "https://promischain.com";
+export const DEFAULT_OG_IMAGE = "/about3.jpg";
 
 export const PHONE_RAW = "626180034828";
 export const PHONE_DISPLAY = "+62 618 003 4828";

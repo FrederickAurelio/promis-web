@@ -2,16 +2,28 @@ import SectionContainer from "@/components/layout/section-container";
 import CarouselAuto from "@/components/transitions/carousel-auto";
 import { CarouselItem } from "@/components/ui/carousel";
 import Image from "next/image";
+import { COMPANY_NAME, DEFAULT_OG_IMAGE } from "@/constant";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Produk",
   description:
-    "Katalog produk Promis: conveyor chain (rantai konveyor), sprocket, dan pulley untuk pabrik kelapa sawit. Spesifikasi dan aplikasi.",
+    "Katalog produk Promis Conveyor Chain: conveyor chain, sprocket, dan pulley untuk pabrik kelapa sawit dengan spesifikasi teknis lengkap.",
+  alternates: {
+    canonical: "/products",
+  },
   openGraph: {
-    title: "Produk | Promis Conveyor Chain",
+    title: `Produk | ${COMPANY_NAME}`,
     description:
-      "Conveyor chain, sprocket, dan pulley untuk industri kelapa sawit. Spesifikasi teknis dan aplikasi.",
+      "Lihat katalog conveyor chain, sprocket, dan pulley untuk kebutuhan pabrik kelapa sawit dan industri terkait.",
+    url: "/products",
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    title: `Produk | ${COMPANY_NAME}`,
+    description:
+      "Katalog conveyor chain, sprocket, dan pulley dengan spesifikasi teknis untuk kebutuhan industri.",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 import {
