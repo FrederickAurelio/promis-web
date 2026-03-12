@@ -99,9 +99,6 @@ export const metadata: Metadata = {
   authors: [{ name: COMPANY_NAME, url: WEBSITE_URL }],
   creator: COMPANY_NAME,
   publisher: COMPANY_NAME,
-  alternates: {
-    canonical: "/",
-  },
   manifest: "/manifest.webmanifest",
   icons: {
     icon: "/favicon.png",
