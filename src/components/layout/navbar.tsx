@@ -75,7 +75,7 @@ export default function Navbar() {
         >
           <div className="flex items-center">
             {/* Mobile */}
-            <div className="mr-1 items-center md:hidden">
+            <div className="mr-1.5 items-center md:hidden">
               <Button
                 onClick={() => setIsMenuOpen((prev) => !prev)}
                 className="size-7 translate-y-px rounded-[10px]"
@@ -89,14 +89,16 @@ export default function Navbar() {
                 )}
               </Button>
             </div>
-            <Image
-              src="/logo.png"
-              alt="Promis Conveyor Chain"
-              width={200}
-              height={45}
-              priority
-              className="h-7 w-auto object-contain md:h-8"
-            />
+            <Link href="/">
+              <Image
+                src="/logo.png"
+                alt="Promis Conveyor Chain"
+                width={200}
+                height={45}
+                priority
+                className="h-7 w-auto object-contain md:h-8"
+              />
+            </Link>
           </div>
 
           <div className="hidden items-center md:flex md:gap-1 lg:gap-2 xl:gap-3">
