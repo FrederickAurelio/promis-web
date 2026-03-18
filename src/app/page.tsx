@@ -10,6 +10,7 @@ import {
   ArrowRight,
   Brain,
   CheckCircle,
+  Factory,
   Flame,
   FlaskConical,
   MessageCircle,
@@ -64,7 +65,7 @@ function Hero() {
       <HeroTransition className="relative z-10 flex h-full max-w-3xl -translate-y-4 flex-col items-start justify-center">
         {/* use Badge components */}
         <Badge className="bg-primary/10 text-primary mb-6 rounded-full px-4 py-1 text-sm font-semibold tracking-wider uppercase">
-          Revolusi Kinerja Rantai Chain
+          Revolusi Kinerja Rantai Konveyor
         </Badge>
         <h1 className="mb-6 text-5xl leading-[1.1] font-semibold md:text-7xl">
           Membuka Era Baru: Rantai <span className="text-primary">Kinerja Tinggi</span> untuk Dominasi Industri
@@ -101,24 +102,24 @@ function Hero() {
 
 const SEKTOR_INDUSTRI = [
   {
-    name: "Kelapa Sawit",
+    name: "Pabrik Kelapa Sawit",
     icon: Palmtree,
   },
   {
-    name: "Petrokimia",
-    icon: Truck,
+    name: "Manufaktur & Pengolahan",
+    icon: Settings,
   },
   {
-    name: "Energi",
+    name: "Sektor Energi",
     icon: Flame,
   },
   {
-    name: "Kimia",
+    name: "Industri Kimia",
     icon: FlaskConical,
   },
   {
-    name: "Farmasi",
-    icon: Pill,
+    name: "Logistik & Transportasi",
+    icon: Truck,
   },
 ];
 
