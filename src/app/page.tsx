@@ -64,7 +64,7 @@ function Hero() {
       <HeroTransition className="relative z-10 flex h-full max-w-3xl -translate-y-4 flex-col items-start justify-center">
         {/* use Badge components */}
         <Badge className="bg-primary/10 text-primary mb-6 rounded-full px-4 py-1 text-sm font-semibold tracking-wider uppercase">
-          Revolusi Kinerja Rantai Konveyor
+          Revolusi Kinerja Rantai Chain
         </Badge>
         <h1 className="mb-6 text-5xl leading-[1.1] font-semibold md:text-7xl">
           Membuka Era Baru: Rantai <span className="text-primary">Kinerja Tinggi</span> untuk Dominasi Industri
