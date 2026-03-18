@@ -64,16 +64,13 @@ function Hero() {
       <HeroTransition className="relative z-10 flex h-full max-w-3xl -translate-y-4 flex-col items-start justify-center">
         {/* use Badge components */}
         <Badge className="bg-primary/10 text-primary mb-6 rounded-full px-4 py-1 text-sm font-semibold tracking-wider uppercase">
-          Pemimpin Pasar Transmisi Daya
+          Revolusi Kinerja Rantai Konveyor
         </Badge>
         <h1 className="mb-6 text-5xl leading-[1.1] font-semibold md:text-7xl">
-          Solusi Rantai <span className="text-primary">Presisi</span> Untuk
-          Efisiensi Pabrik
+          Membuka Era Baru: Rantai <span className="text-primary">Kinerja Tinggi</span> untuk Dominasi Industri
         </h1>
         <p className="text-muted-foreground mb-10 max-w-2xl text-xl md:text-2xl">
-          IndoChain menyediakan komponen conveyor chain dan sprocket kelas dunia
-          yang dirancang khusus untuk meningkatkan produktivitas pabrik kelapa
-          sawit di seluruh Indonesia.
+          Di IndoChain, kami tidak hanya menjual rantai; kami merevolusi kinerja, keandalan, dan efisiensi di jantung operasi Anda. Temukan bagaimana solusi canggih kami memberdayakan pabrik kelapa sawit di seluruh Indonesia untuk mencapai tingkat produktivitas yang belum pernah terjadi sebelumnya.
         </p>
         <div className="flex flex-col gap-4 sm:flex-row">
           <Button
