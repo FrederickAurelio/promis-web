@@ -148,51 +148,51 @@ function HubungiKami() {
 const FAQ_ITEMS = [
   {
     id: "min-order",
-    question: "Apakah ada minimum order?",
+    question: "Apakah ada minimum pemesanan (MOQ)?",
     answer:
-      "Kami melayani order kecil maupun besar. Untuk kebutuhan proyek atau pengadaan rutin, silakan hubungi tim penjualan kami untuk penawaran dan syarat minimum order.",
-  },
-  {
-    id: "delivery",
-    question: "Berapa lama waktu pengiriman?",
-    answer:
-      "Waktu pengiriman tergantung lokasi dan ketersediaan stok. Untuk area Jawa umumnya 3–7 hari kerja. Wilayah luar Jawa dapat dikonfirmasi setelah pemesanan.",
-  },
-  {
-    id: "payment",
-    question: "Metode pembayaran apa saja yang diterima?",
-    answer:
-      "Kami menerima transfer bank, pembayaran via faktur (untuk pelanggan terdaftar), dan dapat mendiskusikan skema pembayaran sesuai kebutuhan proyek Anda.",
+      "Tidak ada minimum order. Kami melayani kebutuhan Anda, mulai dari penggantian komponen tunggal hingga pengadaan proyek skala besar.",
   },
   {
     id: "warranty",
-    question: "Apakah produk memiliki garansi?",
+    question: "Apakah produk memiliki garansi resmi?",
     answer:
-      "Produk kami dilengkapi jaminan kualitas. Detail garansi dan syarat berlaku dapat ditanyakan kepada tim kami saat pemesanan.",
+      "Ya. Kami memberikan jaminan kualitas dan durabilitas hingga 10.000 jam operasional (2 tahun) untuk memastikan performa maksimal conveyor chain Anda dalam jangka panjang.",
   },
   {
-    id: "catalog",
-    question: "Bagaimana cara mendapatkan katalog atau daftar harga?",
+    id: "after-sales",
+    question: "Bagaimana dukungan after-sales dan layanan teknis Promis?",
     answer:
-      "Anda dapat meminta katalog dan penawaran harga melalui telepon, WhatsApp, atau email. Tim kami akan mengirimkan dokumen sesuai kebutuhan Anda.",
+      "Kami menyediakan layanan purna jual proaktif, meliputi: (1) Kunjungan Pabrik 3x setahun untuk evaluasi operasional, (2) Laporan Berkala mendetail tentang performa dan pemeliharaan, serta (3) Pendampingan teknis troubleshooting.",
   },
   {
     id: "custom",
-    question: "Apakah bisa pesan produk sesuai spesifikasi custom?",
+    question: "Apakah bisa memesan produk sesuai spesifikasi khusus (Custom/OEM)?",
     answer:
-      "Ya. Kami melayani pemesanan sesuai spesifikasi teknis Anda. Silakan hubungi tim teknis kami untuk konsultasi dan penawaran.",
+      "Tentu. Kami memiliki kemampuan manufaktur yang kuat untuk melayani pemesanan sesuai spesifikasi teknis (Custom) atau kebutuhan OEM Anda.",
   },
   {
-    id: "support",
-    question: "Apakah ada dukungan teknis setelah pembelian?",
+    id: "delivery",
+    question: "Berapa lama estimasi waktu pengiriman?",
     answer:
-      "Kami menyediakan dukungan teknis untuk pemasangan, perawatan, dan troubleshooting. Hubungi kami kapan saja untuk bantuan.",
+      "Waktu pengiriman disesuaikan dengan lokasi dan ketersediaan stok. Kami bermitra dengan ekspedisi berpengalaman 30 tahun untuk menjamin barang tiba tepat waktu dan aman di seluruh Indonesia.",
+  },
+  {
+    id: "catalog",
+    question: "Bagaimana cara mendapatkan katalog resmi dan daftar harga?",
+    answer:
+      "Anda dapat meminta katalog digital dan penawaran harga melalui WhatsApp atau Email. Tim kami akan segera mengirimkan dokumen yang sesuai dengan kebutuhan industri Anda.",
+  },
+  {
+    id: "payment",
+    question: "Metode pembayaran apa saja yang tersedia?",
+    answer:
+      "Kami menerima transfer bank dan dapat mendiskusikan skema pembayaran fleksibel (seperti pembayaran via faktur) sesuai dengan kesepakatan kebutuhan proyek Anda.",
   },
   {
     id: "return",
-    question: "Bagaimana kebijakan pengembalian atau komplain?",
+    question: "Bagaimana kebijakan jika terjadi kendala pada produk?",
     answer:
-      "Untuk komplain kualitas atau kesalahan pengiriman, laporkan dalam waktu yang disepakati. Kami akan memeriksa dan menyelesaikan sesuai kebijakan perusahaan.",
+      "Kepuasan pelanggan adalah prioritas kami. Jika terdapat kesalahan pengiriman atau kendala kualitas, laporkan segera untuk pemeriksaan teknis dan solusi penyelesaian sesuai kebijakan perusahaan.",
   },
 ];
 

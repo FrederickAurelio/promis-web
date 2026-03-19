@@ -2,8 +2,8 @@ export const COMPANY_NAME = "Promis Conveyor Chain";
 export const WEBSITE_URL = "https://promischain.com";
 export const DEFAULT_OG_IMAGE = "/about3.jpg";
 
-export const PHONE_RAW = "626180034828";
-export const PHONE_DISPLAY = "+62 618 003 4828";
+export const PHONE_RAW = "6281269708999";
+export const PHONE_DISPLAY = "+62 812-6970-8999";
 export const EMAIL = "intiperkasapancasurya@yahoo.com";
 export const ADDRESS =
   "Komplek Citra Land Gamma City Jalan Boulevard Barat Raya Blok R8 No 3, Kenangan, Kec. Percut Sei Tuan, Kota Medan, Sumatera Utara 20371, Indonesia";

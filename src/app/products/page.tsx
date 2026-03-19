@@ -179,23 +179,19 @@ function Katalog() {
 
 const CARA_PEMESANAN = [
   {
-    title: "Konsultasi",
+    title: "Konsultasi & Solusi Teknis",
     description:
-      "Hubungi tim teknis kami untuk mendiskusikan kebutuhan spesifik Anda.",
+      "Diskusikan kebutuhan spesifik dan tantangan operasional Anda dengan tim ahli kami untuk mendapatkan spesifikasi material yang paling tepat.",
   },
   {
-    title: "Penawaran",
+    title: "Penawaran & Validasi",
     description:
-      "Kami akan mengirimkan penawaran harga resmi dalam waktu 1x24 jam.",
+      "Terima penawaran harga resmi dan estimasi teknis dalam waktu 1x24 jam untuk percepatan proses pengadaan perusahaan Anda.",
   },
   {
-    title: "Produksi",
+    title: "Produksi & Distribusi Aman",
     description:
-      "Proses manufaktur dimulai setelah persetujuan desain dan pembayaran.",
-  },
-  {
-    title: "Pengiriman",
-    description: "Barang dikirim ke lokasi Anda dengan packing kayu yang aman.",
+      "Proses manufaktur presisi segera dimulai, diikuti pengiriman menggunakan standar proteksi kayu profesional hingga sampai di lokasi Anda.",
   },
 ];
 

@@ -35,13 +35,10 @@ function Intro() {
           PROFIL PERUSAHAAN
         </span>
         <h1 className="mb-6 text-4xl leading-[1.1] font-semibold md:text-5xl">
-          Dedikasi Untuk Industri Indonesia
+        Spesialis Rantai Conveyor Pabrik Kelapa Sawit
         </h1>
         <p className="text-muted-foreground mx-auto max-w-4xl text-base lg:text-lg">
-          Sejak tahun 2010, IndoChain telah berkomitmen untuk menjadi tulang
-          punggung sistem transmisi mekanikal di Indonesia. Kami menggabungkan
-          teknologi manufaktur modern dengan pemahaman mendalam tentang
-          tantangan operasional di lapangan.
+        Promis adalah solusi rantai konveyor presisi bagi industri kelapa sawit sejak 2017. Kami percaya pada kekuatan kualitas. itulah mengapa kami menyertakan garansi penuh, inspeksi rutin, dan dukungan teknologi terbaik untuk menjamin investasi Anda tetap produktif dalam jangka panjang.
         </p>
       </div>
     </SectionContainer>
@@ -50,29 +47,29 @@ function Intro() {
 
 const TIMELINE_ITEMS = [
   {
-    year: "2010",
-    title: "Pendirian Perusahaan",
-    desc: "IndoChain resmi berdiri di Medan, Sumatera Utara, melayani pabrik sawit lokal.",
+    year: "1996 - 2016",
+    title: "Tiga Dekade Keahlian Teknis",
+    desc: "Membangun landasan kuat dengan lebih dari 30 tahun pengalaman mendalam dalam manufaktur dan solusi rantai transmisi industri.",
   },
   {
-    year: "2014",
-    title: "Ekspansi Nasional",
-    desc: "Membuka kantor cabang di Kalimantan Barat dan Sulawesi untuk menjangkau lebih banyak klien.",
+    year: "2017",
+    title: "Pendirian PT Inti Perkasa Panca Surya",
+    desc: "Resmi beroperasi di Medan sebagai pusat solusi rantai conveyor, fokus pada efisiensi operasional pabrik kelapa sawit.",
   },
   {
-    year: "2018",
-    title: "Sertifikasi ISO 9001",
-    desc: "Mendapatkan pengakuan internasional untuk sistem manajemen kualitas manufaktur kami.",
+    year: "2019",
+    title: "Ekspansi & Jangkauan Nasional", 
+    desc: "Memperluas distribusi ke Kalimantan dan Sulawesi untuk mendukung percepatan industri sawit di luar Sumatera.",
   },
   {
-    year: "2022",
-    title: "Inovasi Produk Baru",
-    desc: "Meluncurkan lini 'Extreme-Duty' untuk rantai konveyor dengan ketahanan korosi tinggi.",
+    year: "2021",
+    title: "Transformasi Brand: Promis",
+    desc: "Evolusi menjadi brand Promis untuk mempertegas standar kualitas premium dan dedikasi pada inovasi rantai conveyor.",
   },
   {
-    year: "2025",
-    title: "Pengembangan Teknologi",
-    desc: "Mengembangkan teknologi rantai konveyor yang lebih efisien dan berkualitas tinggi.",
+    year: "2026",
+    title: "Dinamika Industri & Era Digital",
+    desc: "Mengintegrasikan teknologi manufaktur mutakhir dengan sistem digital untuk mendukung efisiensi industri masa depan.",
   },
 ];
 
@@ -130,21 +127,21 @@ function Timeline() {
 const NILAI_KAMI_ITEMS = [
   {
     icon: Handshake,
-    name: "Integritas",
+    name: "Layanan Kunjungan Pabrik",
     description:
-      "Kami memegang teguh kejujuran dalam setiap transaksi dan spesifikasi produk yang kami berikan.",
+      "Kami menawarkan kunjungan pabrik 3 kali dalam setahun untuk memastikan kinerja optimal conveyor chain dan melakukan evaluasi  menyeluruh  terhadap  kualitas operasional",
   },
   {
     icon: Trophy,
-    name: "Kualitas Tanpa Kompromi",
+    name: "Laporan Berkala",
     description:
-      "Setiap rantai dan sprocket melewati 5 tahap inspeksi sebelum sampai ke tangan pelanggan.",
+      "Setiap kunjungan dilengkapi dengan laporan mendetail yang mencakup analisis performa, pemeliharaan, dan saran peningkatan, guna memastikan  conveyor  chain  Anda  tetap bekerja secara efisien",
   },
   {
     icon: Sparkles,
-    name: "Inovasi Berkelanjutan",
+    name: "Garansi Produk",
     description:
-      "Terus melakukan riset material untuk menciptakan produk yang lebih ringan namun lebih kuat.",
+      "Kami  memberikan  garansi  produk  hingga 10.000 jam (2 tahun), yang menjamin kualitas dan daya tahan conveyor chain dalam jangka waktu panjang",
   },
 ];
 
@@ -155,7 +152,7 @@ function NilaiKami() {
       className="flex flex-col gap-16 py-24 pb-32"
     >
       <h3 className="text-center text-2xl font-bold md:text-3xl">
-        Nilai-Nilai Utama Kami
+        Servis Kami
       </h3>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6 lg:gap-8">
         {NILAI_KAMI_ITEMS.map((nilai) => (
@@ -176,11 +173,11 @@ function NilaiKami() {
 }
 
 const PROCESS_MANUFACTURING_ITEMS = [
-  "Seleksi material baja paduan bersertifikat.",
-  "Pemotongan presisi menggunakan mesin CNC terbaru.",
-  "Proses Heat Treatment untuk kekerasan permukaan yang optimal.",
-  "Perakitan otomatis untuk konsistensi kualitas.",
-  "Uji beban tarik (Tensile Test) pada setiap batch produksi.",
+  "Verifikasi Dimensi & Presisi Mikron, Menggunakan alat ukur digital terkalibrasi untuk memastikan setiap mata rantai memenuhi toleransi presisi standar internasional.",
+  "Uji Kekerasan Material, Memverifikasi efektivitas heat treatment pada setiap batch untuk menjamin ketahanan aus maksimal di medan berat sawit.",
+  "Uji Beban Tarik Ekstrem, Menguji kekuatan putus rantai untuk memastikan unit mampu menahan beban operasional puncak tanpa kegagalan mekanis.",
+  "Sistem Perakitan & Konsistensi Kualitas, Menggabungkan keahlian teknisi berpengalaman dengan perakitan sistematis untuk hasil produk yang seragam dan andal.",
+  "Pengemasan & Logistik Laut Profesional, Menggunakan proteksi berlapis (Karton + Kotak Kayu + Palet) menjamin pengiriman aman, tepat waktu, dan minim risiko.",
 ];
 
 function ProsesManufaktur() {
@@ -196,11 +193,10 @@ function ProsesManufaktur() {
       </div>
       <div className="flex w-full flex-1 flex-col gap-4 md:col-span-4">
         <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
-          Proses Manufaktur & Kontrol Kualitas
+          Kontrol Kualitas, Dari Presisi Laboratorium hingga Keamanan Pengiriman
         </h2>
         <p className="text-muted-foreground text-base lg:text-lg">
-          Kami memastikan setiap komponen diproduksi dengan presisi mikron untuk
-          menjamin performa optimal.
+        Kami melampaui standar manufaktur dengan menerapkan kontrol kualitas berlapis yang didukung peralatan uji canggih, guna memastikan performa ekstrem dan unit yang diterima dalam kondisi sempurna.
         </p>
         <div className="flex flex-col gap-4">
           {PROCESS_MANUFACTURING_ITEMS.map((process, idx) => (

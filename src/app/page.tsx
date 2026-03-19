@@ -65,13 +65,15 @@ function Hero() {
       <HeroTransition className="relative z-10 flex h-full max-w-3xl -translate-y-4 flex-col items-start justify-center">
         {/* use Badge components */}
         <Badge className="bg-primary/10 text-primary mb-6 rounded-full px-4 py-1 text-sm font-semibold tracking-wider uppercase">
-          Revolusi Kinerja Rantai Konveyor
+        Promis: Jaminan Ketangguhan Rantai Conveyor di Indonesia
         </Badge>
         <h1 className="mb-6 text-5xl leading-[1.1] font-semibold md:text-7xl">
-          Membuka Era Baru: Rantai <span className="text-primary">Kinerja Tinggi</span> untuk Dominasi Industri
+       Solusi <span className="text-primary">  Rantai Conveyor </span> Berkualitas untuk Industri Sawit
         </h1>
         <p className="text-muted-foreground mb-10 max-w-2xl text-xl md:text-2xl">
-          Di IndoChain, kami tidak hanya menjual rantai; kami merevolusi kinerja, keandalan, dan efisiensi di jantung operasi Anda. Temukan bagaimana solusi canggih kami memberdayakan pabrik kelapa sawit di seluruh Indonesia untuk mencapai tingkat produktivitas yang belum pernah terjadi sebelumnya.
+        Dengan bertahun- tahunnya pengalaman untuk meningkatkan	efisiensi dan	keandalan	dalam proses pengolahan kelapa sawit,	dengan
+menjaga kualitas dan kepuasan pelanggan
+
         </p>
         <div className="flex flex-col gap-4 sm:flex-row">
           <Button
@@ -102,24 +104,24 @@ function Hero() {
 
 const SEKTOR_INDUSTRI = [
   {
-    name: "Pabrik Kelapa Sawit",
+    name: "Conveyor Chain (PKS)",
+    description: "Rantai konveyor spesifikasi berat untuk digester, kranji, dan pengolahan tandan buah segar.",
     icon: Palmtree,
   },
   {
-    name: "Manufaktur & Pengolahan",
+    name: "Transmission Roller Chain",
+    description: "Rantai transmisi presisi tinggi untuk efisiensi daya maksimal di mesin pengolahan.",
     icon: Settings,
   },
   {
-    name: "Sektor Energi",
+    name: "Precision Sprockets",
+    description: "Sprocket dengan durabilitas tinggi, dirancang pas untuk meminimalisir keausan rantai.",
     icon: Flame,
   },
   {
-    name: "Industri Kimia",
+    name: "Connecting & Offset Links",
+    description: "Komponen penyambung kritikal dengan kekuatan tarik yang setara dengan rantai utama.",
     icon: FlaskConical,
-  },
-  {
-    name: "Logistik & Transportasi",
-    icon: Truck,
   },
 ];
 
@@ -127,12 +129,11 @@ function LayananIndustri() {
   return (
     <SectionContainer className="flex flex-col gap-3 py-24 pb-32 lg:py-32 lg:pb-40">
       <h2 className="text-3xl font-bold max-sm:max-w-[16ch] lg:text-4xl">
-        Sektor Industri Yang Kami Layani
+      Spesialisasi Solusi Transmisi Pabrik Kelapa Sawit
       </h2>
       <div className="mb-7 flex flex-col justify-between gap-4 md:flex-row md:items-end md:gap-8">
         <p className="text-muted-foreground text-base lg:text-lg">
-          Meskipun spesialisasi kami adalah Kelapa Sawit, keahlian teknik kami
-          mencakup berbagai industri berat lainnya.
+        Kami memusatkan seluruh keahlian teknik kami pada satu sektor: Industri Kelapa Sawit. Dengan fokus tunggal ini, kami menjamin setiap komponen transmisi yang kami hadirkan memiliki ketahanan operasional yang telah teruji menghadapi beban ekstrem di pabrik Anda.
         </p>
         <div>
           <Button
@@ -145,7 +146,7 @@ function LayananIndustri() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Konsultasi Sektor Anda <ArrowRight className="size-5" />
+              Konsultasikan Kebutuhan Pabrik Anda<ArrowRight className="size-5" />
             </Link>
           </Button>
         </div>
@@ -170,33 +171,33 @@ function LayananIndustri() {
 
 const REASONS_TO_CHOOSE_US = [
   {
-    title: "Material Kelas Premium",
+    title: "Pengalaman & Keahlian 30 Tahun",
     description:
-      "Kami menggunakan material berkualitas tinggi untuk memproduksi conveyor chain dan sprocket yang tahan lama dan tahan terhadap cuaca.",
+      "Memiliki rekam jejak tiga dekade dalam memproduksi rantai rol dan konveyor berkualitas tinggi untuk berbagai kebutuhan transmisi industri.",
     icon: CheckCircle,
   },
   {
-    title: "Keunggulan Teknik",
+    title: "Teknologi Produksi & Inspeksi Mutakhir",
     description:
-      "Kami memiliki tim teknis berpengalaman yang memastikan produk kami memenuhi standar tertinggi.",
+      "Didukung peralatan canggih serta keunggulan teknologi heat treatment dan surface treatment untuk memastikan daya tahan produk yang maksimal.",
     icon: Brain,
   },
   {
-    title: "Solusi Kustom",
+    title: "Standar Kualitas Internasional",
     description:
-      "Kami menyediakan solusi konveyor chain dan sprocket yang disesuaikan dengan kebutuhan industri Anda.",
+      "Produk diproduksi sesuai Standar Amerika, Eropa, dan Jepang (ANSI, DIN, JIS) menggunakan material premium untuk menjamin masa pakai yang lama.",
     icon: Settings,
   },
   {
-    title: "Jaminan Kualitas",
+    title: "Kapasitas Produksi & Kustomisasi OEM",
     description:
-      "Kami memiliki sistem kontrol kualitas yang ketat untuk memastikan produk kami memenuhi standar tertinggi.",
+      "Fasilitas pabrik yang kuat dengan kemampuan layanan kustom dan OEM yang fleksibel untuk memenuhi spesifikasi khusus setiap pelanggan.",
     icon: ShieldCheck,
   },
   {
-    title: "Kepuasan Pelanggan",
+    title: "Harga Kompetitif & Layanan Purna Jual (After Sales Service)",
     description:
-      "Kami memiliki tim pelanggan berpengalaman yang memastikan produk kami memenuhi standar tertinggi.",
+      "Memberikan penawaran harga terbaik, dukungan teknis ahli, serta jaminan layanan after-sales untuk mendukung efisiensi bisnis Anda.",
     icon: Smile,
   },
 ];
@@ -220,8 +221,9 @@ function AlasanMemilihKami() {
           Mengapa Memilih Promis?
         </h2>
         <p className="text-muted-foreground text-base lg:text-lg">
-          Kami bukan sekadar pemasok; kami adalah mitra teknis Anda dalam
-          menjaga kelancaran operasional pabrik.
+        Kami adalah	perusahaan	yang	menyediakan
+conveyor	chain	berkualitas tinggi untuk	industri kelapa sawit.
+
         </p>
         <div className="flex flex-col gap-3">
           {REASONS_TO_CHOOSE_US.map((reason) => (
@@ -266,7 +268,7 @@ function ProdukPilihanKami() {
           Produk Pilihan Kami
         </h2>
         <p className="text-muted-foreground text-center text-base lg:text-lg">
-          Komponen kritis yang dirancang untuk durabilitas ekstrem.
+        Komponen Vital dengan Durabilitas dan Masa Pakai Optimal.
         </p>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6">
@@ -342,7 +344,7 @@ function GaleriOperasional() {
       </h2>
       <div className="mb-7 flex flex-col justify-between gap-4 md:flex-row md:items-end md:gap-8">
         <p className="text-muted-foreground text-base lg:text-lg">
-          Sekilas pandang fasilitas produksi dan stok gudang kami.
+        Tinjauan Infrastruktur Produksi dan Pusat Distribusi Logistik Kami
         </p>
         <div className="max-md:flex max-md:justify-end">
           <Button
