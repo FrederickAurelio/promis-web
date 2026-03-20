@@ -184,35 +184,27 @@ const PROCESS_MANUFACTURING_ITEMS = [
 
 const PROCESS_MANUFACTURING_IMAGES = [
   {
-    src: "/Qu1.png",
+    src: "/Qu1.jpg",
     alt: "Pabrik",
   },
   {
-    src: "/Qu2.png",
+    src: "/Qu2.jpg",
     alt: "Pabrik",
   },
   {
-    src: "/Qu3.png",
+    src: "/Qu3.jpg",
     alt: "Pabrik",
   },
   {
-    src: "/Qu4.png",
+    src: "/Qu4.jpg",
     alt: "Pabrik",
   },
   {
-    src: "/Qu5.png",
+    src: "/Qu5.jpg",
     alt: "Pabrik",
   },
   {
-    src: "/Qu6.png",
-    alt: "Pabrik",
-  },
-  {
-    src: "/Qu7.png",
-    alt: "Pabrik",
-  },
-  {
-    src: "/Qu8.png",
+    src: "/Qu6.jpg",
     alt: "Pabrik",
   },
 ];
