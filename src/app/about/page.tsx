@@ -175,44 +175,36 @@ function NilaiKami() {
 }
 
 const PROCESS_MANUFACTURING_ITEMS = [
-  "Presisi Mikron: Verifikasi dimensi digital untuk memenuhi standar toleransi internasional.",
-  "Uji Kekerasan: Memastikan ketahanan aus maksimal melalui heat treatment yang terverifikasi.",
-  "Beban Tarik: Pengujian kekuatan putus untuk menjamin keamanan operasional puncak.",
-  "Perakitan Ahli: Proses sistematis untuk menjamin konsistensi dan keandalan produk.",
-  "Logistik Aman: Pengemasan standar ekspor dengan proteksi kayu untuk pengiriman laut.",
-];
+    "Verifikasi Dimensi & Presisi Mikron, Menggunakan alat ukur digital terkalibrasi untuk memastikan setiap mata rantai memenuhi toleransi presisi standar internasional.",
+    "Uji Kekerasan Material, Memverifikasi efektivitas heat treatment pada setiap batch untuk menjamin ketahanan aus maksimal di medan berat sawit.",
+    "Uji Beban Tarik Ekstrem, Menguji kekuatan putus rantai untuk memastikan unit mampu menahan beban operasional puncak tanpa kegagalan mekanis.",
+    "Sistem Perakitan & Konsistensi Kualitas, Menggabungkan keahlian teknisi berpengalaman dengan perakitan sistematis untuk hasil produk yang seragam dan andal.",
+    "Pengemasan & Logistik Laut Profesional, Menggunakan proteksi berlapis (Plastik + Karton + Kotak Kayu + Palet) menjamin pengiriman aman, tepat waktu, dan minim risiko.",
+  ];
 
 const PROCESS_MANUFACTURING_IMAGES = [
   {
-    src: "/Qu1.png",
+    src: "/Qu1.jpg",
     alt: "Pabrik",
   },
   {
-    src: "/Qu2.png",
+    src: "/Qu2.jpg",
     alt: "Pabrik",
   },
   {
-    src: "/Qu3.png",
+    src: "/Qu3.jpg",
     alt: "Pabrik",
   },
   {
-    src: "/Qu4.png",
+    src: "/Qu4.jpg",
     alt: "Pabrik",
   },
   {
-    src: "/Qu5.png",
+    src: "/Qu5.jpg",
     alt: "Pabrik",
   },
   {
-    src: "/Qu6.png",
-    alt: "Pabrik",
-  },
-  {
-    src: "/Qu7.png",
-    alt: "Pabrik",
-  },
-  {
-    src: "/Qu8.png",
+    src: "/Qu6.jpg",
     alt: "Pabrik",
   },
 ];
