@@ -6,26 +6,44 @@ import { COMPANY_NAME, DEFAULT_OG_IMAGE } from "@/constant";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Produk",
+  title: "Katalog Conveyor Chain & Sparepart Pabrik Kelapa Sawit | Promis",
   description:
-    "Katalog produk Promis Conveyor Chain: conveyor chain, sprocket, dan pulley untuk pabrik kelapa sawit dengan spesifikasi teknis lengkap.",
+    "Distributor rantai industri terlengkap: Conveyor Chain, Roller Chain (Rantai Transmisi), Sprocket, dan Connecting Link. Spesialisasi komponen mesin pabrik kelapa sawit dengan durabilitas tinggi.",
   alternates: {
-    canonical: "/products",
+    canonical: "https://promis.co.id/products", // Pastikan pakai full URL jika sudah ada domain
   },
+  keywords: [
+    "conveyor chain pabrik sawit",
+    "rantai transmisi roller chain",
+    "jual sprocket industri",
+    "connecting link rantai konveyor",
+    "sparepart pabrik kelapa sawit",
+    "rantai penggerak mesin industri",
+    "Promis conveyor Indonesia"
+  ],
   openGraph: {
-    title: `Produk | ${COMPANY_NAME}`,
+    title: `Solusi Rantai Industri & Komponen Pabrik Sawit | ${COMPANY_NAME}`,
     description:
-      "Lihat katalog conveyor chain, sprocket, dan pulley untuk kebutuhan pabrik kelapa sawit dan industri terkait.",
-    url: "/products",
-    images: [DEFAULT_OG_IMAGE],
+      "Tingkatkan efisiensi pabrik Anda dengan Conveyor Chain dan Transmission Chain berkualitas premium. Tersedia berbagai ukuran sprocket dan connecting link.",
+    url: "https://promis.co.id/products",
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Katalog Produk Promis Conveyor Chain",
+      },
+    ],
+    type: "website",
   },
   twitter: {
-    title: `Produk | ${COMPANY_NAME}`,
-    description:
-      "Katalog conveyor chain, sprocket, dan pulley dengan spesifikasi teknis untuk kebutuhan industri.",
+    card: "summary_large_image",
+    title: `Produk Rantai Industri Premium | ${COMPANY_NAME}`,
+    description: "Katalog lengkap Conveyor Chain, Roller Chain, dan Sprocket khusus industri kelapa sawit.",
     images: [DEFAULT_OG_IMAGE],
   },
 };
+
 import {
   Table,
   TableBody,
@@ -43,7 +61,7 @@ import { WHATSAPP_LINK } from "@/constant";
 const products = [
   {
     name: "Conveyor Chain (Rantai Konveyor)",
-    images: ["/about.jpg", "/photo_20_2024-02-01_08-37-17.jpg", "/about3.jpg"],
+    images: ["/Conv1.JPG", "/Conv2.JPG", "/Conv3.jpg"],
     specs: [
       { spesifikasi: "Material", detail: "Alloy Steel / Stainless Steel" },
       { spesifikasi: "Pitch Range", detail: "100mm - 300mm" },
@@ -55,8 +73,8 @@ const products = [
     ],
   },
   {
-    name: "Sprocket (Sproket)",
-    images: ["/photo_20_2024-02-01_08-37-17.jpg", "/about.jpg", "/about3.jpg"],
+    name: "Roller Chain (Rantai Transmisi)",
+    images: ["/Trans2.JPG", "/Trans3.JPG", "/Trans1.jpg"],
     specs: [
       { spesifikasi: "Material", detail: "Alloy Steel / Stainless Steel" },
       { spesifikasi: "Pitch Range", detail: "100mm - 300mm" },
@@ -181,21 +199,17 @@ const CARA_PEMESANAN = [
   {
     title: "Konsultasi",
     description:
-      "Hubungi tim teknis kami untuk mendiskusikan kebutuhan spesifik Anda.",
+      "Diskusikan kebutuhan spesifik dan tantangan operasional Anda dengan tim ahli kami untuk mendapatkan spesifikasi material yang paling tepat.",
   },
   {
     title: "Penawaran",
     description:
-      "Kami akan mengirimkan penawaran harga resmi dalam waktu 1x24 jam.",
-  },
-  {
-    title: "Produksi",
-    description:
-      "Proses manufaktur dimulai setelah persetujuan desain dan pembayaran.",
+      "Terima penawaran harga resmi dan estimasi teknis dalam waktu 1x24 jam untuk perusahaan Anda.",
   },
   {
     title: "Pengiriman",
-    description: "Barang dikirim ke lokasi Anda dengan packing kayu yang aman.",
+    description:
+      "Pengiriman menggunakan standar proteksi kayu profesional hingga sampai di lokasi Anda.",
   },
 ];
 
@@ -208,7 +222,7 @@ function CaraPemesanan() {
       <h2 className="text-center text-2xl font-bold md:text-3xl lg:text-4xl">
         Cara Pemesanan
       </h2>
-      <div className="mx-4 grid grid-cols-1 gap-8 gap-y-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+      <div className="mx-auto max-w-5xl grid grid-cols-1 gap-8 gap-y-12 md:grid-cols-3 lg:gap-12">
         {CARA_PEMESANAN.map((item, index) => (
           <div
             className="flex flex-col items-center gap-4 text-center"

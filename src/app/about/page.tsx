@@ -1,5 +1,7 @@
 import SectionContainer from "@/components/layout/section-container";
 import RevealCard from "@/components/transitions/reveal-card";
+import CarouselAuto from "@/components/transitions/carousel-auto";
+import { CarouselItem } from "@/components/ui/carousel";
 import { Handshake, Sparkles, Trophy } from "lucide-react";
 import Image from "next/image";
 import { COMPANY_NAME, DEFAULT_OG_IMAGE } from "@/constant";
@@ -35,13 +37,10 @@ function Intro() {
           PROFIL PERUSAHAAN
         </span>
         <h1 className="mb-6 text-4xl leading-[1.1] font-semibold md:text-5xl">
-          Dedikasi Untuk Industri Indonesia
+        Spesialis Rantai Konveyor Pabrik Kelapa Sawit
         </h1>
         <p className="text-muted-foreground mx-auto max-w-4xl text-base lg:text-lg">
-          Sejak tahun 2010, IndoChain telah berkomitmen untuk menjadi tulang
-          punggung sistem transmisi mekanikal di Indonesia. Kami menggabungkan
-          teknologi manufaktur modern dengan pemahaman mendalam tentang
-          tantangan operasional di lapangan.
+        Promis adalah solusi rantai konveyor presisi bagi industri kelapa sawit sejak 2017. Kami percaya pada kekuatan kualitas. itulah mengapa kami menyertakan garansi penuh, inspeksi rutin, dan dukungan teknologi terbaik untuk menjamin investasi Anda tetap produktif dalam jangka panjang.
         </p>
       </div>
     </SectionContainer>
@@ -50,29 +49,29 @@ function Intro() {
 
 const TIMELINE_ITEMS = [
   {
-    year: "2010",
-    title: "Pendirian Perusahaan",
-    desc: "IndoChain resmi berdiri di Medan, Sumatera Utara, melayani pabrik sawit lokal.",
+    year: "1995 - 2016",
+    title: "Tiga Dekade Keahlian Teknis",
+    desc: "Membangun landasan kuat dengan lebih dari 30 tahun pengalaman mendalam dalam manufaktur dan solusi rantai industri.",
   },
   {
-    year: "2014",
-    title: "Ekspansi Nasional",
-    desc: "Membuka kantor cabang di Kalimantan Barat dan Sulawesi untuk menjangkau lebih banyak klien.",
+    year: "2017",
+    title: "Pendirian PT Inti Perkasa Panca Surya",
+    desc: "Resmi beroperasi di Medan sebagai pusat solusi rantai konveyor, fokus pada efisiensi operasional pabrik kelapa sawit.",
   },
   {
-    year: "2018",
-    title: "Sertifikasi ISO 9001",
-    desc: "Mendapatkan pengakuan internasional untuk sistem manajemen kualitas manufaktur kami.",
+    year: "2019",
+    title: "Ekspansi & Jangkauan Nasional", 
+    desc: "Memperluas distribusi dari Kalimantan sampai papua untuk mendukung percepatan industri sawit di luar Sumatera.",
   },
   {
-    year: "2022",
-    title: "Inovasi Produk Baru",
-    desc: "Meluncurkan lini 'Extreme-Duty' untuk rantai konveyor dengan ketahanan korosi tinggi.",
+    year: "2021",
+    title: "Transformasi Brand: Promis",
+    desc: "Evolusi menjadi brand Promis untuk mempertegas standar kualitas premium dan dedikasi pada inovasi rantai konveyor.",
   },
   {
-    year: "2025",
-    title: "Pengembangan Teknologi",
-    desc: "Mengembangkan teknologi rantai konveyor yang lebih efisien dan berkualitas tinggi.",
+    year: "2026",
+    title: "Dinamika Industri & Era Digital",
+    desc: "Mengintegrasikan teknologi manufaktur mutakhir dengan sistem digital untuk mendukung efisiensi industri masa depan.",
   },
 ];
 
@@ -130,21 +129,21 @@ function Timeline() {
 const NILAI_KAMI_ITEMS = [
   {
     icon: Handshake,
-    name: "Integritas",
+    name: "Layanan Kunjungan Pabrik",
     description:
-      "Kami memegang teguh kejujuran dalam setiap transaksi dan spesifikasi produk yang kami berikan.",
+      "Kami menawarkan kunjungan pabrik 3 kali dalam setahun untuk memastikan kinerja optimal conveyor chain dan melakukan evaluasi  menyeluruh  terhadap  kualitas operasional",
   },
   {
     icon: Trophy,
-    name: "Kualitas Tanpa Kompromi",
+    name: "Laporan Berkala",
     description:
-      "Setiap rantai dan sprocket melewati 5 tahap inspeksi sebelum sampai ke tangan pelanggan.",
+      "Setiap kunjungan dilengkapi dengan laporan mendetail yang mencakup analisis performa, pemeliharaan, dan saran peningkatan, guna memastikan  conveyor  chain  Anda  tetap bekerja secara efisien",
   },
   {
     icon: Sparkles,
-    name: "Inovasi Berkelanjutan",
+    name: "Garansi Produk",
     description:
-      "Terus melakukan riset material untuk menciptakan produk yang lebih ringan namun lebih kuat.",
+      "Kami  memberikan  garansi  produk  hingga 10.000 jam (2 tahun), yang menjamin kualitas dan daya tahan conveyor chain dalam jangka waktu panjang",
   },
 ];
 
@@ -155,7 +154,7 @@ function NilaiKami() {
       className="flex flex-col gap-16 py-24 pb-32"
     >
       <h3 className="text-center text-2xl font-bold md:text-3xl">
-        Nilai-Nilai Utama Kami
+        Servis Kami
       </h3>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6 lg:gap-8">
         {NILAI_KAMI_ITEMS.map((nilai) => (
@@ -176,32 +175,74 @@ function NilaiKami() {
 }
 
 const PROCESS_MANUFACTURING_ITEMS = [
-  "Seleksi material baja paduan bersertifikat.",
-  "Pemotongan presisi menggunakan mesin CNC terbaru.",
-  "Proses Heat Treatment untuk kekerasan permukaan yang optimal.",
-  "Perakitan otomatis untuk konsistensi kualitas.",
-  "Uji beban tarik (Tensile Test) pada setiap batch produksi.",
+  "Presisi Mikron: Verifikasi dimensi digital untuk memenuhi standar toleransi internasional.",
+  "Uji Kekerasan: Memastikan ketahanan aus maksimal melalui heat treatment yang terverifikasi.",
+  "Beban Tarik: Pengujian kekuatan putus untuk menjamin keamanan operasional puncak.",
+  "Perakitan Ahli: Proses sistematis untuk menjamin konsistensi dan keandalan produk.",
+  "Logistik Aman: Pengemasan standar ekspor dengan proteksi kayu untuk pengiriman laut.",
+];
+
+const PROCESS_MANUFACTURING_IMAGES = [
+  {
+    src: "/Qu1.png",
+    alt: "Pabrik",
+  },
+  {
+    src: "/Qu2.png",
+    alt: "Pabrik",
+  },
+  {
+    src: "/Qu3.png",
+    alt: "Pabrik",
+  },
+  {
+    src: "/Qu4.png",
+    alt: "Pabrik",
+  },
+  {
+    src: "/Qu5.png",
+    alt: "Pabrik",
+  },
+  {
+    src: "/Qu6.png",
+    alt: "Pabrik",
+  },
+  {
+    src: "/Qu7.png",
+    alt: "Pabrik",
+  },
+  {
+    src: "/Qu8.png",
+    alt: "Pabrik",
+  },
 ];
 
 function ProsesManufaktur() {
   return (
     <SectionContainer className="flex flex-col-reverse items-center gap-8 py-20 md:grid md:grid-cols-7 md:gap-12">
-      <div className="relative aspect-4/3 flex-1 md:col-span-3">
-        <Image
-          src="/photo_20_2024-02-01_08-37-17.jpg"
-          alt="Industrial Background"
-          fill
-          className="rounded-xl object-cover shadow-lg"
-        />
+      <div className="bg-card border-border relative aspect-square overflow-hidden rounded-2xl border shadow-lg **:data-[slot=carousel-item]:ml-0 **:data-[slot=carousel-item]:pl-0 md:col-span-3 [&_[data-slot=carousel-content]>div]:ml-0">
+        <CarouselAuto showBadge delay={4000}>
+          {PROCESS_MANUFACTURING_IMAGES.map((image) => (
+            <CarouselItem key={image.src}>
+              <div className="relative aspect-square w-full">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselAuto>
       </div>
       <div className="flex w-full flex-1 flex-col gap-4 md:col-span-4">
         <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
-          Proses Manufaktur & Kontrol Kualitas
+          Quality Control
         </h2>
         <p className="text-muted-foreground text-base lg:text-lg">
-          Kami memastikan setiap komponen diproduksi dengan presisi mikron untuk
-          menjamin performa optimal.
-        </p>
+        Standar manufaktur tinggi dengan kontrol kualitas berlapis guna menjamin performa ekstrem dan unit yang presisi.        </p>
         <div className="flex flex-col gap-4">
           {PROCESS_MANUFACTURING_ITEMS.map((process, idx) => (
             <div className="flex items-center gap-2.5" key={idx}>
@@ -224,63 +265,63 @@ function ProsesManufaktur() {
 const GALLERY_ITEMS = [
   {
     id: 1,
-    image: "/photo_20_2024-02-01_08-37-17.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Stok2.jpg",
+    name: "Ketersediaan Stok Unit",
+    description: "Gudang pusat dengan stok komponen lengkap yang siap dikirim untuk meminimalisir waktu henti (downtime) produksi.",
   },
   {
     id: 2,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Palmex2024.jpeg",
+    name: "Event Palmex 2024",
+    description: "Partisipasi Promis dalam pameran teknologi kelapa sawit terbesar.",
   },
   {
     id: 3,
-    image: "/about3.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Kemas.jpg",
+    name: "Proses Pengemasan",
+    description: "Standar pengemasan aman untuk memastikan produk sampai dalam kondisi prima.",
   },
   {
     id: 4,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Stok.jpg",
+    name: "Ketersediaan Stok",
+    description: "Gudang penyimpanan dengan stok rantai industri yang selalu siap kirim.",
   },
   {
     id: 5,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Produksi.jpg",
+    name: "Lini Produksi",
+    description: "Proses pembuatan rantai menggunakan teknologi perakitan terkini.",
   },
   {
     id: 6,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Palmex2025.jpg",
+    name: "Palmex 2025 Highlights",
+    description: "Menampilkan inovasi terbaru sprocket dan rantai transmisi di Palmex.",
   },
   {
     id: 7,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Palmex2025-2.jpg",
+    name: "Konsultasi Teknis pada Palmex 2025",
+    description: "Interaksi dengan mitra industri mengenai solusi kebutuhan pabrik.",
   },
   {
     id: 8,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Pabrik3.jpeg",
+    name: "Standar Kontrol Kualitas",
+    description: "Proses inspeksi teknis mandiri untuk memastikan setiap rantai memiliki ketahanan beban dan durabilitas maksimal.",
   },
   {
     id: 9,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Pabrik4.jpeg",
+    name: "Kunjungan Pabrik",
+    description: "Membuat laporan dan mengecek kondisi ketahan rantai kustomer kami untuk memastikan kepuasan pelanggan",
   },
   {
     id: 10,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Stok3.jpg",
+    name: "Logistik Pengiriman",
+    description: "Siap mendistribusikan kebutuhan sparepart ke seluruh pabrik sawit Indonesia.",
   },
 ];
 

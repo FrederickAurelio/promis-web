@@ -6,8 +6,10 @@ import {
   MAILTO_LINK,
   MAPS_QUERY_URL,
   PHONE_DISPLAY,
+  LANDLINE_DISPLAY,
   SOCIAL_LINKS as SOCIAL_LINKS_CONST,
   TEL_LINK,
+  LANDLINE_TEL_LINK,
 } from "@/constant";
 import {
   FacebookIcon,
@@ -48,15 +50,16 @@ const NAVIGATION_ITEMS = [
 
 const PRODUCTS_ITEMS = [
   { href: "/products?product=conveyor-chain", label: "Conveyor Chain" },
-  { href: "/products?product=sprocket", label: "Sprocket" },
-  { href: "/products?product=pulley", label: "Pulley" },
-  { href: "/products?product=bearing", label: "Bearing Roller" },
-  { href: "/products?product=chain-link", label: "Chain Link" },
+  { href: "/products?product=sprocket", label: "Tranmission Chain" },
+  { href: "/products?product=pulley", label: "Sprocket" },
+  { href: "/products?product=bearing", label: "Connecting Link" },
+  { href: "/products?product=chain-link", label: "& kebutuhan lainnya" },
 ];
 
 const CONTACT_ITEMS = [
   { href: MAPS_QUERY_URL, label: ADDRESS, Icon: MapPinIcon },
   { href: TEL_LINK, label: PHONE_DISPLAY, Icon: PhoneIcon },
+  { href: LANDLINE_TEL_LINK, label: LANDLINE_DISPLAY, Icon: PhoneIcon },
   { href: MAILTO_LINK, label: EMAIL, Icon: MailIcon },
 ];
 
