@@ -37,7 +37,9 @@ import {
   MAPS_EMBED_URL,
   MAPS_QUERY_URL,
   PHONE_DISPLAY,
+  LANDLINE_DISPLAY,
   WHATSAPP_LINK,
+  LANDLINE_TEL_LINK,
 } from "@/constant";
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 import Link from "next/link";
@@ -49,6 +51,12 @@ const CONTACT_INFO = [
     label: "Telepon / WhatsApp",
     value: PHONE_DISPLAY,
     href: WHATSAPP_LINK,
+  },
+  {
+    icon: PhoneIcon,
+    label: "Telepon Kantor",
+    value: LANDLINE_DISPLAY,
+    href: LANDLINE_TEL_LINK,
   },
   { icon: MailIcon, label: "Email", value: EMAIL, href: MAILTO_LINK },
   {
@@ -69,7 +77,7 @@ const OPERATIONAL_HOURS = [
     hours: "08:30 - 12:30",
   },
   {
-    day: "Minggu",
+    day: "Minggu/Libur Nasional",
     hours: "Tutup",
   },
 ];
@@ -162,7 +170,7 @@ const FAQ_ITEMS = [
     id: "after-sales",
     question: "Bagaimana dukungan after-sales dan layanan teknis Promis?",
     answer:
-      "Kami menyediakan layanan purna jual proaktif, meliputi: (1) Kunjungan Pabrik 3x setahun untuk evaluasi operasional, (2) Laporan Berkala mendetail tentang performa dan pemeliharaan, serta (3) Pendampingan teknis troubleshooting.",
+      "Kami menyediakan layanan purna jual proaktif, meliputi: Kunjungan Pabrik 3x setahun untuk evaluasi operasional & Laporan Berkala mendetail tentang performa dan pemeliharaan",
   },
   {
     id: "custom",
@@ -180,13 +188,13 @@ const FAQ_ITEMS = [
     id: "catalog",
     question: "Bagaimana cara mendapatkan katalog resmi dan daftar harga?",
     answer:
-      "Anda dapat meminta katalog digital dan penawaran harga melalui WhatsApp atau Email. Tim kami akan segera mengirimkan dokumen yang sesuai dengan kebutuhan industri Anda.",
+      "Anda dapat mendownload brosur & penawaran harga melalui WhatsApp atau Email. Tim kami akan segera mengirimkan dokumen yang sesuai dengan kebutuhan industri Anda.",
   },
   {
     id: "payment",
     question: "Metode pembayaran apa saja yang tersedia?",
     answer:
-      "Kami menerima transfer bank dan dapat mendiskusikan skema pembayaran fleksibel (seperti pembayaran via faktur) sesuai dengan kesepakatan kebutuhan proyek Anda.",
+      "Kami menerima transfer bank dan dapat mendiskusikan skema pembayaran fleksibel sesuai dengan kesepakatan kebutuhan proyek Anda.",
   },
   {
     id: "return",

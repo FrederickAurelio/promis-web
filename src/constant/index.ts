@@ -1,15 +1,18 @@
 export const COMPANY_NAME = "Promis Conveyor Chain";
 export const WEBSITE_URL = "https://promischain.com";
-export const DEFAULT_OG_IMAGE = "/about3.jpg";
+export const DEFAULT_OG_IMAGE = "/OG.jpg";
 
 export const PHONE_RAW = "6281269708999";
 export const PHONE_DISPLAY = "+62 812-6970-8999";
-export const EMAIL = "intiperkasapancasurya@yahoo.com";
+export const LANDLINE_RAW = "626180034828";
+export const LANDLINE_DISPLAY = "+62 618 003 4828";
+export const EMAIL = "intiperkasapancasurya@gmail.com";
 export const ADDRESS =
-  "Komplek Citra Land Gamma City Jalan Boulevard Barat Raya Blok R8 No 3, Kenangan, Kec. Percut Sei Tuan, Kota Medan, Sumatera Utara 20371, Indonesia";
+  "CitraLand Gamma City Jalan Boulevard Barat Raya Blok R8 No 3, Kenangan, Kec. Percut Sei Tuan, Kota Medan, Sumatera Utara 20371, Indonesia";
 
 export const WHATSAPP_LINK = `https://wa.me/${PHONE_RAW}`;
 export const TEL_LINK = `tel:+${PHONE_RAW}`;
+export const LANDLINE_TEL_LINK = `tel:${LANDLINE_RAW}`;
 export const MAILTO_LINK = `mailto:${EMAIL}`;
 
 export const MAPS_EMBED_URL =
@@ -17,7 +20,7 @@ export const MAPS_EMBED_URL =
 export const MAPS_QUERY_URL = "https://maps.app.goo.gl/UNWFnTXyrE5yYBJTA";
 
 export const SOCIAL_LINKS = {
-  facebook: "https://www.facebook.com/promischain",
-  instagram: "https://www.instagram.com/promischain",
-  linkedin: "https://www.linkedin.com/company/promischain",
+  facebook: "https://www.facebook.com/profile.php?id=61555938339639",
+  instagram: "https://www.instagram.com/promisconveyorchain/",
+  linkedin: "https://www.linkedin.com/in/promis-conveyor-chain-n-sprocket-8a236154/?originalSubdomain=id",
 } as const;

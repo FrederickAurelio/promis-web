@@ -1,20 +1,21 @@
-"use client";
+'use client';
 
-import CollapseTransition from "@/components/transitions/CollapseTransition";
-import { Button } from "@/components/ui/button";
-import { WHATSAPP_LINK } from "@/constant";
-import { cn } from "@/lib/utils";
-import { MenuIcon, X } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import CollapseTransition from '@/components/transitions/CollapseTransition';
+import { Button } from '@/components/ui/button';
+import { WHATSAPP_LINK } from '@/constant';
+import { cn } from '@/lib/utils';
+import { MenuIcon, X } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const NAV_ITEMS = [
-  { href: "/", label: "Beranda" },
-  { href: "/products", label: "Produk" },
-  { href: "/about", label: "Tentang Kami" },
-  { href: "/contact", label: "Kontak" },
+  { href: '/', label: 'Beranda' },
+  { href: '/products', label: 'Produk' },
+  { href: '/about', label: 'Tentang Kami' },
+  { href: '/contact', label: 'Kontak' },
+  { href: '/brosur-produk.pdf', label: 'Download Brosur', download: true },
 ];
 
 export default function Navbar() {
@@ -22,7 +23,7 @@ export default function Navbar() {
 
   const pathname = usePathname();
   const isActive = (path: string) => {
-    if (path === "/") return pathname === "/";
+    if (path === '/') return pathname === '/';
     return pathname.startsWith(path);
   };
   const [scrolled, setScrolled] = useState(false);
@@ -31,8 +32,8 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
@@ -43,11 +44,11 @@ export default function Navbar() {
         setIsMenuOpen(false);
       }
     };
-    document.addEventListener("click", handleClickOutside);
-    document.addEventListener("touchstart", handleClickOutside);
+    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
     return () => {
-      document.removeEventListener("click", handleClickOutside);
-      document.removeEventListener("touchstart", handleClickOutside);
+      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
     };
   }, [isMenuOpen]);
 
@@ -55,22 +56,22 @@ export default function Navbar() {
     <nav
       data-nav-root="true"
       className={cn(
-        "sticky top-0 z-50 w-full",
-        scrolled && isMenuOpen && "shadow-md",
+        'sticky top-0 z-50 w-full',
+        scrolled && isMenuOpen && 'shadow-md',
       )}
     >
       <div
         className={cn(
-          "w-full transition-all duration-300",
+          'w-full transition-all duration-300',
           !scrolled
-            ? "backdrop-blur-0 bg-transparent"
-            : "bg-background/70 shadow-md backdrop-blur-md",
+            ? 'backdrop-blur-0 bg-transparent'
+            : 'bg-background/70 shadow-md backdrop-blur-md',
         )}
       >
         <div
           className={cn(
-            "container mx-auto flex items-center justify-between px-4 transition-all duration-300 md:px-6 lg:px-10",
-            scrolled ? "h-12 md:h-14" : "h-14 md:h-16",
+            'container mx-auto flex items-center justify-between px-4 transition-all duration-300 md:px-6 lg:px-10',
+            scrolled ? 'h-12 md:h-14' : 'h-14 md:h-16',
           )}
         >
           <div className="flex items-center">
@@ -109,11 +110,17 @@ export default function Navbar() {
                 variant="ghost"
                 asChild
                 className={cn(
-                  "text-base lg:text-lg",
-                  isActive(item.href) && "text-primary hover:text-primary",
+                  'text-base lg:text-lg',
+                  !item.download && isActive(item.href) && 'text-primary hover:text-primary',
                 )}
               >
-                <Link href={item.href}>{item.label}</Link>
+                {item.download ? (
+                  <a href={item.href} download>
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link href={item.href}>{item.label}</Link>
+                )}
               </Button>
             ))}
 
@@ -163,12 +170,19 @@ export default function Navbar() {
                   asChild
                   onClick={() => setIsMenuOpen(false)}
                   className={cn(
-                    "text-foreground/90 hover:bg-accent hover:text-accent-foreground w-full justify-start rounded-none px-4 py-2 text-base",
-                    isActive(item.href) &&
-                      "bg-accent text-primary hover:text-primary",
+                    'text-foreground/90 hover:bg-accent hover:text-accent-foreground w-full justify-start rounded-none px-4 py-2 text-base',
+                    !item.download &&
+                      isActive(item.href) &&
+                      'bg-accent text-primary hover:text-primary',
                   )}
                 >
-                  <Link href={item.href}>{item.label}</Link>
+                  {item.download ? (
+                    <a href={item.href} download>
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link href={item.href}>{item.label}</Link>
+                  )}
                 </Button>
               ))}
             </div>

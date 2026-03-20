@@ -35,7 +35,7 @@ function Intro() {
           PROFIL PERUSAHAAN
         </span>
         <h1 className="mb-6 text-4xl leading-[1.1] font-semibold md:text-5xl">
-        Spesialis Rantai Conveyor Pabrik Kelapa Sawit
+        Spesialis Rantai Konveyor Pabrik Kelapa Sawit
         </h1>
         <p className="text-muted-foreground mx-auto max-w-4xl text-base lg:text-lg">
         Promis adalah solusi rantai konveyor presisi bagi industri kelapa sawit sejak 2017. Kami percaya pada kekuatan kualitas. itulah mengapa kami menyertakan garansi penuh, inspeksi rutin, dan dukungan teknologi terbaik untuk menjamin investasi Anda tetap produktif dalam jangka panjang.
@@ -47,24 +47,24 @@ function Intro() {
 
 const TIMELINE_ITEMS = [
   {
-    year: "1996 - 2016",
+    year: "1995 - 2016",
     title: "Tiga Dekade Keahlian Teknis",
-    desc: "Membangun landasan kuat dengan lebih dari 30 tahun pengalaman mendalam dalam manufaktur dan solusi rantai transmisi industri.",
+    desc: "Membangun landasan kuat dengan lebih dari 30 tahun pengalaman mendalam dalam manufaktur dan solusi rantai industri.",
   },
   {
     year: "2017",
     title: "Pendirian PT Inti Perkasa Panca Surya",
-    desc: "Resmi beroperasi di Medan sebagai pusat solusi rantai conveyor, fokus pada efisiensi operasional pabrik kelapa sawit.",
+    desc: "Resmi beroperasi di Medan sebagai pusat solusi rantai konveyor, fokus pada efisiensi operasional pabrik kelapa sawit.",
   },
   {
     year: "2019",
     title: "Ekspansi & Jangkauan Nasional", 
-    desc: "Memperluas distribusi ke Kalimantan dan Sulawesi untuk mendukung percepatan industri sawit di luar Sumatera.",
+    desc: "Memperluas distribusi dari Kalimantan sampai papua untuk mendukung percepatan industri sawit di luar Sumatera.",
   },
   {
     year: "2021",
     title: "Transformasi Brand: Promis",
-    desc: "Evolusi menjadi brand Promis untuk mempertegas standar kualitas premium dan dedikasi pada inovasi rantai conveyor.",
+    desc: "Evolusi menjadi brand Promis untuk mempertegas standar kualitas premium dan dedikasi pada inovasi rantai konveyor.",
   },
   {
     year: "2026",
@@ -177,7 +177,7 @@ const PROCESS_MANUFACTURING_ITEMS = [
   "Uji Kekerasan Material, Memverifikasi efektivitas heat treatment pada setiap batch untuk menjamin ketahanan aus maksimal di medan berat sawit.",
   "Uji Beban Tarik Ekstrem, Menguji kekuatan putus rantai untuk memastikan unit mampu menahan beban operasional puncak tanpa kegagalan mekanis.",
   "Sistem Perakitan & Konsistensi Kualitas, Menggabungkan keahlian teknisi berpengalaman dengan perakitan sistematis untuk hasil produk yang seragam dan andal.",
-  "Pengemasan & Logistik Laut Profesional, Menggunakan proteksi berlapis (Karton + Kotak Kayu + Palet) menjamin pengiriman aman, tepat waktu, dan minim risiko.",
+  "Pengemasan & Logistik Laut Profesional, Menggunakan proteksi berlapis (Plastik + Karton + Kotak Kayu + Palet) menjamin pengiriman aman, tepat waktu, dan minim risiko.",
 ];
 
 function ProsesManufaktur() {
@@ -220,63 +220,63 @@ function ProsesManufaktur() {
 const GALLERY_ITEMS = [
   {
     id: 1,
-    image: "/photo_20_2024-02-01_08-37-17.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Stok2.jpg",
+    name: "Ketersediaan Stok Unit",
+    description: "Gudang pusat dengan stok komponen lengkap yang siap dikirim untuk meminimalisir waktu henti (downtime) produksi.",
   },
   {
     id: 2,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Palmex2024.jpeg",
+    name: "Event Palmex 2024",
+    description: "Partisipasi Promis dalam pameran teknologi kelapa sawit terbesar.",
   },
   {
     id: 3,
-    image: "/about3.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Kemas.jpg",
+    name: "Proses Pengemasan",
+    description: "Standar pengemasan aman untuk memastikan produk sampai dalam kondisi prima.",
   },
   {
     id: 4,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Stok.jpg",
+    name: "Ketersediaan Stok",
+    description: "Gudang penyimpanan dengan stok rantai industri yang selalu siap kirim.",
   },
   {
     id: 5,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Produksi.jpg",
+    name: "Lini Produksi",
+    description: "Proses pembuatan rantai menggunakan teknologi perakitan terkini.",
   },
   {
     id: 6,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Palmex2025.jpg",
+    name: "Palmex 2025 Highlights",
+    description: "Menampilkan inovasi terbaru sprocket dan rantai transmisi di Palmex.",
   },
   {
     id: 7,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Palmex2025-2.jpg",
+    name: "Konsultasi Teknis pada Palmex 2025",
+    description: "Interaksi dengan mitra industri mengenai solusi kebutuhan pabrik.",
   },
   {
     id: 8,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Pabrik3.jpeg",
+    name: "Standar Kontrol Kualitas",
+    description: "Proses inspeksi teknis mandiri untuk memastikan setiap rantai memiliki ketahanan beban dan durabilitas maksimal.",
   },
   {
     id: 9,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Pabrik4.jpeg",
+    name: "Kunjungan Pabrik",
+    description: "Membuat laporan dan mengecek kondisi ketahan rantai kustomer kami untuk memastikan kepuasan pelanggan",
   },
   {
     id: 10,
-    image: "/about.jpg",
-    name: "Fasilitas Produksi",
-    description: "Melihat lebih dekat fasilitas produksi kami.",
+    image: "/Galeri-Stok3.jpg",
+    name: "Logistik Pengiriman",
+    description: "Siap mendistribusikan kebutuhan sparepart ke seluruh pabrik sawit Indonesia.",
   },
 ];
 

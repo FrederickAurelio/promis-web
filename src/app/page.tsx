@@ -53,7 +53,7 @@ function Hero() {
     <SectionContainer className="h-[calc(var(--height-screen)-56px)] min-h-[600px] md:h-[calc(var(--height-screen)-64px)] md:max-h-[1050px]">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/about3.jpg"
+          src="/Depan6.jpg"
           alt="Industrial Background"
           fill
           className="h-full w-full object-cover opacity-30"
@@ -104,7 +104,7 @@ menjaga kualitas dan kepuasan pelanggan
 
 const SEKTOR_INDUSTRI = [
   {
-    name: "Conveyor Chain (PKS)",
+    name: "Conveyor Chain",
     description: "Rantai konveyor spesifikasi berat untuk digester, kranji, dan pengolahan tandan buah segar.",
     icon: Palmtree,
   },
@@ -114,14 +114,19 @@ const SEKTOR_INDUSTRI = [
     icon: Settings,
   },
   {
-    name: "Precision Sprockets",
+    name: "Sprockets",
     description: "Sprocket dengan durabilitas tinggi, dirancang pas untuk meminimalisir keausan rantai.",
     icon: Flame,
   },
   {
-    name: "Connecting & Offset Links",
+    name: "Connecting Links",
     description: "Komponen penyambung kritikal dengan kekuatan tarik yang setara dengan rantai utama.",
     icon: FlaskConical,
+  },
+  {
+    name: "& Kebutuhan lainnya",
+    description: "Komponen penyambung kritikal dengan kekuatan tarik yang setara dengan rantai utama.",
+    icon: Settings,
   },
 ];
 
@@ -210,7 +215,7 @@ function AlasanMemilihKami() {
     >
       <div className="relative aspect-4/3 flex-1 md:col-span-3">
         <Image
-          src="/about.jpg"
+          src="/Depan4.jpg"
           alt="Industrial Background"
           fill
           className="rounded-xl object-cover shadow-lg"
@@ -248,15 +253,13 @@ conveyor	chain	berkualitas tinggi untuk	industri kelapa sawit.
 const PRODUCTS = [
   {
     name: "Conveyor Chain",
-    description:
-      "Conveyor chain adalah komponen yang digunakan untuk mengangkut material dari satu tempat ke tempat lain.",
-    image: "/photo_20_2024-02-01_08-37-17.jpg",
+    description: "Solusi andalan untuk perpindahan material yang efisien dengan ketahanan beban maksimal di berbagai lini produksi.",
+    image: "/Depan6.jpg",
   },
   {
-    name: "Sprocket",
-    description:
-      "Sprocket adalah komponen yang digunakan untuk mengangkut material dari satu tempat ke tempat lain.",
-    image: "/photo_20_2024-02-01_08-37-17.jpg",
+    name: "Transmission Chain", 
+    description: "Optimalkan performa mesin dengan transmisi daya yang presisi, menjamin kelancaran operasional jangka panjang.",
+    image: "/Depan8.jpg",
   },
 ];
 
@@ -313,22 +316,22 @@ function ProdukPilihanKami() {
 const GALLERY_OPERATIONAL = [
   {
     id: 1,
-    image: "/about.jpg",
+    image: "/Banyak2.jpg",
     name: "Fasilitas Produksi",
   },
   {
     id: 2,
-    image: "/about3.jpg",
+    image: "/Pabrik.jpeg",
     name: "Stok Gudang",
   },
   {
     id: 3,
-    image: "/photo_20_2024-02-01_08-37-17.jpg",
+    image: "/Delivery.jpg",
     name: "Karyawan",
   },
   {
     id: 4,
-    image: "/about.jpg",
+    image: "/Kemasan.jpeg",
     name: "Produksi",
   },
 ];
