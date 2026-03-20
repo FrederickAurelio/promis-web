@@ -7,24 +7,22 @@ import { Button } from "@/components/ui/button";
 import { CarouselItem } from "@/components/ui/carousel";
 import { COMPANY_NAME, DEFAULT_OG_IMAGE, WHATSAPP_LINK } from "@/constant";
 import {
+  Award,
   ArrowRight,
-  Brain,
-  CheckCircle,
+  Cog,
+  BadgeCheck,
   Factory,
-  Flame,
-  FlaskConical,
+  Headset,
+  Link2,
+  Microscope,
   MessageCircle,
   Palmtree,
-  Pill,
   QuoteIcon,
   Settings,
-  ShieldCheck,
-  Smile,
-  Truck,
 } from "lucide-react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Conveyor Chain & Sprocket untuk Industri",
@@ -64,16 +62,17 @@ function Hero() {
 
       <HeroTransition className="relative z-10 flex h-full max-w-3xl -translate-y-4 flex-col items-start justify-center">
         {/* use Badge components */}
-        <Badge className="bg-primary/10 text-primary mb-6 rounded-full px-4 py-1 text-sm font-semibold tracking-wider uppercase">
-        Promis: Jaminan Ketangguhan Rantai Conveyor di Indonesia
+        <Badge className="bg-primary/10 text-primary mb-6 w-fit shrink rounded-full px-4 py-1 text-xs font-semibold tracking-wider wrap-break-word whitespace-normal uppercase md:text-sm">
+          Promis: Jaminan Ketangguhan Rantai Conveyor di Indonesia
         </Badge>
-        <h1 className="mb-6 text-5xl leading-[1.1] font-semibold md:text-7xl">
-       Solusi <span className="text-primary">  Rantai Conveyor </span> Berkualitas untuk Industri Sawit
+        <h1 className="mb-6 text-4xl leading-[1.1] font-semibold md:text-6xl">
+          Solusi <span className="text-primary"> Rantai Conveyor </span>{" "}
+          Berkualitas untuk Industri Sawit
         </h1>
         <p className="text-muted-foreground mb-10 max-w-2xl text-xl md:text-2xl">
-        Dengan bertahun- tahunnya pengalaman untuk meningkatkan	efisiensi dan	keandalan	dalam proses pengolahan kelapa sawit,	dengan
-menjaga kualitas dan kepuasan pelanggan
-
+          Dengan bertahun- tahunnya pengalaman untuk meningkatkan efisiensi dan
+          keandalan dalam proses pengolahan kelapa sawit, dengan menjaga
+          kualitas dan kepuasan pelanggan
         </p>
         <div className="flex flex-col gap-4 sm:flex-row">
           <Button
@@ -105,28 +104,27 @@ menjaga kualitas dan kepuasan pelanggan
 const SEKTOR_INDUSTRI = [
   {
     name: "Conveyor Chain",
-    description: "Rantai konveyor spesifikasi berat untuk digester, kranji, dan pengolahan tandan buah segar.",
+    description:
+      "Rantai konveyor spesifikasi berat untuk digester, kranji, dan pengolahan tandan buah segar.",
     icon: Palmtree,
   },
   {
     name: "Transmission Roller Chain",
-    description: "Rantai transmisi presisi tinggi untuk efisiensi daya maksimal di mesin pengolahan.",
+    description:
+      "Rantai transmisi presisi tinggi untuk efisiensi daya maksimal di mesin pengolahan.",
     icon: Settings,
   },
   {
     name: "Sprockets",
-    description: "Sprocket dengan durabilitas tinggi, dirancang pas untuk meminimalisir keausan rantai.",
-    icon: Flame,
+    description:
+      "Sprocket dengan durabilitas tinggi, dirancang pas untuk meminimalisir keausan rantai.",
+    icon: Cog,
   },
   {
     name: "Connecting Links",
-    description: "Komponen penyambung kritikal dengan kekuatan tarik yang setara dengan rantai utama.",
-    icon: FlaskConical,
-  },
-  {
-    name: "& Kebutuhan lainnya",
-    description: "Komponen penyambung kritikal dengan kekuatan tarik yang setara dengan rantai utama.",
-    icon: Settings,
+    description:
+      "Komponen penyambung kritikal dengan kekuatan tarik yang setara dengan rantai utama.",
+    icon: Link2,
   },
 ];
 
@@ -134,11 +132,14 @@ function LayananIndustri() {
   return (
     <SectionContainer className="flex flex-col gap-3 py-24 pb-32 lg:py-32 lg:pb-40">
       <h2 className="text-3xl font-bold max-sm:max-w-[16ch] lg:text-4xl">
-      Spesialisasi Solusi Transmisi Pabrik Kelapa Sawit
+        Spesialisasi Solusi Transmisi Pabrik Kelapa Sawit
       </h2>
       <div className="mb-7 flex flex-col justify-between gap-4 md:flex-row md:items-end md:gap-8">
         <p className="text-muted-foreground text-base lg:text-lg">
-        Kami memusatkan seluruh keahlian teknik kami pada satu sektor: Industri Kelapa Sawit. Dengan fokus tunggal ini, kami menjamin setiap komponen transmisi yang kami hadirkan memiliki ketahanan operasional yang telah teruji menghadapi beban ekstrem di pabrik Anda.
+          Kami memusatkan seluruh keahlian teknik kami pada satu sektor:
+          Industri Kelapa Sawit. Dengan fokus tunggal ini, kami menjamin setiap
+          komponen transmisi yang kami hadirkan memiliki ketahanan operasional
+          yang telah teruji menghadapi beban ekstrem di pabrik Anda.
         </p>
         <div>
           <Button
@@ -151,12 +152,13 @@ function LayananIndustri() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Konsultasikan Kebutuhan Pabrik Anda<ArrowRight className="size-5" />
+              Konsultasikan Kebutuhan Pabrik Anda
+              <ArrowRight className="size-5" />
             </Link>
           </Button>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {SEKTOR_INDUSTRI.map((sektor) => (
           <RevealCard
             randomDelay
@@ -166,7 +168,7 @@ function LayananIndustri() {
             className="bg-card border-border hover:bg-accent hover:border-accent-foreground flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border p-4 py-8 transition-all duration-300 hover:-translate-y-1"
           >
             <sektor.icon className="size-10" />
-            <h3 className="text-lg font-bold">{sektor.name}</h3>
+            <h3 className="text-center text-lg font-bold">{sektor.name}</h3>
           </RevealCard>
         ))}
       </div>
@@ -179,31 +181,31 @@ const REASONS_TO_CHOOSE_US = [
     title: "Pengalaman & Keahlian 30 Tahun",
     description:
       "Memiliki rekam jejak tiga dekade dalam memproduksi rantai rol dan konveyor berkualitas tinggi untuk berbagai kebutuhan transmisi industri.",
-    icon: CheckCircle,
+    icon: Award,
   },
   {
     title: "Teknologi Produksi & Inspeksi Mutakhir",
     description:
       "Didukung peralatan canggih serta keunggulan teknologi heat treatment dan surface treatment untuk memastikan daya tahan produk yang maksimal.",
-    icon: Brain,
+    icon: Microscope,
   },
   {
     title: "Standar Kualitas Internasional",
     description:
       "Produk diproduksi sesuai Standar Amerika, Eropa, dan Jepang (ANSI, DIN, JIS) menggunakan material premium untuk menjamin masa pakai yang lama.",
-    icon: Settings,
+    icon: BadgeCheck,
   },
   {
     title: "Kapasitas Produksi & Kustomisasi OEM",
     description:
       "Fasilitas pabrik yang kuat dengan kemampuan layanan kustom dan OEM yang fleksibel untuk memenuhi spesifikasi khusus setiap pelanggan.",
-    icon: ShieldCheck,
+    icon: Factory,
   },
   {
     title: "Harga Kompetitif & Layanan Purna Jual (After Sales Service)",
     description:
       "Memberikan penawaran harga terbaik, dukungan teknis ahli, serta jaminan layanan after-sales untuk mendukung efisiensi bisnis Anda.",
-    icon: Smile,
+    icon: Headset,
   },
 ];
 
@@ -213,7 +215,7 @@ function AlasanMemilihKami() {
       rootClassName="bg-card"
       className="flex flex-col items-center gap-8 py-20 md:grid md:grid-cols-7 md:gap-12"
     >
-      <div className="relative aspect-4/3 flex-1 md:col-span-3">
+      <div className="relative aspect-4/3 flex-1 max-md:w-full md:col-span-3">
         <Image
           src="/Depan4.jpg"
           alt="Industrial Background"
@@ -226,9 +228,8 @@ function AlasanMemilihKami() {
           Mengapa Memilih Promis?
         </h2>
         <p className="text-muted-foreground text-base lg:text-lg">
-        Kami adalah	perusahaan	yang	menyediakan
-conveyor	chain	berkualitas tinggi untuk	industri kelapa sawit.
-
+          Kami adalah perusahaan yang menyediakan conveyor chain berkualitas
+          tinggi untuk industri kelapa sawit.
         </p>
         <div className="flex flex-col gap-3">
           {REASONS_TO_CHOOSE_US.map((reason) => (
@@ -253,12 +254,14 @@ conveyor	chain	berkualitas tinggi untuk	industri kelapa sawit.
 const PRODUCTS = [
   {
     name: "Conveyor Chain",
-    description: "Solusi andalan untuk perpindahan material yang efisien dengan ketahanan beban maksimal di berbagai lini produksi.",
+    description:
+      "Solusi andalan untuk perpindahan material yang efisien dengan ketahanan beban maksimal di berbagai lini produksi.",
     image: "/Depan6.jpg",
   },
   {
-    name: "Transmission Chain", 
-    description: "Optimalkan performa mesin dengan transmisi daya yang presisi, menjamin kelancaran operasional jangka panjang.",
+    name: "Transmission Chain",
+    description:
+      "Optimalkan performa mesin dengan transmisi daya yang presisi, menjamin kelancaran operasional jangka panjang.",
     image: "/Depan8.jpg",
   },
 ];
@@ -271,7 +274,7 @@ function ProdukPilihanKami() {
           Produk Pilihan Kami
         </h2>
         <p className="text-muted-foreground text-center text-base lg:text-lg">
-        Komponen Vital dengan Durabilitas dan Masa Pakai Optimal.
+          Komponen Vital dengan Durabilitas dan Masa Pakai Optimal.
         </p>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6">
@@ -347,7 +350,7 @@ function GaleriOperasional() {
       </h2>
       <div className="mb-7 flex flex-col justify-between gap-4 md:flex-row md:items-end md:gap-8">
         <p className="text-muted-foreground text-base lg:text-lg">
-        Tinjauan Infrastruktur Produksi dan Pusat Distribusi Logistik Kami
+          Tinjauan Infrastruktur Produksi dan Pusat Distribusi Logistik Kami
         </p>
         <div className="max-md:flex max-md:justify-end">
           <Button
