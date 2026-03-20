@@ -15,7 +15,7 @@ const NAV_ITEMS = [
   { href: '/products', label: 'Produk' },
   { href: '/about', label: 'Tentang Kami' },
   { href: '/contact', label: 'Kontak' },
-  { href: '/brosur-produk.pdf', label: 'Download Brosur', download: true },
+  { href: '/brosur-produk.pdf', label: 'Brosur', download: true },
 ];
 
 export default function Navbar() {

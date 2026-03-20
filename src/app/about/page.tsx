@@ -173,11 +173,11 @@ function NilaiKami() {
 }
 
 const PROCESS_MANUFACTURING_ITEMS = [
-  "Verifikasi Dimensi & Presisi Mikron, Menggunakan alat ukur digital terkalibrasi untuk memastikan setiap mata rantai memenuhi toleransi presisi standar internasional.",
-  "Uji Kekerasan Material, Memverifikasi efektivitas heat treatment pada setiap batch untuk menjamin ketahanan aus maksimal di medan berat sawit.",
-  "Uji Beban Tarik Ekstrem, Menguji kekuatan putus rantai untuk memastikan unit mampu menahan beban operasional puncak tanpa kegagalan mekanis.",
-  "Sistem Perakitan & Konsistensi Kualitas, Menggabungkan keahlian teknisi berpengalaman dengan perakitan sistematis untuk hasil produk yang seragam dan andal.",
-  "Pengemasan & Logistik Laut Profesional, Menggunakan proteksi berlapis (Plastik + Karton + Kotak Kayu + Palet) menjamin pengiriman aman, tepat waktu, dan minim risiko.",
+  "Presisi Mikron: Verifikasi dimensi digital untuk memenuhi standar toleransi internasional.",
+  "Uji Kekerasan: Memastikan ketahanan aus maksimal melalui heat treatment yang terverifikasi.",
+  "Beban Tarik: Pengujian kekuatan putus untuk menjamin keamanan operasional puncak.",
+  "Perakitan Ahli: Proses sistematis untuk menjamin konsistensi dan keandalan produk.",
+  "Logistik Aman: Pengemasan standar ekspor dengan proteksi kayu untuk pengiriman laut.",
 ];
 
 function ProsesManufaktur() {
@@ -193,11 +193,10 @@ function ProsesManufaktur() {
       </div>
       <div className="flex w-full flex-1 flex-col gap-4 md:col-span-4">
         <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
-          Kontrol Kualitas, Dari Presisi Laboratorium hingga Keamanan Pengiriman
+          Quality Control
         </h2>
         <p className="text-muted-foreground text-base lg:text-lg">
-        Kami melampaui standar manufaktur dengan menerapkan kontrol kualitas berlapis yang didukung peralatan uji canggih, guna memastikan performa ekstrem dan unit yang diterima dalam kondisi sempurna.
-        </p>
+        Standar manufaktur tinggi dengan kontrol kualitas berlapis guna menjamin performa ekstrem dan unit yang presisi.        </p>
         <div className="flex flex-col gap-4">
           {PROCESS_MANUFACTURING_ITEMS.map((process, idx) => (
             <div className="flex items-center gap-2.5" key={idx}>
