@@ -164,7 +164,7 @@ const FAQ_ITEMS = [
     id: "warranty",
     question: "Apakah produk memiliki garansi resmi?",
     answer:
-      "Ya. Kami memberikan jaminan kualitas dan durabilitas hingga 10.000 jam operasional (2 tahun) untuk memastikan performa maksimal conveyor chain Anda dalam jangka panjang.",
+      "Ya. Kami memberikan Garansi hingga 10.000 jam operasional (2 tahun) untuk memastikan performa maksimal conveyor chain Anda dalam jangka panjang.",
   },
   {
     id: "after-sales",
@@ -200,7 +200,7 @@ const FAQ_ITEMS = [
     id: "return",
     question: "Bagaimana kebijakan jika terjadi kendala pada produk?",
     answer:
-      "Kepuasan pelanggan adalah prioritas kami. Jika terdapat kesalahan pengiriman atau kendala kualitas, laporkan segera untuk pemeriksaan teknis dan solusi penyelesaian sesuai kebijakan perusahaan.",
+      "Kepuasan pelanggan adalah prioritas kami. Jika terdapat kesalahan pengiriman atau kendala kualitas, kami menjamin penggantian unit baru setelah pemeriksaan teknis.",
   },
 ];
 
