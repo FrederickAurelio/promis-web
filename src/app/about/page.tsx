@@ -220,7 +220,7 @@ const PROCESS_MANUFACTURING_IMAGES = [
 function ProsesManufaktur() {
   return (
     <SectionContainer className="flex flex-col-reverse items-center gap-8 py-20 md:grid md:grid-cols-7 md:gap-12">
-      <div className="bg-card border-border relative aspect-square overflow-hidden rounded-2xl border shadow-lg **:data-[slot=carousel-item]:ml-0 **:data-[slot=carousel-item]:pl-0 md:col-span-3 [&_[data-slot=carousel-content]>div]:ml-0">
+      <div className="w-full bg-card border-border relative aspect-square overflow-hidden rounded-2xl border shadow-lg **:data-[slot=carousel-item]:ml-0 **:data-[slot=carousel-item]:pl-0 md:col-span-3 [&_[data-slot=carousel-content]>div]:ml-0">
         <CarouselAuto showBadge delay={4000}>
           {PROCESS_MANUFACTURING_IMAGES.map((image) => (
             <CarouselItem key={image.src}>
