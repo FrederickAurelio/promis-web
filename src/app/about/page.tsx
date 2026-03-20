@@ -1,5 +1,7 @@
 import SectionContainer from "@/components/layout/section-container";
 import RevealCard from "@/components/transitions/reveal-card";
+import CarouselAuto from "@/components/transitions/carousel-auto";
+import { CarouselItem } from "@/components/ui/carousel";
 import { Handshake, Sparkles, Trophy } from "lucide-react";
 import Image from "next/image";
 import { COMPANY_NAME, DEFAULT_OG_IMAGE } from "@/constant";
@@ -180,16 +182,60 @@ const PROCESS_MANUFACTURING_ITEMS = [
   "Logistik Aman: Pengemasan standar ekspor dengan proteksi kayu untuk pengiriman laut.",
 ];
 
+const PROCESS_MANUFACTURING_IMAGES = [
+  {
+    src: "/Qu1.png",
+    alt: "Pabrik",
+  },
+  {
+    src: "/Qu2.png",
+    alt: "Pabrik",
+  },
+  {
+    src: "/Qu3.png",
+    alt: "Pabrik",
+  },
+  {
+    src: "/Qu4.png",
+    alt: "Pabrik",
+  },
+  {
+    src: "/Qu5.png",
+    alt: "Pabrik",
+  },
+  {
+    src: "/Qu6.png",
+    alt: "Pabrik",
+  },
+  {
+    src: "/Qu7.png",
+    alt: "Pabrik",
+  },
+  {
+    src: "/Qu8.png",
+    alt: "Pabrik",
+  },
+];
+
 function ProsesManufaktur() {
   return (
     <SectionContainer className="flex flex-col-reverse items-center gap-8 py-20 md:grid md:grid-cols-7 md:gap-12">
-      <div className="relative aspect-4/3 flex-1 md:col-span-3">
-        <Image
-          src="/photo_20_2024-02-01_08-37-17.jpg"
-          alt="Industrial Background"
-          fill
-          className="rounded-xl object-cover shadow-lg"
-        />
+      <div className="bg-card border-border relative aspect-square overflow-hidden rounded-2xl border shadow-lg **:data-[slot=carousel-item]:ml-0 **:data-[slot=carousel-item]:pl-0 md:col-span-3 [&_[data-slot=carousel-content]>div]:ml-0">
+        <CarouselAuto showBadge delay={4000}>
+          {PROCESS_MANUFACTURING_IMAGES.map((image) => (
+            <CarouselItem key={image.src}>
+              <div className="relative aspect-square w-full">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselAuto>
       </div>
       <div className="flex w-full flex-1 flex-col gap-4 md:col-span-4">
         <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
