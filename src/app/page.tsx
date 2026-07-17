@@ -390,39 +390,29 @@ function GaleriOperasional() {
 
 const TESTIMONI = [
   {
-    id: 2,
-    name: "Ibu Maya Lestari",
-    job: "Direktur PT. Petrokimia Gresik",
+    id: 1,
     testimoni:
-      "Sprocket dari IndoChain sangat presisi dan tahan lama. Kualitasnya konsisten, membuat kami sangat puas dengan produk mereka.",
+      "Sprocket Promis yang kami pasang di lini produksi kami sudah jalan hampir dua tahun tanpa perlu diganti. Presisinya pas, jadi rantai juga nggak cepat aus di satu sisi. Sampai sekarang belum ada kendala yang berarti.",
+  },
+  {
+    id: 2,
+    testimoni:
+      "Awalnya kami cuma coba di satu line dulu. Setelah beberapa bulan dipakai di digester dan conveyor, umur rantainya ternyata lebih awet dibanding yang sebelumnya. Akhirnya kami mulai pakai Promis di beberapa titik lain juga.",
   },
   {
     id: 3,
-    name: "Bpk. Ahmad Soejo",
-    job: "Manager PKS, Sumatera Utara",
     testimoni:
-      "Konsultasi teknis dari tim IndoChain sangat membantu kami meningkatkan efisiensi produksi. Respons mereka cepat dan profesional.",
-  },
-  {
-    id: 1,
-    name: "Bpk. Agus Setiawan",
-    job: "Manager PKS, Sumatera Utara",
-    testimoni:
-      "Rantai dari IndoChain memiliki umur pakai 30% lebih lama dibanding merk sebelumnya. Ini sangat mengurangi biaya perawatan dan meningkatkan produktivitas.",
+      "Sejak ganti ke rantai Promis, frekuensi penggantian rantai jadi lebih jarang. Buat kami itu lumayan membantu karena downtime berkurang dan maintenance juga lebih mudah dijadwalkan.",
   },
   {
     id: 4,
-    name: "Ibu Rina Dewi",
-    job: "Supervisor Produksi, PT. Agro Nusantara",
     testimoni:
-      "Pelayanan IndoChain luar biasa. Mereka selalu siap memberikan solusi tepat dan produk selalu sesuai spesifikasi.",
+      "Yang kami apresiasi bukan cuma produknya, tapi juga respons timnya. Waktu kami butuh connecting link mendadak karena produksi sedang jalan, mereka cepat bantu koordinasi sampai barang bisa segera dikirim.",
   },
   {
     id: 5,
-    name: "Bpk. Hendra Pratama",
-    job: "Engineering Head, PT. Sawit Makmur",
     testimoni:
-      "Penggunaan komponen IndoChain membuat proses produksi lebih stabil dan minim gangguan. Kami merasa investasi ini sangat berharga.",
+      "Kami sudah pakai beberapa komponen Promis di area transmisi mesin. Selama pemakaian sejauh ini performanya stabil dan tim maintenance juga lebih jarang menerima laporan masalah dibanding sebelumnya.",
   },
 ];
 
@@ -448,14 +438,6 @@ function Testimoni() {
               <p className="text-muted-foreground z-10 text-base italic lg:text-lg">
                 {testimoni.testimoni}
               </p>
-              <div className="z-10 flex flex-col">
-                <h2 className="text-base font-semibold lg:text-lg">
-                  {testimoni.name}
-                </h2>
-                <p className="text-muted-foreground text-sm lg:text-base">
-                  {testimoni.job}
-                </p>
-              </div>
             </div>
           </CarouselItem>
         ))}
