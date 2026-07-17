@@ -49,8 +49,8 @@ export function ProductsAnchorNav() {
   }, []);
 
   return (
-    <nav className="bg-background/80 sticky top-14 z-40 -mx-4 border-b px-4 py-3 backdrop-blur-md md:top-16 md:-mx-6 md:px-6 lg:-mx-10 lg:px-10">
-      <div className="flex gap-2 overflow-x-auto pb-1">
+    <nav className="bg-background/80 sticky top-14 z-40 border-b py-3 backdrop-blur-md md:top-16">
+      <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto pb-1">
         {ANCHOR_ITEMS.map((item) => (
           <Link
             key={item.href}

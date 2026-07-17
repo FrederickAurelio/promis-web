@@ -76,6 +76,58 @@ function PageHeader() {
   );
 }
 
+/** Mobile: square carousel. Desktop: 3-tile grid so product details stay readable. */
+function ProductImageGallery({
+  images,
+  alt,
+  priority = false,
+}: {
+  images: string[];
+  alt: string;
+  priority?: boolean;
+}) {
+  return (
+    <>
+      <div className="border-border mx-auto w-full max-w-md overflow-hidden rounded-2xl border md:hidden **:data-[slot=carousel-item]:ml-0 **:data-[slot=carousel-item]:pl-0 [&_[data-slot=carousel-content]>div]:ml-0">
+        <CarouselAuto showBadge delay={4000}>
+          {images.map((src) => (
+            <CarouselItem key={src}>
+              <div className="relative aspect-square w-full">
+                <Image
+                  src={src}
+                  alt={alt}
+                  fill
+                  className="object-cover"
+                  priority={priority}
+                  sizes="(max-width: 768px) 100vw, 28rem"
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselAuto>
+      </div>
+
+      <div className="hidden gap-4 md:grid md:grid-cols-3">
+        {images.map((src, index) => (
+          <div
+            key={src}
+            className="border-border relative aspect-square overflow-hidden rounded-2xl border"
+          >
+            <Image
+              src={src}
+              alt={`${alt} ${index + 1}`}
+              fill
+              className="object-cover transition-transform duration-500 hover:scale-[102%]"
+              priority={priority && index === 0}
+              sizes="(min-width: 768px) 33vw, 100vw"
+            />
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
 function ConveyorChainSection() {
   return (
     <section
@@ -92,28 +144,16 @@ function ConveyorChainSection() {
           </h2>
         </div>
         <p className="text-muted-foreground text-base lg:text-lg">
-          Rantai Konveyor untuk pergerakan yang sempurna
-          cocok untuk pabrik kelapa sawit — 4 model chain, 2 connecting link, 11 sprocket.
+          Rantai Konveyor untuk pergerakan yang sempurna cocok untuk pabrik
+          kelapa sawit — 4 model chain, 2 connecting link, 11 sprocket.
         </p>
       </div>
 
-      <div className="bg-card border-border relative aspect-[4/3] max-h-[420px] overflow-hidden rounded-2xl border **:data-[slot=carousel-item]:ml-0 **:data-[slot=carousel-item]:pl-0 [&_[data-slot=carousel-content]>div]:ml-0">
-        <CarouselAuto showBadge delay={4000}>
-          {CONVEYOR_IMAGES.map((src) => (
-            <CarouselItem key={src}>
-              <div className="relative aspect-[4/3] h-full w-full">
-                <Image
-                  src={src}
-                  alt="Conveyor Chain Promis"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselAuto>
-      </div>
+      <ProductImageGallery
+        images={CONVEYOR_IMAGES}
+        alt="Conveyor Chain Promis"
+        priority
+      />
 
       <ConveyorCatalog />
 
@@ -147,22 +187,8 @@ function RollerChainSection() {
           sprocket transmisi Simplex / Duplex / Triplex.
         </p>
       </div>
-      <div className="bg-card border-border relative aspect-[4/3] max-h-[420px] overflow-hidden rounded-2xl border **:data-[slot=carousel-item]:ml-0 **:data-[slot=carousel-item]:pl-0 [&_[data-slot=carousel-content]>div]:ml-0">
-        <CarouselAuto showBadge delay={4000}>
-          {ROLLER_IMAGES.map((src) => (
-            <CarouselItem key={src}>
-              <div className="relative aspect-[4/3] h-full w-full">
-                <Image
-                  src={src}
-                  alt="Roller Chain Promis"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselAuto>
-      </div>
+
+      <ProductImageGallery images={ROLLER_IMAGES} alt="Roller Chain Promis" />
 
       <RollerChainCatalog />
     </section>
