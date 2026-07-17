@@ -49,11 +49,10 @@ const NAVIGATION_ITEMS = [
 ];
 
 const PRODUCTS_ITEMS = [
-  { href: "/products?product=conveyor-chain", label: "Conveyor Chain" },
-  { href: "/products?product=sprocket", label: "Tranmission Chain" },
-  { href: "/products?product=pulley", label: "Sprocket" },
-  { href: "/products?product=bearing", label: "Connecting Link" },
-  { href: "/products?product=chain-link", label: "& kebutuhan lainnya" },
+  { href: "/products#conveyor-chain", label: "Conveyor Chain" },
+  { href: "/products#roller-chain", label: "Roller Chain" },
+  { href: "/products#roller-sprocket", label: "Sprocket Transmisi" },
+  { href: "/contact", label: "Konsultasi Lainnya" },
 ];
 
 const CONTACT_ITEMS = [
