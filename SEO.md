@@ -23,7 +23,7 @@ Summary of what’s done and what you should do next:
 - Each entry has `lastModified`, `changeFrequency`, `priority`.
 
 ### 3. **Robots** (`src/app/robots.ts`)
-- `robots.txt` allows all crawlers and points to `https://promischain.com/sitemap.xml`.
+- `robots.txt` allows all crawlers and points to `https://promischain.id/sitemap.xml`.
 
 ### 4. **Per-page metadata**
 - **About** (`/about`): title “Tentang Kami”, description about profil & dedikasi industri.
@@ -41,14 +41,14 @@ Summary of what’s done and what you should do next:
 
 1. **Go to**: [Google Search Console](https://search.google.com/search-console).
 2. **Add property**
-   - Choose “URL prefix” and enter: `https://promischain.com` (or your real domain).
-   - If you use `www`, add that too (e.g. `https://www.promischain.com`).
+   - Choose “URL prefix” and enter: `https://promischain.id` (or your real domain).
+   - If you use `www`, add that too (e.g. `https://www.promischain.id`).
 3. **Verify ownership** (pick one):
    - **HTML file**: Download the file Google gives you, put it in your site (e.g. `public/`), then deploy. Confirm in Search Console.
    - **HTML tag**: Add the meta tag they give you into your root layout `<head>`. Then click “Verify”.
    - **DNS**: Add the TXT record they give you at your domain registrar (where you bought the domain). Then verify.
 4. **Submit sitemap**
-   - In Search Console: **Sitemaps** → add: `https://promischain.com/sitemap.xml` → Submit.
+   - In Search Console: **Sitemaps** → add: `https://promischain.id/sitemap.xml` → Submit.
    - Google will then crawl and index your pages over time.
 
 After that you can:

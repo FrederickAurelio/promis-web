@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description:
     "Katalog lengkap Conveyor Chain 117 & 717, Connecting Link, Sprocket, Roller Chain RS Series, dan Sprocket Transmisi. Spesifikasi teknis untuk pabrik kelapa sawit.",
   alternates: {
-    canonical: "https://promis.co.id/products",
+    canonical: "/products",
   },
   keywords: [
     "conveyor chain pabrik sawit",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: `Solusi Rantai Industri & Komponen Pabrik Sawit | ${COMPANY_NAME}`,
     description:
       "Katalog Conveyor Chain 117 & 717, Roller Chain RS Series, dan Sprocket Transmisi. Minta penawaran harga langsung via WhatsApp.",
-    url: "https://promis.co.id/products",
+    url: "/products",
     images: [
       {
         url: DEFAULT_OG_IMAGE,

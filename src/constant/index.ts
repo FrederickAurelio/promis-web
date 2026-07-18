@@ -1,5 +1,5 @@
 export const COMPANY_NAME = "Promis Conveyor Chain";
-export const WEBSITE_URL = "https://promischain.com";
+export const WEBSITE_URL = "https://promischain.id";
 export const DEFAULT_OG_IMAGE = "/OG.jpg";
 
 export const PHONE_RAW = "6281269708999";
