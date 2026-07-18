@@ -28,14 +28,15 @@ Summary of what’s done and what you should do next:
 ### 4. **Per-page metadata**
 - **Home**: absolute title `Promis Chain | Palm Oil Conveyor Chain Manufacturer Indonesia`.
 - **About** (`/about`): produsen rantai conveyor sawit.
-- **Products** (`/products`): katalog conveyor & roller chain + Product/ItemList JSON-LD.
+- **Products** (`/products`): katalog conveyor & roller chain + BreadcrumbList (no Product rich-result schema — B2B supplier, not e-commerce).
 - **Contact** (`/contact`): konsultasi + FAQ schema + BreadcrumbList.
 - **Blog** (`/blog` + `/blog/[slug]`): topical articles for non-brand keywords.
 
 ### 5. **Structured data (JSON-LD)**
-- Organization (alternateName, logo), WebSite, LocalBusiness (makesOffer).
+- Organization (alternateName, logo), WebSite, LocalBusiness (address, geo, opening hours, knowsAbout).
 - BreadcrumbList on About, Products, Contact, Blog.
-- ItemList/Product on Products; BlogPosting on articles; FAQPage on Contact.
+- BlogPosting on articles; FAQPage on Contact.
+- Product/Offer schema intentionally omitted (not an online store).
 
 ---
 

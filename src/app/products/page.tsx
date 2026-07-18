@@ -13,7 +13,6 @@ import { CONVEYOR_IMAGES, ROLLER_IMAGES } from "@/data/products";
 import {
   buildBreadcrumbJsonLd,
   buildPageMetadata,
-  buildProductItemListJsonLd,
   JsonLd,
 } from "@/lib/seo";
 import { ArrowRight, InfoIcon } from "lucide-react";
@@ -270,7 +269,6 @@ export default function ProductsPage() {
           { name: "Produk", path: "/products" },
         ])}
       />
-      <JsonLd data={buildProductItemListJsonLd()} />
       <Katalog />
       <CaraPemesanan />
     </>

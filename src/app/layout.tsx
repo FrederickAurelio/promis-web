@@ -105,16 +105,13 @@ const jsonLd = {
         "@type": "Country",
         name: "Indonesia",
       },
-      makesOffer: {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Product",
-          name: "Palm Oil Conveyor Chain",
-          description:
-            "Conveyor chain, roller chain, sprocket, and connecting link supplied for palm oil mills.",
-          brand: { "@type": "Brand", name: BRAND_SHORT },
-        },
-      },
+      knowsAbout: [
+        "Conveyor chain",
+        "Palm oil mill conveyor chain",
+        "Industrial roller chain",
+        "Sprocket",
+        "Connecting link",
+      ],
     },
   ],
 };
