@@ -44,6 +44,7 @@ const SOCIAL_LINKS = [
 const NAVIGATION_ITEMS = [
   { href: "/", label: "Beranda" },
   { href: "/products", label: "Produk" },
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "Tentang Kami" },
   { href: "/contact", label: "Kontak" },
 ];

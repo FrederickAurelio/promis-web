@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react';
 const NAV_ITEMS = [
   { href: '/', label: 'Beranda' },
   { href: '/products', label: 'Produk' },
+  { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'Tentang Kami' },
   { href: '/contact', label: 'Kontak' },
   { href: '/brosur-produk.pdf', label: 'Brosur', download: true },

@@ -1,6 +1,29 @@
 export const COMPANY_NAME = "Promis Conveyor Chain";
+export const BRAND_SHORT = "Promis Chain";
 export const WEBSITE_URL = "https://promischain.id";
 export const DEFAULT_OG_IMAGE = "/OG.jpg";
+
+export const BRAND_ALTERNATE_NAMES = [
+  "Promis",
+  "Promis Chain",
+  "Promis Conveyor Chain",
+  "Promis Indonesia",
+  "Promis Rantai",
+  "Promis Rantai Konveyor",
+] as const;
+
+/** Commercial + brand keywords — keep list short and non-repetitive */
+export const DEFAULT_KEYWORDS = [
+  "Promis Chain",
+  "Promis Conveyor Chain",
+  "conveyor chain supplier",
+  "palm oil conveyor chain supplier",
+  "industrial chain supplier",
+  "supplier rantai conveyor",
+  "supplier rantai konveyor",
+  "supplier rantai pabrik kelapa sawit",
+  "rantai conveyor kelapa sawit",
+] as const;
 
 export const PHONE_RAW = "6281269708999";
 export const PHONE_DISPLAY = "+62 812-6970-8999";
@@ -9,6 +32,10 @@ export const LANDLINE_DISPLAY = "+62 618 003 4828";
 export const EMAIL = "intiperkasapancasurya@gmail.com";
 export const ADDRESS =
   "CitraLand Gamma City Jalan Boulevard Barat Raya Blok R8 No 3, Kenangan, Kec. Percut Sei Tuan, Kota Medan, Sumatera Utara 20371, Indonesia";
+
+/** Approximate office coordinates (Google Maps embed) */
+export const GEO_LATITUDE = 3.6074952;
+export const GEO_LONGITUDE = 98.7232136;
 
 export const WHATSAPP_LINK = `https://wa.me/${PHONE_RAW}`;
 export const TEL_LINK = `tel:+${PHONE_RAW}`;

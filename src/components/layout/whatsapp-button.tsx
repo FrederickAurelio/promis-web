@@ -16,11 +16,12 @@ export default function WhatsappButton() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Hubungi Promis Chain melalui WhatsApp"
           >
             <Image
               className="rounded-full shadow-lg animate-pulse hover:animate-none transition-all duration-200 cursor-pointer hover:scale-105"
               src="/whatsapp.svg"
-              alt="Whatsapp"
+              alt="Chat WhatsApp Promis Chain untuk penawaran conveyor chain"
               priority
               width={50}
               height={50}

@@ -26,12 +26,16 @@ Summary of what’s done and what you should do next:
 - `robots.txt` allows all crawlers and points to `https://promischain.id/sitemap.xml`.
 
 ### 4. **Per-page metadata**
-- **About** (`/about`): title “Tentang Kami”, description about profil & dedikasi industri.
-- **Products** (`/products`): title “Produk”, description about katalog conveyor chain, sprocket, pulley.
-- **Contact** (`/contact`): title “Kontak”, description about telepon, email, alamat, FAQ.
+- **Home**: absolute title `Promis Chain | Palm Oil Conveyor Chain Manufacturer Indonesia`.
+- **About** (`/about`): produsen rantai conveyor sawit.
+- **Products** (`/products`): katalog conveyor & roller chain + Product/ItemList JSON-LD.
+- **Contact** (`/contact`): konsultasi + FAQ schema + BreadcrumbList.
+- **Blog** (`/blog` + `/blog/[slug]`): topical articles for non-brand keywords.
 
 ### 5. **Structured data (JSON-LD)**
-- **Contact page**: `FAQPage` schema built from `FAQ_ITEMS` so Google can show FAQ rich results.
+- Organization (alternateName, logo), WebSite, LocalBusiness (makesOffer).
+- BreadcrumbList on About, Products, Contact, Blog.
+- ItemList/Product on Products; BlogPosting on articles; FAQPage on Contact.
 
 ---
 

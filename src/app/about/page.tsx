@@ -2,32 +2,18 @@ import SectionContainer from "@/components/layout/section-container";
 import RevealCard from "@/components/transitions/reveal-card";
 import CarouselAuto from "@/components/transitions/carousel-auto";
 import { CarouselItem } from "@/components/ui/carousel";
+import { buildBreadcrumbJsonLd, buildPageMetadata, JsonLd } from "@/lib/seo";
 import { Handshake, Sparkles, Trophy } from "lucide-react";
-import Image from "next/image";
-import { COMPANY_NAME, DEFAULT_OG_IMAGE } from "@/constant";
 import type { Metadata } from "next";
+import Image from "next/image";
 
-export const metadata: Metadata = {
-  title: "Tentang Kami",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Tentang Promis Chain | Supplier Rantai Conveyor",
   description:
-    "Profil Promis Conveyor Chain dan komitmen kami menyediakan conveyor chain serta sprocket berkualitas untuk kebutuhan industri Indonesia.",
-  alternates: {
-    canonical: "/about",
-  },
-  openGraph: {
-    title: `Tentang Kami | ${COMPANY_NAME}`,
-    description:
-      "Pelajari profil, perjalanan, dan nilai kerja Promis Conveyor Chain sebagai mitra rantai industri di Indonesia.",
-    url: "/about",
-    images: [DEFAULT_OG_IMAGE],
-  },
-  twitter: {
-    title: `Tentang Kami | ${COMPANY_NAME}`,
-    description:
-      "Profil dan perjalanan Promis Conveyor Chain dalam melayani kebutuhan rantai industri di Indonesia.",
-    images: [DEFAULT_OG_IMAGE],
-  },
-};
+    "Profil Promis Chain, supplier rantai conveyor untuk pabrik kelapa sawit di Indonesia. Fokus kualitas, dukungan teknis, dan solusi andal.",
+  path: "/about",
+  imageAlt: "Tentang Promis Chain supplier conveyor chain kelapa sawit",
+});
 
 function Intro() {
   return (
@@ -37,10 +23,13 @@ function Intro() {
           PROFIL PERUSAHAAN
         </span>
         <h1 className="mb-6 text-4xl leading-[1.1] font-semibold md:text-5xl">
-        Spesialis Rantai Konveyor Pabrik Kelapa Sawit
+          Supplier Rantai Conveyor untuk Pabrik Kelapa Sawit
         </h1>
         <p className="text-muted-foreground mx-auto max-w-4xl text-base lg:text-lg">
-        Promis adalah solusi rantai konveyor presisi bagi industri kelapa sawit sejak 2017. Kami percaya pada kekuatan kualitas. itulah mengapa kami menyertakan garansi penuh, inspeksi rutin, dan dukungan teknologi terbaik untuk menjamin investasi Anda tetap produktif dalam jangka panjang.
+          Promis Chain adalah mitra rantai konveyor untuk industri kelapa sawit
+          sejak 2017. Sebagai supplier yang fokus pada palm oil mill, kami
+          menyediakan inspeksi mutu dan dukungan teknis agar investasi conveyor
+          chain Anda tetap produktif dalam jangka panjang.
         </p>
       </div>
     </SectionContainer>
@@ -79,7 +68,7 @@ function Timeline() {
   return (
     <SectionContainer className="flex flex-col gap-16 py-24 pb-32">
       <div className="mx-auto flex max-w-2xl flex-col gap-4 text-center">
-        <h3 className="text-3xl font-bold md:text-5xl">Perjalanan Kami</h3>
+        <h2 className="text-3xl font-bold md:text-5xl">Perjalanan Kami</h2>
         <p className="text-muted-foreground text-lg">
           Dedikasi kami dalam menyediakan solusi rantai industri dari tahun ke
           tahun.
@@ -345,9 +334,10 @@ function Galeri() {
             <div className="relative h-64 w-full">
               <Image
                 src={gallery.image}
-                alt={gallery.name}
+                alt={`${gallery.name} — fasilitas Promis Chain supplier rantai conveyor Indonesia`}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-[102%]"
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
             </div>
             <div className="flex flex-col gap-1 p-4 pb-6 lg:p-6 lg:pb-8">
@@ -366,6 +356,12 @@ function Galeri() {
 export default function AboutPage() {
   return (
     <>
+      <JsonLd
+        data={buildBreadcrumbJsonLd([
+          { name: "Beranda", path: "/" },
+          { name: "Tentang Kami", path: "/about" },
+        ])}
+      />
       <Intro />
       <Timeline />
       <NilaiKami />

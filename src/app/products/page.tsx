@@ -7,53 +7,33 @@ import {
 } from "@/components/products/products-anchor-nav";
 import RollerChainCatalog from "@/components/products/roller-chain-catalog";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { CarouselItem } from "@/components/ui/carousel";
-import { COMPANY_NAME, DEFAULT_OG_IMAGE } from "@/constant";
 import { CONVEYOR_IMAGES, ROLLER_IMAGES } from "@/data/products";
-import { InfoIcon } from "lucide-react";
+import {
+  buildBreadcrumbJsonLd,
+  buildPageMetadata,
+  buildProductItemListJsonLd,
+  JsonLd,
+} from "@/lib/seo";
+import { ArrowRight, InfoIcon } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Katalog Conveyor Chain & Sparepart Pabrik Kelapa Sawit | Promis",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Katalog Conveyor Chain & Roller Chain",
   description:
-    "Katalog lengkap Conveyor Chain 117 & 717, Connecting Link, Sprocket, Roller Chain RS Series, dan Sprocket Transmisi. Spesifikasi teknis untuk pabrik kelapa sawit.",
-  alternates: {
-    canonical: "/products",
-  },
+    "Katalog Promis Chain: conveyor chain 117 & 717, roller chain RS, sprocket, dan connecting link untuk pabrik kelapa sawit Indonesia.",
+  path: "/products",
+  imageAlt: "Katalog conveyor chain Promis untuk palm oil mill",
   keywords: [
-    "conveyor chain pabrik sawit",
-    "rantai transmisi roller chain",
-    "jual sprocket industri",
-    "connecting link rantai konveyor",
-    "sparepart pabrik kelapa sawit",
-    "117 conveyor chain",
-    "717 conveyor chain",
-    "Promis conveyor Indonesia",
+    "katalog conveyor chain",
+    "supplier rantai conveyor",
+    "roller chain RS",
+    "rantai pabrik kelapa sawit",
   ],
-  openGraph: {
-    title: `Solusi Rantai Industri & Komponen Pabrik Sawit | ${COMPANY_NAME}`,
-    description:
-      "Katalog Conveyor Chain 117 & 717, Roller Chain RS Series, dan Sprocket Transmisi. Minta penawaran harga langsung via WhatsApp.",
-    url: "/products",
-    images: [
-      {
-        url: DEFAULT_OG_IMAGE,
-        width: 1200,
-        height: 630,
-        alt: "Katalog Produk Promis Conveyor Chain",
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `Produk Rantai Industri Premium | ${COMPANY_NAME}`,
-    description:
-      "Katalog lengkap Conveyor Chain, Roller Chain, dan Sprocket khusus industri kelapa sawit.",
-    images: [DEFAULT_OG_IMAGE],
-  },
-};
+});
 
 function PageHeader() {
   return (
@@ -62,15 +42,15 @@ function PageHeader() {
         Highlight: Conveyor Chain
       </Badge>
       <h1 className="text-center text-2xl font-bold md:text-3xl lg:text-4xl">
-        Katalog Produk & Spesifikasi
+        Katalog Conveyor Chain & Roller Chain untuk Industri Sawit
       </h1>
       <p className="text-muted-foreground max-w-2xl text-center text-base lg:text-lg">
-        Dua kategori utama:{" "}
+        Promis Chain memasok{" "}
         <span className="text-foreground font-medium">Conveyor Chain</span>{" "}
         (117 & 717) dan{" "}
-        <span className="text-foreground font-medium">Roller Chain</span> (RS
-        Series). Setiap kategori memiliki Conveyor Chain / Connecting Link /
-        Sprocket.
+        <span className="text-foreground font-medium">Roller Chain</span> RS
+        Series untuk palm oil mill di Indonesia, lengkap dengan connecting
+        link dan sprocket.
       </p>
     </div>
   );
@@ -151,7 +131,7 @@ function ConveyorChainSection() {
 
       <ProductImageGallery
         images={CONVEYOR_IMAGES}
-        alt="Conveyor Chain Promis"
+        alt="Heavy duty palm oil conveyor chain Promis"
         priority
       />
 
@@ -188,9 +168,24 @@ function RollerChainSection() {
         </p>
       </div>
 
-      <ProductImageGallery images={ROLLER_IMAGES} alt="Roller Chain Promis" />
+      <ProductImageGallery
+        images={ROLLER_IMAGES}
+        alt="Industrial transmission roller chain Promis"
+      />
 
       <RollerChainCatalog />
+
+      <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-muted-foreground text-sm lg:text-base">
+          Butuh spesifikasi khusus atau penawaran resmi?
+        </p>
+        <Button variant="link" className="h-auto px-0 py-0 text-base" asChild>
+          <Link href="/contact">
+            Hubungi tim Promis Chain
+            <ArrowRight className="size-4" />
+          </Link>
+        </Button>
+      </div>
     </section>
   );
 }
@@ -269,6 +264,13 @@ function CaraPemesanan() {
 export default function ProductsPage() {
   return (
     <>
+      <JsonLd
+        data={buildBreadcrumbJsonLd([
+          { name: "Beranda", path: "/" },
+          { name: "Produk", path: "/products" },
+        ])}
+      />
+      <JsonLd data={buildProductItemListJsonLd()} />
       <Katalog />
       <CaraPemesanan />
     </>

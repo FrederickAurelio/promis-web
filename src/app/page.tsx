@@ -1,11 +1,5 @@
-import SectionContainer from "@/components/layout/section-container";
-import CarouselAuto from "@/components/transitions/carousel-auto";
-import HeroTransition from "@/components/transitions/hero-transition";
-import RevealCard from "@/components/transitions/reveal-card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { CarouselItem } from "@/components/ui/carousel";
-import { COMPANY_NAME, DEFAULT_OG_IMAGE, WHATSAPP_LINK } from "@/constant";
+import { BRAND_SHORT, WEBSITE_URL, WHATSAPP_LINK } from "@/constant";
+import { buildPageMetadata, JsonLd } from "@/lib/seo";
 import {
   Award,
   ArrowRight,
@@ -23,28 +17,28 @@ import {
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import SectionContainer from "@/components/layout/section-container";
+import CarouselAuto from "@/components/transitions/carousel-auto";
+import HeroTransition from "@/components/transitions/hero-transition";
+import RevealCard from "@/components/transitions/reveal-card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { CarouselItem } from "@/components/ui/carousel";
 
-export const metadata: Metadata = {
-  title: "Conveyor Chain & Sprocket untuk Industri",
+export const metadata: Metadata = buildPageMetadata({
+  title: `${BRAND_SHORT} | Palm Oil Conveyor Chain Supplier Indonesia`,
   description:
-    "Promis Conveyor Chain menghadirkan conveyor chain dan sprocket berkualitas untuk pabrik kelapa sawit dengan dukungan teknis dan pengiriman ke seluruh Indonesia.",
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: `${COMPANY_NAME} | Conveyor Chain & Sprocket`,
-    description:
-      "Conveyor chain dan sprocket berkualitas untuk pabrik kelapa sawit, lengkap dengan konsultasi teknis dan pengiriman nasional.",
-    url: "/",
-    images: [DEFAULT_OG_IMAGE],
-  },
-  twitter: {
-    title: `${COMPANY_NAME} | Conveyor Chain & Sprocket`,
-    description:
-      "Conveyor chain dan sprocket berkualitas untuk pabrik kelapa sawit, lengkap dengan konsultasi teknis dan pengiriman nasional.",
-    images: [DEFAULT_OG_IMAGE],
-  },
-};
+    "Promis Chain supplies conveyor chains for palm oil mills across Indonesia. Durable industrial chain solutions built for demanding mill operations.",
+  path: "/",
+  absoluteTitle: true,
+  imageAlt: "Promis Chain palm oil conveyor chain supplier Indonesia",
+  keywords: [
+    "Promis Chain",
+    "conveyor chain supplier",
+    "palm oil conveyor chain supplier",
+    "supplier rantai conveyor",
+  ],
+});
 
 function Hero() {
   return (
@@ -52,27 +46,32 @@ function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/Depan6.jpg"
-          alt="Industrial Background"
+          alt="Heavy duty palm oil conveyor chain for industrial palm oil mill"
           fill
           className="h-full w-full object-cover opacity-30"
+          priority
+          sizes="100vw"
           referrerPolicy="no-referrer"
         />
         <div className="from-background via-background/80 absolute inset-0 bg-linear-to-r via-50% to-transparent"></div>
       </div>
 
       <HeroTransition className="relative z-10 flex h-full max-w-3xl -translate-y-4 flex-col items-start justify-center">
-        {/* use Badge components */}
         <Badge className="bg-primary/10 text-primary mb-6 w-fit shrink rounded-full px-4 py-1 text-xs font-semibold tracking-wider wrap-break-word whitespace-normal uppercase md:text-sm">
-          Promis: Jaminan Ketangguhan Rantai Conveyor di Indonesia
+          Promis Chain — Supplier Conveyor Chain Indonesia
         </Badge>
         <h1 className="mb-6 text-4xl leading-[1.1] font-semibold md:text-6xl">
-          Solusi <span className="text-primary"> Rantai Conveyor </span>{" "}
-          Berkualitas untuk Industri Sawit
+          Solusi {" "}
+          <span className="text-primary">Rantai Konveyor</span> Berkualitas untuk Industri Kelapa Sawit
         </h1>
         <p className="text-muted-foreground mb-10 max-w-2xl text-xl md:text-2xl">
-          Dengan bertahun-tahunnya pengalaman untuk meningkatkan efisiensi dan
-          keandalan dalam proses pengolahan kelapa sawit, dengan menjaga
-          kualitas dan kepuasan pelanggan
+        Dengan bertahun-tahunnya pengalaman untuk meningkatkan efisiensi dan 
+        keandalan dalam proses pengolahan kelapa sawit, dengan menjaga kualitas 
+        dan kepuasan pelanggan Baca juga{" "}
+          <Link href="/blog" className="text-primary underline-offset-4 hover:underline">
+            artikel teknis kami
+          </Link>
+          .
         </p>
         <div className="flex flex-col gap-4 sm:flex-row">
           <Button
@@ -136,10 +135,9 @@ function LayananIndustri() {
       </h2>
       <div className="mb-7 flex flex-col justify-between gap-4 md:flex-row md:items-end md:gap-8">
         <p className="text-muted-foreground text-base lg:text-lg">
-          Kami memusatkan seluruh keahlian teknik kami pada satu sektor:
-          Industri Kelapa Sawit. Dengan fokus tunggal ini, kami menjamin setiap
-          komponen transmisi yang kami hadirkan memiliki ketahanan operasional
-          yang telah teruji menghadapi beban ekstrem di pabrik Anda.
+          Kami memusatkan keahlian teknik pada industri kelapa sawit. Setiap
+          conveyor chain dan komponen transmisi Promis Chain diuji untuk beban
+          ekstrem di pabrik kelapa sawit Anda.
         </p>
         <div>
           <Button
@@ -196,7 +194,7 @@ const REASONS_TO_CHOOSE_US = [
     icon: BadgeCheck,
   },
   {
-      title: "One-Stop Chain Solution",
+      title: "Chain Solution",
       description:
         "Menawarkan berbagai tipe rantai conveyor berkualitas tinggi untuk mendukung seluruh sistem conveyor di industri kelapa sawit, dari stasiun awal hingga proses akhir.",
       icon: Factory,
@@ -218,18 +216,20 @@ function AlasanMemilihKami() {
       <div className="relative aspect-4/3 flex-1 max-md:w-full md:col-span-3">
         <Image
           src="/Depan4.jpg"
-          alt="Industrial Background"
+          alt="Industrial conveyor chain production for palm oil processing"
           fill
           className="rounded-xl object-cover shadow-lg"
+          sizes="(min-width: 768px) 40vw, 100vw"
         />
       </div>
       <div className="flex w-full flex-1 flex-col gap-4 md:col-span-4">
         <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
-          Mengapa Memilih Promis?
+          Mengapa Memilih Promis Chain?
         </h2>
         <p className="text-muted-foreground text-base lg:text-lg">
-          Kami adalah perusahaan yang menyediakan conveyor chain berkualitas
-          tinggi untuk industri kelapa sawit.
+          Sebagai supplier rantai conveyor industri di Indonesia, Promis Chain
+          fokus pada ketahanan operasional pabrik kelapa sawit, dari stasiun
+          loading hingga proses akhir.
         </p>
         <div className="flex flex-col gap-3">
           {REASONS_TO_CHOOSE_US.map((reason) => (
@@ -257,12 +257,14 @@ const PRODUCTS = [
     description:
       "Solusi andalan untuk perpindahan material yang efisien dengan ketahanan beban maksimal di berbagai lini produksi.",
     image: "/Depan6.jpg",
+    alt: "Palm oil mill conveyor chain Promis heavy duty",
   },
   {
     name: "Transmission Chain",
     description:
-      "Optimalkan performa mesin dengan transmisi daya yang presisi, menjamin kelancaran operasional jangka panjang.",
+      "Roller chain transmisi untuk efisiensi daya mesin pengolahan kelapa sawit dengan masa pakai optimal.",
     image: "/Depan8.jpg",
+    alt: "Industrial transmission roller chain for palm oil factory",
   },
 ];
 
@@ -271,10 +273,11 @@ function ProdukPilihanKami() {
     <SectionContainer className="flex flex-col gap-12 py-20 pb-32">
       <div className="flex flex-col gap-3">
         <h2 className="text-center text-2xl font-bold md:text-3xl lg:text-4xl">
-          Produk Pilihan Kami
+          Produk Conveyor Chain & Transmisi
         </h2>
         <p className="text-muted-foreground text-center text-base lg:text-lg">
-          Komponen Vital dengan Durabilitas dan Masa Pakai Optimal.
+          Komponen vital untuk conveyor system pabrik kelapa sawit, dirancang
+          untuk durabilitas dan masa pakai optimal.
         </p>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6">
@@ -286,9 +289,10 @@ function ProdukPilihanKami() {
             <div className="relative h-80 w-full">
               <Image
                 src={product.image}
-                alt={product.name}
+                alt={product.alt}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-[102%]"
+                sizes="(min-width: 768px) 50vw, 100vw"
               />
             </div>
             <div className="flex flex-col gap-2 p-4 pb-6 lg:gap-3 lg:p-6 lg:pb-8">
@@ -321,21 +325,25 @@ const GALLERY_OPERATIONAL = [
     id: 1,
     image: "/Banyak2.jpg",
     name: "Fasilitas Produksi",
+    alt: "Fasilitas produksi conveyor chain Promis Chain Indonesia",
   },
   {
     id: 2,
     image: "/Pabrik.jpeg",
     name: "Stok Gudang",
+    alt: "Stok industrial conveyor chain di gudang Promis",
   },
   {
     id: 3,
     image: "/Delivery.jpg",
     name: "Karyawan",
+    alt: "Tim operasional Promis Chain mendukung pengiriman rantai industri",
   },
   {
     id: 4,
     image: "/Kemasan.jpeg",
     name: "Produksi",
+    alt: "Kemasan Rantai Konveyor siap kirim ke pabrik kelapa sawit",
   },
 ];
 
@@ -375,9 +383,10 @@ function GaleriOperasional() {
               <div className="relative aspect-square h-full w-full">
                 <Image
                   src={gallery.image}
-                  alt={gallery.name}
+                  alt={gallery.alt}
                   fill
                   className="rounded-xl object-cover shadow-md"
+                  sizes="(min-width: 768px) 25vw, 50vw"
                 />
               </div>
             </RevealCard>
@@ -479,7 +488,7 @@ function ClickToAction() {
           variant="default"
           asChild
         >
-          <Link href="/contact">Lihat Lokasi Kmai</Link>
+          <Link href="/contact">Kunjungi kami!</Link>
         </Button>
       </div>
     </SectionContainer>
@@ -489,6 +498,21 @@ function ClickToAction() {
 export default function Home() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: `${BRAND_SHORT} | Palm Oil Conveyor Chain Supplier Indonesia`,
+          description:
+            "Promis Chain supplies high-quality conveyor chains for palm oil mills across Indonesia.",
+          url: `${WEBSITE_URL}/`,
+          isPartOf: { "@id": `${WEBSITE_URL}/#website` },
+          about: {
+            "@type": "Thing",
+            name: "Conveyor chain for palm oil mill",
+          },
+        }}
+      />
       <Hero />
       <LayananIndustri />
       <AlasanMemilihKami />

@@ -1,12 +1,12 @@
-import { COMPANY_NAME, WEBSITE_URL } from "@/constant";
+import { BRAND_SHORT, COMPANY_NAME, WEBSITE_URL } from "@/constant";
 import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: COMPANY_NAME,
-    short_name: "Promis Chain",
+    short_name: BRAND_SHORT,
     description:
-      "Conveyor chain dan sprocket untuk pabrik kelapa sawit serta kebutuhan industri di Indonesia.",
+      "Promis Chain supplies high-quality conveyor chains for palm oil mills and industrial systems in Indonesia.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
