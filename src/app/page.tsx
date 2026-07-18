@@ -70,7 +70,7 @@ function Hero() {
           Berkualitas untuk Industri Sawit
         </h1>
         <p className="text-muted-foreground mb-10 max-w-2xl text-xl md:text-2xl">
-          Dengan bertahun- tahunnya pengalaman untuk meningkatkan efisiensi dan
+          Dengan bertahun-tahunnya pengalaman untuk meningkatkan efisiensi dan
           keandalan dalam proses pengolahan kelapa sawit, dengan menjaga
           kualitas dan kepuasan pelanggan
         </p>
@@ -196,10 +196,10 @@ const REASONS_TO_CHOOSE_US = [
     icon: BadgeCheck,
   },
   {
-    title: "Kapasitas Produksi & Kustomisasi OEM",
-    description:
-      "Fasilitas pabrik yang kuat dengan kemampuan layanan kustom dan OEM yang fleksibel untuk memenuhi spesifikasi khusus setiap pelanggan.",
-    icon: Factory,
+      title: "One-Stop Chain Solution",
+      description:
+        "Menawarkan berbagai tipe rantai conveyor berkualitas tinggi untuk mendukung seluruh sistem conveyor di industri kelapa sawit, dari stasiun awal hingga proses akhir.",
+      icon: Factory,
   },
   {
     title: "Harga Kompetitif & Layanan Purna Jual (After Sales Service)",
@@ -458,7 +458,7 @@ function ClickToAction() {
         </h2>
         <p className="text-center text-base lg:text-lg">
           Hubungi spesialis teknis kami hari ini untuk konsultasi gratis dan
-          penawaran harga terbak.
+          penawaran harga terbaik.
         </p>
       </div>
       <div className="flex flex-col justify-center gap-4 md:flex-row">

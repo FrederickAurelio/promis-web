@@ -51,7 +51,6 @@ const NAVIGATION_ITEMS = [
 const PRODUCTS_ITEMS = [
   { href: "/products#conveyor-chain", label: "Conveyor Chain" },
   { href: "/products#roller-chain", label: "Roller Chain" },
-  { href: "/products#roller-sprocket", label: "Sprocket Transmisi" },
   { href: "/contact", label: "Konsultasi Lainnya" },
 ];
 

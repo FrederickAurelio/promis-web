@@ -173,10 +173,10 @@ const FAQ_ITEMS = [
       "Kami menyediakan layanan purna jual proaktif, meliputi: Kunjungan Pabrik 3x setahun untuk evaluasi operasional & Laporan Berkala mendetail tentang performa dan pemeliharaan",
   },
   {
-    id: "custom",
-    question: "Apakah bisa memesan produk sesuai spesifikasi khusus (Custom/OEM)?",
+    id: "selection",
+    question: "Bagaimana jika saya tidak yakin memilih jenis rantai yang tepat?",
     answer:
-      "Tentu. Kami memiliki kemampuan manufaktur yang kuat untuk melayani pemesanan sesuai spesifikasi teknis (Custom) atau kebutuhan OEM Anda.",
+      "Tim kami akan membantu memilih jenis rantai yang sesuai berdasarkan aplikasi, ukuran, dan kebutuhan operasional pabrik Anda, sehingga Anda mendapatkan solusi yang tepat dari berbagai pilihan produk yang tersedia.",
   },
   {
     id: "delivery",
