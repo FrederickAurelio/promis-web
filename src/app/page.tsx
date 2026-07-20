@@ -65,9 +65,7 @@ function Hero() {
           <span className="text-primary">Rantai Konveyor</span> Berkualitas untuk Industri Kelapa Sawit
         </h1>
         <p className="text-muted-foreground mb-10 max-w-2xl text-xl md:text-2xl">
-        Dengan bertahun-tahunnya pengalaman untuk meningkatkan efisiensi dan 
-        keandalan dalam proses pengolahan kelapa sawit, dengan menjaga kualitas 
-        dan kepuasan pelanggan Baca juga{" "}
+        Berbekal pengalaman bertahun-tahun, kami terus berupaya meningkatkan efisiensi dan keandalan rantai konveyor kami. Baca juga{" "}
           <Link href="/blog" className="text-primary underline-offset-4 hover:underline">
             artikel teknis kami
           </Link>
@@ -131,13 +129,11 @@ function LayananIndustri() {
   return (
     <SectionContainer className="flex flex-col gap-3 py-24 pb-32 lg:py-32 lg:pb-40">
       <h2 className="text-3xl font-bold max-sm:max-w-[16ch] lg:text-4xl">
-        Spesialisasi Solusi Transmisi Pabrik Kelapa Sawit
+      Spesialis Konveyor di Industri Kelapa Sawit
       </h2>
       <div className="mb-7 flex flex-col justify-between gap-4 md:flex-row md:items-end md:gap-8">
         <p className="text-muted-foreground text-base lg:text-lg">
-          Kami memusatkan keahlian teknik pada industri kelapa sawit. Setiap
-          conveyor chain dan komponen transmisi Promis Chain diuji untuk beban
-          ekstrem di pabrik kelapa sawit Anda.
+        Dengan pengalaman lebih dari 30 tahun, kami sangat memahami berbagai masalah dan tantangan sistem konveyor yang dihadapi pabrik kelapa sawit, termasuk risiko penghentian produksi yang sering terjadi.
         </p>
         <div>
           <Button
@@ -150,7 +146,7 @@ function LayananIndustri() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Konsultasikan Kebutuhan Pabrik Anda
+              Konsultasikan kebutuhan Anda bersama kami
               <ArrowRight className="size-5" />
             </Link>
           </Button>
@@ -178,31 +174,31 @@ const REASONS_TO_CHOOSE_US = [
   {
     title: "Pengalaman & Keahlian 30 Tahun",
     description:
-      "Memiliki rekam jejak tiga dekade dalam memproduksi rantai rol dan konveyor berkualitas tinggi untuk berbagai kebutuhan transmisi industri.",
+      "Dengan pengalaman lebih dari tiga dekade, kami memiliki rekam jejak yang kuat dalam memproduksi rantai rol dan konveyor berkualitas tinggi untuk berbagai kebutuhan transmisi industri",
     icon: Award,
   },
   {
     title: "Teknologi Produksi & Inspeksi Mutakhir",
     description:
-      "Didukung peralatan canggih serta keunggulan teknologi heat treatment dan surface treatment untuk memastikan daya tahan produk yang maksimal.",
+      "Didukung oleh peralatan modern serta teknologi heat treatment dan surface treatment yang unggul, kami memastikan setiap produk memiliki daya tahan maksimal dan performa yang andal",
     icon: Microscope,
   },
   {
     title: "Standar Kualitas Internasional",
     description:
-      "Produk diproduksi sesuai Standar Amerika, Eropa, dan Jepang (ANSI, DIN, JIS) menggunakan material premium untuk menjamin masa pakai yang lama.",
+      "Produk kami diproduksi sesuai standar internasional seperti ANSI, DIN, dan JIS, menggunakan material premium untuk menjamin umur pakai yang lebih panjang.",
     icon: BadgeCheck,
   },
   {
-      title: "Chain Solution",
+      title: "Kemudahan Instalasi & Perawatan",
       description:
-        "Menawarkan berbagai tipe rantai conveyor berkualitas tinggi untuk mendukung seluruh sistem conveyor di industri kelapa sawit, dari stasiun awal hingga proses akhir.",
+      "Berbeda dengan rantai konveyor konvensional, kami menggunakan teknologi extended-pin yang memudahkan pengguna dalam proses pemasangan maupun penggantian, sehingga menghemat waktu dan tenaga.",
       icon: Factory,
   },
   {
-    title: "Harga Kompetitif & Layanan Purna Jual (After Sales Service)",
+    title: "Harga Kompetitif & After Sales Service",
     description:
-      "Memberikan penawaran harga terbaik, dukungan teknis ahli, serta jaminan layanan after-sales untuk mendukung efisiensi bisnis Anda.",
+      "Kami menawarkan harga yang kompetitif, didukung oleh tim teknis profesional serta after sales service yang responsif untuk memastikan kelancaran operasional bisnis Anda.",
     icon: Headset,
   },
 ];
@@ -227,9 +223,7 @@ function AlasanMemilihKami() {
           Mengapa Memilih Promis Chain?
         </h2>
         <p className="text-muted-foreground text-base lg:text-lg">
-          Sebagai supplier rantai conveyor industri di Indonesia, Promis Chain
-          fokus pada ketahanan operasional pabrik kelapa sawit, dari stasiun
-          loading hingga proses akhir.
+        Kami berkomitmen menghadirkan kualitas terbaik serta kemudahan penggunaan sistem konveyor di lapangan, mulai dari stasiun loading hingga proses akhir.
         </p>
         <div className="flex flex-col gap-3">
           {REASONS_TO_CHOOSE_US.map((reason) => (
@@ -273,11 +267,10 @@ function ProdukPilihanKami() {
     <SectionContainer className="flex flex-col gap-12 py-20 pb-32">
       <div className="flex flex-col gap-3">
         <h2 className="text-center text-2xl font-bold md:text-3xl lg:text-4xl">
-          Produk Conveyor Chain & Transmisi
+        Produk Rantai Konveyor & Transmisi
         </h2>
         <p className="text-muted-foreground text-center text-base lg:text-lg">
-          Komponen vital untuk conveyor system pabrik kelapa sawit, dirancang
-          untuk durabilitas dan masa pakai optimal.
+        Komponen vital untuk sistem konveyor pabrik kelapa sawit, dirancang untuk durabilitas dan masa pakai yang lebih optimal
         </p>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6">
@@ -307,7 +300,7 @@ function ProdukPilihanKami() {
                   asChild
                 >
                   <Link href="/products">
-                    Lihat Detail Spek{" "}
+                  Specification{" "}
                     <ArrowRight className="size-4 -translate-y-px" />
                   </Link>
                 </Button>
@@ -358,7 +351,7 @@ function GaleriOperasional() {
       </h2>
       <div className="mb-7 flex flex-col justify-between gap-4 md:flex-row md:items-end md:gap-8">
         <p className="text-muted-foreground text-base lg:text-lg">
-          Tinjauan Infrastruktur Produksi dan Pusat Distribusi Logistik Kami
+          Infrastruktur Produksi dan Pusat Distribusi Logistik Kami
         </p>
         <div className="max-md:flex max-md:justify-end">
           <Button
