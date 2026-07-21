@@ -104,20 +104,6 @@ export const CONVEYOR_SPROCKETS: ConveyorSprocket[] = [
     label: 'Sprocket 117 - 4" 12T (Cast Steel) padu',
   },
   {
-    model: "117",
-    teeth: 14,
-    material: "Cast Steel",
-    type: "Jari",
-    label: 'Sprocket 117 - 4" 14T (Cast Steel) Jari',
-  },
-  {
-    model: "117",
-    teeth: 16,
-    material: "Cast Steel",
-    type: "Jari",
-    label: 'Sprocket 117 - 4" 16T (Cast Steel) Jari',
-  },
-  {
     model: "717",
     teeth: 8,
     material: "Cast Steel",
@@ -144,13 +130,6 @@ export const CONVEYOR_SPROCKETS: ConveyorSprocket[] = [
     material: "Cast Steel",
     type: "",
     label: 'Sprocket 717 - 6" 16T (Cast Steel)',
-  },
-  {
-    model: "717",
-    teeth: 18,
-    material: "Cast Steel",
-    type: "",
-    label: 'Sprocket 717 - 6" 18T (Cast Steel)',
   },
   {
     model: "717",
